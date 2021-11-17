@@ -1,0 +1,60 @@
+# Treatment
+
+Treatment of a customer
+
+## Properties
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**acceptance_date** | **date** |  | [optional] 
+**acceptance_nr** | **str** |  | [optional] 
+**application_type** | [**ApplicationType**](ApplicationType.md) |  | [optional] 
+**article_set_name** | **str** |  | [optional] 
+**avoid_collective_invoice** | **bool** |  | [optional] 
+**branch_id** | **str** |  | [optional] 
+**causation_date** | **date** |  | [optional] 
+**check_mandatory** | **str** |  | [optional] 
+**company_id** | **str** |  | [optional] 
+**complaints** | [**[Complaint]**](Complaint.md) |  | [optional] 
+**convert_reason_property_id** | **str** |  | [optional] 
+**coverage_treatment_extension** | **str** |  | [optional] 
+**customer** | [**CustomerReduced**](CustomerReduced.md) |  | [optional] 
+**data_checked** | **bool** |  | [optional] 
+**delivery_address_id** | **str** |  | [optional] 
+**demo_hearing_cares** | [**[HearingCare]**](HearingCare.md) |  | [optional] 
+**doctor_id** | **str** |  | [optional] 
+**end_date** | **date** |  | [optional] 
+**exempt_from_extra_payment_amount** | **int** |  | [optional] 
+**exempt_from_extra_payment_status** | [**TranslatedString**](TranslatedString.md) |  | [optional] 
+**extra_staff** | [**StaffReduced**](StaffReduced.md) |  | [optional] 
+**hi_membership2_id** | **str** |  | [optional] 
+**hi_membership_id** | **str** |  | [optional] 
+**id** | **str** |  | [optional] 
+**import_date** | **datetime** |  | [optional] 
+**invoices** | [**[Invoice]**](Invoice.md) |  | [optional] 
+**is_working** | **str** |  | [optional] 
+**kind** | [**TranslatedString**](TranslatedString.md) |  | [optional] 
+**marketing_contact_id** | **str** |  | [optional] 
+**modified** | **datetime** |  | [optional] 
+**name** | **str** |  | [optional] 
+**payed_prepayment** | **float** |  | [optional] 
+**prescription_date** | **date** |  | [optional] 
+**prescription_number** | **str** |  | [optional] 
+**prescription_type** | [**TranslatedString**](TranslatedString.md) |  | [optional] 
+**reference_number** | **str** |  | [optional] 
+**refraction_reports** | [**[RefractionReport]**](RefractionReport.md) |  | [optional] 
+**related_to_id** | **str** | A link to a previous, related treatment | [optional] 
+**repetition_index** | **int** |  | [optional] 
+**repetition_type** | [**TranslatedString**](TranslatedString.md) |  | [optional] 
+**side** | [**TranslatedString**](TranslatedString.md) |  | [optional] 
+**staff** | [**StaffReduced**](StaffReduced.md) |  | [optional] 
+**start_date** | **date** |  | [optional] 
+**state** | [**TranslatedString**](TranslatedString.md) |  | [optional] 
+**tariff_indicator** | **str** |  | [optional] 
+**treatment_nr** | **str** |  | [optional] 
+**treatment_positions** | [**[TreatmentPosition]**](TreatmentPosition.md) |  | [optional] 
+**use_start_date_for_pricing** | **bool** |  | [optional] 
+**any string name** | **bool, date, datetime, dict, float, int, list, str, none_type** | any string name can be used but the value must be the correct type | [optional]
+
+[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
+
+
