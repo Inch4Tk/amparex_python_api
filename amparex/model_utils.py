@@ -1659,49 +1659,50 @@ def model_to_dict(model_instance, serialize=True):
     result = {}
 
     model_instances = [model_instance]
-    if model_instance._composed_schemas:
+    if '_composed_schemas' in model_instance and model_instance._composed_schemas:
         model_instances.extend(model_instance._composed_instances)
     seen_json_attribute_names = set()
     used_fallback_python_attribute_names = set()
     py_to_json_map = {}
     for model_instance in model_instances:
-        for attr, value in model_instance._data_store.items():
-            if serialize:
-                # we use get here because additional property key names do not
-                # exist in attribute_map
-                try:
-                    attr = model_instance.attribute_map[attr]
-                    py_to_json_map.update(model_instance.attribute_map)
-                    seen_json_attribute_names.add(attr)
-                except KeyError:
-                    used_fallback_python_attribute_names.add(attr)
-            if isinstance(value, list):
-               if not value:
-                   # empty list or None
-                   result[attr] = value
-               else:
-                   res = []
-                   for v in value:
-                       if isinstance(v, PRIMITIVE_TYPES) or v is None:
-                           res.append(v)
-                       elif isinstance(v, ModelSimple):
-                           res.append(v.value)
-                       else:
-                           res.append(model_to_dict(v, serialize=serialize))
-                   result[attr] = res
-            elif isinstance(value, dict):
-                result[attr] = dict(map(
-                    lambda item: (item[0],
-                                  model_to_dict(item[1], serialize=serialize))
-                    if hasattr(item[1], '_data_store') else item,
-                    value.items()
-                ))
-            elif isinstance(value, ModelSimple):
-                result[attr] = value.value
-            elif hasattr(value, '_data_store'):
-                result[attr] = model_to_dict(value, serialize=serialize)
-            else:
-                result[attr] = value
+        if '_data_store' in model_instance:
+            for attr, value in model_instance._data_store.items():
+                if serialize:
+                    # we use get here because additional property key names do not
+                    # exist in attribute_map
+                    try:
+                        attr = model_instance.attribute_map[attr]
+                        py_to_json_map.update(model_instance.attribute_map)
+                        seen_json_attribute_names.add(attr)
+                    except KeyError:
+                        used_fallback_python_attribute_names.add(attr)
+                if isinstance(value, list):
+                if not value:
+                    # empty list or None
+                    result[attr] = value
+                else:
+                    res = []
+                    for v in value:
+                        if isinstance(v, PRIMITIVE_TYPES) or v is None:
+                            res.append(v)
+                        elif isinstance(v, ModelSimple):
+                            res.append(v.value)
+                        else:
+                            res.append(model_to_dict(v, serialize=serialize))
+                    result[attr] = res
+                elif isinstance(value, dict):
+                    result[attr] = dict(map(
+                        lambda item: (item[0],
+                                    model_to_dict(item[1], serialize=serialize))
+                        if hasattr(item[1], '_data_store') else item,
+                        value.items()
+                    ))
+                elif isinstance(value, ModelSimple):
+                    result[attr] = value.value
+                elif hasattr(value, '_data_store'):
+                    result[attr] = model_to_dict(value, serialize=serialize)
+                else:
+                    result[attr] = value
     if serialize:
         for python_key in used_fallback_python_attribute_names:
             json_key = py_to_json_map.get(python_key)
