@@ -10,7 +10,7 @@
 
 from setuptools import setup, find_packages  # noqa: H301
 
-NAME = "openapi-client"
+NAME = "amparex"
 VERSION = "1.0.0"
 # To install the library, run the following
 #
@@ -29,7 +29,7 @@ setup(
     version=VERSION,
     description="AMPAREX Rest API Documentation",
     author="AMPAREX",
-    author_email="team@openapitools.org",
+    author_email="nobody@email.com",
     url="",
     keywords=["OpenAPI", "OpenAPI-Generator", "AMPAREX Rest API Documentation"],
     python_requires=">=3.6",
