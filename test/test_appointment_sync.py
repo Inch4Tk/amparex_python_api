@@ -11,14 +11,14 @@
 import sys
 import unittest
 
-import openapi_client
-from openapi_client.model.customer_reduced_with_email import CustomerReducedWithEmail
-from openapi_client.model.predefined_property_simple import PredefinedPropertySimple
-from openapi_client.model.resource_reduced import ResourceReduced
+import amparex
+from amparex.model.customer_reduced_with_email import CustomerReducedWithEmail
+from amparex.model.predefined_property_simple import PredefinedPropertySimple
+from amparex.model.resource_reduced import ResourceReduced
 globals()['CustomerReducedWithEmail'] = CustomerReducedWithEmail
 globals()['PredefinedPropertySimple'] = PredefinedPropertySimple
 globals()['ResourceReduced'] = ResourceReduced
-from openapi_client.model.appointment_sync import AppointmentSync
+from amparex.model.appointment_sync import AppointmentSync
 
 
 class TestAppointmentSync(unittest.TestCase):

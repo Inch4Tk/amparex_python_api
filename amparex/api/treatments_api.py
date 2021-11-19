@@ -11,8 +11,8 @@
 import re  # noqa: F401
 import sys  # noqa: F401
 
-from openapi_client.api_client import ApiClient, Endpoint as _Endpoint
-from openapi_client.model_utils import (  # noqa: F401
+from amparex.api_client import ApiClient, Endpoint as _Endpoint
+from amparex.model_utils import (  # noqa: F401
     check_allowed_values,
     check_validations,
     date,
@@ -21,16 +21,16 @@ from openapi_client.model_utils import (  # noqa: F401
     none_type,
     validate_and_convert_types
 )
-from openapi_client.model.doctor import Doctor
-from openapi_client.model.document_search_query import DocumentSearchQuery
-from openapi_client.model.list_result_wrapper_document import ListResultWrapperDocument
-from openapi_client.model.list_result_wrapper_invoice import ListResultWrapperInvoice
-from openapi_client.model.list_result_wrapper_treatment import ListResultWrapperTreatment
-from openapi_client.model.sales_treatment_to_create import SalesTreatmentToCreate
-from openapi_client.model.therapeutics_treatment import TherapeuticsTreatment
-from openapi_client.model.treatment import Treatment
-from openapi_client.model.treatment_creation_response import TreatmentCreationResponse
-from openapi_client.model.treatment_search_query import TreatmentSearchQuery
+from amparex.model.doctor import Doctor
+from amparex.model.document_search_query import DocumentSearchQuery
+from amparex.model.list_result_wrapper_document import ListResultWrapperDocument
+from amparex.model.list_result_wrapper_invoice import ListResultWrapperInvoice
+from amparex.model.list_result_wrapper_treatment import ListResultWrapperTreatment
+from amparex.model.sales_treatment_to_create import SalesTreatmentToCreate
+from amparex.model.therapeutics_treatment import TherapeuticsTreatment
+from amparex.model.treatment import Treatment
+from amparex.model.treatment_creation_response import TreatmentCreationResponse
+from amparex.model.treatment_search_query import TreatmentSearchQuery
 
 
 class TreatmentsApi(object):

@@ -11,7 +11,7 @@
 import re  # noqa: F401
 import sys  # noqa: F401
 
-from openapi_client.model_utils import (  # noqa: F401
+from amparex.model_utils import (  # noqa: F401
     ApiTypeError,
     ModelComposed,
     ModelNormal,
@@ -26,13 +26,13 @@ from openapi_client.model_utils import (  # noqa: F401
     validate_get_composed_info,
 )
 from ..model_utils import OpenApiModel
-from openapi_client.exceptions import ApiAttributeError
+from amparex.exceptions import ApiAttributeError
 
 
 def lazy_import():
-    from openapi_client.model.contact_lense_detail import ContactLenseDetail
-    from openapi_client.model.invoice_position_to_save import InvoicePositionToSave
-    from openapi_client.model.optionalboolean import Optionalboolean
+    from amparex.model.contact_lense_detail import ContactLenseDetail
+    from amparex.model.invoice_position_to_save import InvoicePositionToSave
+    from amparex.model.optionalboolean import Optionalboolean
     globals()['ContactLenseDetail'] = ContactLenseDetail
     globals()['InvoicePositionToSave'] = InvoicePositionToSave
     globals()['Optionalboolean'] = Optionalboolean

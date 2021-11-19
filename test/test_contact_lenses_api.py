@@ -10,8 +10,8 @@
 
 import unittest
 
-import openapi_client
-from openapi_client.api.contact_lenses_api import ContactLensesApi  # noqa: E501
+import amparex
+from amparex.api.contact_lenses_api import ContactLensesApi  # noqa: E501
 
 
 class TestContactLensesApi(unittest.TestCase):

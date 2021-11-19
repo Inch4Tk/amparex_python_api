@@ -11,14 +11,14 @@
 import sys
 import unittest
 
-import openapi_client
-from openapi_client.model.branch_reduced import BranchReduced
-from openapi_client.model.predefined_property_reduced import PredefinedPropertyReduced
-from openapi_client.model.staff_reduced import StaffReduced
+import amparex
+from amparex.model.branch_reduced import BranchReduced
+from amparex.model.predefined_property_reduced import PredefinedPropertyReduced
+from amparex.model.staff_reduced import StaffReduced
 globals()['BranchReduced'] = BranchReduced
 globals()['PredefinedPropertyReduced'] = PredefinedPropertyReduced
 globals()['StaffReduced'] = StaffReduced
-from openapi_client.model.comment import Comment
+from amparex.model.comment import Comment
 
 
 class TestComment(unittest.TestCase):

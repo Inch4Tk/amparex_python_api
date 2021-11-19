@@ -11,8 +11,8 @@
 import sys
 import unittest
 
-import openapi_client
-from openapi_client.model.optional_mapstringstring import OptionalMapstringstring
+import amparex
+from amparex.model.optional_mapstringstring import OptionalMapstringstring
 
 
 class TestOptionalMapstringstring(unittest.TestCase):

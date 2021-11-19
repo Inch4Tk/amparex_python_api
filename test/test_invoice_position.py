@@ -11,8 +11,8 @@
 import sys
 import unittest
 
-import openapi_client
-from openapi_client.model.invoice_position import InvoicePosition
+import amparex
+from amparex.model.invoice_position import InvoicePosition
 
 
 class TestInvoicePosition(unittest.TestCase):

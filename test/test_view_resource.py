@@ -11,10 +11,10 @@
 import sys
 import unittest
 
-import openapi_client
-from openapi_client.model.resource_reduced import ResourceReduced
+import amparex
+from amparex.model.resource_reduced import ResourceReduced
 globals()['ResourceReduced'] = ResourceReduced
-from openapi_client.model.view_resource import ViewResource
+from amparex.model.view_resource import ViewResource
 
 
 class TestViewResource(unittest.TestCase):

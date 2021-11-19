@@ -11,12 +11,12 @@
 import sys
 import unittest
 
-import openapi_client
-from openapi_client.model.color import Color
-from openapi_client.model.result_meta_data import ResultMetaData
+import amparex
+from amparex.model.color import Color
+from amparex.model.result_meta_data import ResultMetaData
 globals()['Color'] = Color
 globals()['ResultMetaData'] = ResultMetaData
-from openapi_client.model.list_result_wrapper_color import ListResultWrapperColor
+from amparex.model.list_result_wrapper_color import ListResultWrapperColor
 
 
 class TestListResultWrapperColor(unittest.TestCase):

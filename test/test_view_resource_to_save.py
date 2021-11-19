@@ -11,8 +11,8 @@
 import sys
 import unittest
 
-import openapi_client
-from openapi_client.model.view_resource_to_save import ViewResourceToSave
+import amparex
+from amparex.model.view_resource_to_save import ViewResourceToSave
 
 
 class TestViewResourceToSave(unittest.TestCase):

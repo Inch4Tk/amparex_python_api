@@ -11,8 +11,8 @@
 import re  # noqa: F401
 import sys  # noqa: F401
 
-from openapi_client.api_client import ApiClient, Endpoint as _Endpoint
-from openapi_client.model_utils import (  # noqa: F401
+from amparex.api_client import ApiClient, Endpoint as _Endpoint
+from amparex.model_utils import (  # noqa: F401
     check_allowed_values,
     check_validations,
     date,
@@ -21,8 +21,8 @@ from openapi_client.model_utils import (  # noqa: F401
     none_type,
     validate_and_convert_types
 )
-from openapi_client.model.security_token import SecurityToken
-from openapi_client.model.who_am_i import WhoAmI
+from amparex.model.security_token import SecurityToken
+from amparex.model.who_am_i import WhoAmI
 
 
 class LoginApi(object):

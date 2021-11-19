@@ -11,16 +11,16 @@
 import sys
 import unittest
 
-import openapi_client
-from openapi_client.model.customer_reduced import CustomerReduced
-from openapi_client.model.staff_reduced import StaffReduced
-from openapi_client.model.survey_answer import SurveyAnswer
-from openapi_client.model.translated_string import TranslatedString
+import amparex
+from amparex.model.customer_reduced import CustomerReduced
+from amparex.model.staff_reduced import StaffReduced
+from amparex.model.survey_answer import SurveyAnswer
+from amparex.model.translated_string import TranslatedString
 globals()['CustomerReduced'] = CustomerReduced
 globals()['StaffReduced'] = StaffReduced
 globals()['SurveyAnswer'] = SurveyAnswer
 globals()['TranslatedString'] = TranslatedString
-from openapi_client.model.survey import Survey
+from amparex.model.survey import Survey
 
 
 class TestSurvey(unittest.TestCase):

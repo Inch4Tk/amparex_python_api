@@ -11,10 +11,10 @@
 import sys
 import unittest
 
-import openapi_client
-from openapi_client.model.search_query_meta_data import SearchQueryMetaData
+import amparex
+from amparex.model.search_query_meta_data import SearchQueryMetaData
 globals()['SearchQueryMetaData'] = SearchQueryMetaData
-from openapi_client.model.view_search_query import ViewSearchQuery
+from amparex.model.view_search_query import ViewSearchQuery
 
 
 class TestViewSearchQuery(unittest.TestCase):

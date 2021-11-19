@@ -1,4 +1,4 @@
-# openapi_client.LensesApi
+# amparex.LensesApi
 
 All URIs are relative to *http://trial.amparex.net:8078/amparex/webaxapi*
 
@@ -21,13 +21,13 @@ Get one specific lenseoption by id
 
 ```python
 import time
-import openapi_client
-from openapi_client.api import lenses_api
-from openapi_client.model.lense_options import LenseOptions
+import amparex
+from amparex.api import lenses_api
+from amparex.model.lense_options import LenseOptions
 from pprint import pprint
 # Defining the host is optional and defaults to http://trial.amparex.net:8078/amparex/webaxapi
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = amparex.Configuration(
     host = "http://trial.amparex.net:8078/amparex/webaxapi"
 )
 
@@ -43,7 +43,7 @@ configuration.api_key['security_token'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['security_token'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with amparex.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = lenses_api.LensesApi(api_client)
     alias = "alias_example" # str | alias
@@ -54,7 +54,7 @@ with openapi_client.ApiClient(configuration) as api_client:
         # Get one specific lenseoption by id
         api_response = api_instance.get_lense_option_using_get(alias, id)
         pprint(api_response)
-    except openapi_client.ApiException as e:
+    except amparex.ApiException as e:
         print("Exception when calling LensesApi->get_lense_option_using_get: %s\n" % e)
 ```
 
@@ -103,13 +103,13 @@ Get one specific lensetype by id
 
 ```python
 import time
-import openapi_client
-from openapi_client.api import lenses_api
-from openapi_client.model.lense_type import LenseType
+import amparex
+from amparex.api import lenses_api
+from amparex.model.lense_type import LenseType
 from pprint import pprint
 # Defining the host is optional and defaults to http://trial.amparex.net:8078/amparex/webaxapi
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = amparex.Configuration(
     host = "http://trial.amparex.net:8078/amparex/webaxapi"
 )
 
@@ -125,7 +125,7 @@ configuration.api_key['security_token'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['security_token'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with amparex.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = lenses_api.LensesApi(api_client)
     alias = "alias_example" # str | alias
@@ -136,7 +136,7 @@ with openapi_client.ApiClient(configuration) as api_client:
         # Get one specific lensetype by id
         api_response = api_instance.get_lense_type_using_get(alias, id)
         pprint(api_response)
-    except openapi_client.ApiException as e:
+    except amparex.ApiException as e:
         print("Exception when calling LensesApi->get_lense_type_using_get: %s\n" % e)
 ```
 
@@ -187,14 +187,14 @@ Get a list of lenseoptions  by a search query, paging is used, specify limit and
 
 ```python
 import time
-import openapi_client
-from openapi_client.api import lenses_api
-from openapi_client.model.lense_option_search_query import LenseOptionSearchQuery
-from openapi_client.model.list_result_wrapper_lense_options import ListResultWrapperLenseOptions
+import amparex
+from amparex.api import lenses_api
+from amparex.model.lense_option_search_query import LenseOptionSearchQuery
+from amparex.model.list_result_wrapper_lense_options import ListResultWrapperLenseOptions
 from pprint import pprint
 # Defining the host is optional and defaults to http://trial.amparex.net:8078/amparex/webaxapi
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = amparex.Configuration(
     host = "http://trial.amparex.net:8078/amparex/webaxapi"
 )
 
@@ -210,7 +210,7 @@ configuration.api_key['security_token'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['security_token'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with amparex.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = lenses_api.LensesApi(api_client)
     alias = "alias_example" # str | alias
@@ -230,7 +230,7 @@ with openapi_client.ApiClient(configuration) as api_client:
         # Get a list of lenseoptions
         api_response = api_instance.search_lense_options_using_post(alias, lenseoption_search_query)
         pprint(api_response)
-    except openapi_client.ApiException as e:
+    except amparex.ApiException as e:
         print("Exception when calling LensesApi->search_lense_options_using_post: %s\n" % e)
 ```
 
@@ -282,14 +282,14 @@ Get a list of lensetypes  by a search query, paging is used, specify limit and p
 
 ```python
 import time
-import openapi_client
-from openapi_client.api import lenses_api
-from openapi_client.model.list_result_wrapper_lense_type import ListResultWrapperLenseType
-from openapi_client.model.lense_type_search_query import LenseTypeSearchQuery
+import amparex
+from amparex.api import lenses_api
+from amparex.model.list_result_wrapper_lense_type import ListResultWrapperLenseType
+from amparex.model.lense_type_search_query import LenseTypeSearchQuery
 from pprint import pprint
 # Defining the host is optional and defaults to http://trial.amparex.net:8078/amparex/webaxapi
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = amparex.Configuration(
     host = "http://trial.amparex.net:8078/amparex/webaxapi"
 )
 
@@ -305,7 +305,7 @@ configuration.api_key['security_token'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['security_token'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with amparex.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = lenses_api.LensesApi(api_client)
     alias = "alias_example" # str | alias
@@ -325,7 +325,7 @@ with openapi_client.ApiClient(configuration) as api_client:
         # Get a list of lensetypes
         api_response = api_instance.search_lense_types_using_post(alias, lensetype_search_query)
         pprint(api_response)
-    except openapi_client.ApiException as e:
+    except amparex.ApiException as e:
         print("Exception when calling LensesApi->search_lense_types_using_post: %s\n" % e)
 ```
 

@@ -11,7 +11,7 @@
 import re  # noqa: F401
 import sys  # noqa: F401
 
-from openapi_client.model_utils import (  # noqa: F401
+from amparex.model_utils import (  # noqa: F401
     ApiTypeError,
     ModelComposed,
     ModelNormal,
@@ -26,13 +26,13 @@ from openapi_client.model_utils import (  # noqa: F401
     validate_get_composed_info,
 )
 from ..model_utils import OpenApiModel
-from openapi_client.exceptions import ApiAttributeError
+from amparex.exceptions import ApiAttributeError
 
 
 def lazy_import():
-    from openapi_client.model.predefined_property_simple import PredefinedPropertySimple
-    from openapi_client.model.staff_reduced import StaffReduced
-    from openapi_client.model.translated_string import TranslatedString
+    from amparex.model.predefined_property_simple import PredefinedPropertySimple
+    from amparex.model.staff_reduced import StaffReduced
+    from amparex.model.translated_string import TranslatedString
     globals()['PredefinedPropertySimple'] = PredefinedPropertySimple
     globals()['StaffReduced'] = StaffReduced
     globals()['TranslatedString'] = TranslatedString

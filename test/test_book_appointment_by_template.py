@@ -11,8 +11,8 @@
 import sys
 import unittest
 
-import openapi_client
-from openapi_client.model.book_appointment_by_template import BookAppointmentByTemplate
+import amparex
+from amparex.model.book_appointment_by_template import BookAppointmentByTemplate
 
 
 class TestBookAppointmentByTemplate(unittest.TestCase):

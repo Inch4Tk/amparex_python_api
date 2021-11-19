@@ -1,4 +1,4 @@
-# openapi_client.CompaniesApi
+# amparex.CompaniesApi
 
 All URIs are relative to *http://trial.amparex.net:8078/amparex/webaxapi*
 
@@ -19,13 +19,13 @@ Get one specific company by id
 
 ```python
 import time
-import openapi_client
-from openapi_client.api import companies_api
-from openapi_client.model.company import Company
+import amparex
+from amparex.api import companies_api
+from amparex.model.company import Company
 from pprint import pprint
 # Defining the host is optional and defaults to http://trial.amparex.net:8078/amparex/webaxapi
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = amparex.Configuration(
     host = "http://trial.amparex.net:8078/amparex/webaxapi"
 )
 
@@ -41,7 +41,7 @@ configuration.api_key['security_token'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['security_token'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with amparex.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = companies_api.CompaniesApi(api_client)
     alias = "alias_example" # str | alias
@@ -52,7 +52,7 @@ with openapi_client.ApiClient(configuration) as api_client:
         # Get one specific company by id
         api_response = api_instance.get_company_using_get(alias, id)
         pprint(api_response)
-    except openapi_client.ApiException as e:
+    except amparex.ApiException as e:
         print("Exception when calling CompaniesApi->get_company_using_get: %s\n" % e)
 ```
 
@@ -103,14 +103,14 @@ Get a list of companies by a search query, paging is used, specify limit and pag
 
 ```python
 import time
-import openapi_client
-from openapi_client.api import companies_api
-from openapi_client.model.company_search_query import CompanySearchQuery
-from openapi_client.model.list_result_wrapper_company import ListResultWrapperCompany
+import amparex
+from amparex.api import companies_api
+from amparex.model.company_search_query import CompanySearchQuery
+from amparex.model.list_result_wrapper_company import ListResultWrapperCompany
 from pprint import pprint
 # Defining the host is optional and defaults to http://trial.amparex.net:8078/amparex/webaxapi
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = amparex.Configuration(
     host = "http://trial.amparex.net:8078/amparex/webaxapi"
 )
 
@@ -126,7 +126,7 @@ configuration.api_key['security_token'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['security_token'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with amparex.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = companies_api.CompaniesApi(api_client)
     alias = "alias_example" # str | alias
@@ -147,7 +147,7 @@ with openapi_client.ApiClient(configuration) as api_client:
         # Get a list of companies
         api_response = api_instance.search_companies_using_post(alias, search_query)
         pprint(api_response)
-    except openapi_client.ApiException as e:
+    except amparex.ApiException as e:
         print("Exception when calling CompaniesApi->search_companies_using_post: %s\n" % e)
 ```
 

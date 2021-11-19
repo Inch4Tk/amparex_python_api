@@ -11,8 +11,8 @@
 import sys
 import unittest
 
-import openapi_client
-from openapi_client.model.staff_reduced import StaffReduced
+import amparex
+from amparex.model.staff_reduced import StaffReduced
 
 
 class TestStaffReduced(unittest.TestCase):

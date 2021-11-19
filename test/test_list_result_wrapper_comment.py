@@ -11,12 +11,12 @@
 import sys
 import unittest
 
-import openapi_client
-from openapi_client.model.comment import Comment
-from openapi_client.model.result_meta_data import ResultMetaData
+import amparex
+from amparex.model.comment import Comment
+from amparex.model.result_meta_data import ResultMetaData
 globals()['Comment'] = Comment
 globals()['ResultMetaData'] = ResultMetaData
-from openapi_client.model.list_result_wrapper_comment import ListResultWrapperComment
+from amparex.model.list_result_wrapper_comment import ListResultWrapperComment
 
 
 class TestListResultWrapperComment(unittest.TestCase):

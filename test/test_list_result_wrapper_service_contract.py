@@ -11,12 +11,12 @@
 import sys
 import unittest
 
-import openapi_client
-from openapi_client.model.result_meta_data import ResultMetaData
-from openapi_client.model.service_contract import ServiceContract
+import amparex
+from amparex.model.result_meta_data import ResultMetaData
+from amparex.model.service_contract import ServiceContract
 globals()['ResultMetaData'] = ResultMetaData
 globals()['ServiceContract'] = ServiceContract
-from openapi_client.model.list_result_wrapper_service_contract import ListResultWrapperServiceContract
+from amparex.model.list_result_wrapper_service_contract import ListResultWrapperServiceContract
 
 
 class TestListResultWrapperServiceContract(unittest.TestCase):

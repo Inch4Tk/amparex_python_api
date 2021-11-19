@@ -11,14 +11,14 @@
 import sys
 import unittest
 
-import openapi_client
-from openapi_client.model.address_to_save import AddressToSave
-from openapi_client.model.customer_to_save import CustomerToSave
-from openapi_client.model.invoice_position_to_save import InvoicePositionToSave
+import amparex
+from amparex.model.address_to_save import AddressToSave
+from amparex.model.customer_to_save import CustomerToSave
+from amparex.model.invoice_position_to_save import InvoicePositionToSave
 globals()['AddressToSave'] = AddressToSave
 globals()['CustomerToSave'] = CustomerToSave
 globals()['InvoicePositionToSave'] = InvoicePositionToSave
-from openapi_client.model.sales_treatment_to_create import SalesTreatmentToCreate
+from amparex.model.sales_treatment_to_create import SalesTreatmentToCreate
 
 
 class TestSalesTreatmentToCreate(unittest.TestCase):

@@ -11,10 +11,10 @@
 import sys
 import unittest
 
-import openapi_client
-from openapi_client.model.branch_reduced import BranchReduced
+import amparex
+from amparex.model.branch_reduced import BranchReduced
 globals()['BranchReduced'] = BranchReduced
-from openapi_client.model.api_cash_desk_balance import ApiCashDeskBalance
+from amparex.model.api_cash_desk_balance import ApiCashDeskBalance
 
 
 class TestApiCashDeskBalance(unittest.TestCase):

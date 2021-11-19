@@ -10,8 +10,8 @@
 
 import unittest
 
-import openapi_client
-from openapi_client.api.resources_api import ResourcesApi  # noqa: E501
+import amparex
+from amparex.api.resources_api import ResourcesApi  # noqa: E501
 
 
 class TestResourcesApi(unittest.TestCase):

@@ -11,16 +11,16 @@
 import sys
 import unittest
 
-import openapi_client
-from openapi_client.model.predefined_property_reduced import PredefinedPropertyReduced
-from openapi_client.model.survey_template_category import SurveyTemplateCategory
-from openapi_client.model.survey_template_group import SurveyTemplateGroup
-from openapi_client.model.translated_string import TranslatedString
+import amparex
+from amparex.model.predefined_property_reduced import PredefinedPropertyReduced
+from amparex.model.survey_template_category import SurveyTemplateCategory
+from amparex.model.survey_template_group import SurveyTemplateGroup
+from amparex.model.translated_string import TranslatedString
 globals()['PredefinedPropertyReduced'] = PredefinedPropertyReduced
 globals()['SurveyTemplateCategory'] = SurveyTemplateCategory
 globals()['SurveyTemplateGroup'] = SurveyTemplateGroup
 globals()['TranslatedString'] = TranslatedString
-from openapi_client.model.survey_template import SurveyTemplate
+from amparex.model.survey_template import SurveyTemplate
 
 
 class TestSurveyTemplate(unittest.TestCase):

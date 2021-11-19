@@ -1,4 +1,4 @@
-# openapi_client.VersionsApi
+# amparex.VersionsApi
 
 All URIs are relative to *http://trial.amparex.net:8078/amparex/webaxapi*
 
@@ -28,14 +28,14 @@ Create a version
 
 ```python
 import time
-import openapi_client
-from openapi_client.api import versions_api
-from openapi_client.model.version_to_save import VersionToSave
-from openapi_client.model.creation_response import CreationResponse
+import amparex
+from amparex.api import versions_api
+from amparex.model.version_to_save import VersionToSave
+from amparex.model.creation_response import CreationResponse
 from pprint import pprint
 # Defining the host is optional and defaults to http://trial.amparex.net:8078/amparex/webaxapi
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = amparex.Configuration(
     host = "http://trial.amparex.net:8078/amparex/webaxapi"
 )
 
@@ -51,7 +51,7 @@ configuration.api_key['security_token'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['security_token'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with amparex.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = versions_api.VersionsApi(api_client)
     alias = "alias_example" # str | alias
@@ -68,7 +68,7 @@ with openapi_client.ApiClient(configuration) as api_client:
         # Create a version
         api_response = api_instance.create_version_using_post(alias, version)
         pprint(api_response)
-    except openapi_client.ApiException as e:
+    except amparex.ApiException as e:
         print("Exception when calling VersionsApi->create_version_using_post: %s\n" % e)
 ```
 
@@ -118,13 +118,13 @@ Get latest LTS-Version
 
 ```python
 import time
-import openapi_client
-from openapi_client.api import versions_api
-from openapi_client.model.version import Version
+import amparex
+from amparex.api import versions_api
+from amparex.model.version import Version
 from pprint import pprint
 # Defining the host is optional and defaults to http://trial.amparex.net:8078/amparex/webaxapi
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = amparex.Configuration(
     host = "http://trial.amparex.net:8078/amparex/webaxapi"
 )
 
@@ -140,7 +140,7 @@ configuration.api_key['security_token'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['security_token'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with amparex.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = versions_api.VersionsApi(api_client)
     alias = "alias_example" # str | alias
@@ -150,7 +150,7 @@ with openapi_client.ApiClient(configuration) as api_client:
         # Get latest LTS-Version
         api_response = api_instance.get_latest_lts_version_using_get(alias)
         pprint(api_response)
-    except openapi_client.ApiException as e:
+    except amparex.ApiException as e:
         print("Exception when calling VersionsApi->get_latest_lts_version_using_get: %s\n" % e)
 ```
 
@@ -198,13 +198,13 @@ Get latest stable LTS-Version
 
 ```python
 import time
-import openapi_client
-from openapi_client.api import versions_api
-from openapi_client.model.version import Version
+import amparex
+from amparex.api import versions_api
+from amparex.model.version import Version
 from pprint import pprint
 # Defining the host is optional and defaults to http://trial.amparex.net:8078/amparex/webaxapi
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = amparex.Configuration(
     host = "http://trial.amparex.net:8078/amparex/webaxapi"
 )
 
@@ -220,7 +220,7 @@ configuration.api_key['security_token'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['security_token'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with amparex.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = versions_api.VersionsApi(api_client)
     alias = "alias_example" # str | alias
@@ -230,7 +230,7 @@ with openapi_client.ApiClient(configuration) as api_client:
         # Get latest stable LTS-Version
         api_response = api_instance.get_latest_stable_lts_version_using_get(alias)
         pprint(api_response)
-    except openapi_client.ApiException as e:
+    except amparex.ApiException as e:
         print("Exception when calling VersionsApi->get_latest_stable_lts_version_using_get: %s\n" % e)
 ```
 
@@ -278,13 +278,13 @@ Get latest stable STS-Version
 
 ```python
 import time
-import openapi_client
-from openapi_client.api import versions_api
-from openapi_client.model.version import Version
+import amparex
+from amparex.api import versions_api
+from amparex.model.version import Version
 from pprint import pprint
 # Defining the host is optional and defaults to http://trial.amparex.net:8078/amparex/webaxapi
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = amparex.Configuration(
     host = "http://trial.amparex.net:8078/amparex/webaxapi"
 )
 
@@ -300,7 +300,7 @@ configuration.api_key['security_token'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['security_token'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with amparex.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = versions_api.VersionsApi(api_client)
     alias = "alias_example" # str | alias
@@ -310,7 +310,7 @@ with openapi_client.ApiClient(configuration) as api_client:
         # Get latest stable STS-Version
         api_response = api_instance.get_latest_stable_sts_version_using_get(alias)
         pprint(api_response)
-    except openapi_client.ApiException as e:
+    except amparex.ApiException as e:
         print("Exception when calling VersionsApi->get_latest_stable_sts_version_using_get: %s\n" % e)
 ```
 
@@ -360,13 +360,13 @@ Main version may be either specified by name or ID
 
 ```python
 import time
-import openapi_client
-from openapi_client.api import versions_api
-from openapi_client.model.version import Version
+import amparex
+from amparex.api import versions_api
+from amparex.model.version import Version
 from pprint import pprint
 # Defining the host is optional and defaults to http://trial.amparex.net:8078/amparex/webaxapi
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = amparex.Configuration(
     host = "http://trial.amparex.net:8078/amparex/webaxapi"
 )
 
@@ -382,7 +382,7 @@ configuration.api_key['security_token'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['security_token'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with amparex.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = versions_api.VersionsApi(api_client)
     alias = "alias_example" # str | alias
@@ -393,7 +393,7 @@ with openapi_client.ApiClient(configuration) as api_client:
         # Get latest stable version for given main version
         api_response = api_instance.get_latest_stable_version_using_get(alias, main_version)
         pprint(api_response)
-    except openapi_client.ApiException as e:
+    except amparex.ApiException as e:
         print("Exception when calling VersionsApi->get_latest_stable_version_using_get: %s\n" % e)
 ```
 
@@ -442,13 +442,13 @@ Get latest STS-Version
 
 ```python
 import time
-import openapi_client
-from openapi_client.api import versions_api
-from openapi_client.model.version import Version
+import amparex
+from amparex.api import versions_api
+from amparex.model.version import Version
 from pprint import pprint
 # Defining the host is optional and defaults to http://trial.amparex.net:8078/amparex/webaxapi
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = amparex.Configuration(
     host = "http://trial.amparex.net:8078/amparex/webaxapi"
 )
 
@@ -464,7 +464,7 @@ configuration.api_key['security_token'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['security_token'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with amparex.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = versions_api.VersionsApi(api_client)
     alias = "alias_example" # str | alias
@@ -474,7 +474,7 @@ with openapi_client.ApiClient(configuration) as api_client:
         # Get latest STS-Version
         api_response = api_instance.get_latest_sts_version_using_get(alias)
         pprint(api_response)
-    except openapi_client.ApiException as e:
+    except amparex.ApiException as e:
         print("Exception when calling VersionsApi->get_latest_sts_version_using_get: %s\n" % e)
 ```
 
@@ -522,13 +522,13 @@ Get latest version for given main version
 
 ```python
 import time
-import openapi_client
-from openapi_client.api import versions_api
-from openapi_client.model.version import Version
+import amparex
+from amparex.api import versions_api
+from amparex.model.version import Version
 from pprint import pprint
 # Defining the host is optional and defaults to http://trial.amparex.net:8078/amparex/webaxapi
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = amparex.Configuration(
     host = "http://trial.amparex.net:8078/amparex/webaxapi"
 )
 
@@ -544,7 +544,7 @@ configuration.api_key['security_token'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['security_token'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with amparex.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = versions_api.VersionsApi(api_client)
     alias = "alias_example" # str | alias
@@ -555,7 +555,7 @@ with openapi_client.ApiClient(configuration) as api_client:
         # Get latest version for given main version
         api_response = api_instance.get_latest_version_using_get(alias, main_version)
         pprint(api_response)
-    except openapi_client.ApiException as e:
+    except amparex.ApiException as e:
         print("Exception when calling VersionsApi->get_latest_version_using_get: %s\n" % e)
 ```
 
@@ -604,12 +604,12 @@ Get possible fields for orderby of version fields
 
 ```python
 import time
-import openapi_client
-from openapi_client.api import versions_api
+import amparex
+from amparex.api import versions_api
 from pprint import pprint
 # Defining the host is optional and defaults to http://trial.amparex.net:8078/amparex/webaxapi
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = amparex.Configuration(
     host = "http://trial.amparex.net:8078/amparex/webaxapi"
 )
 
@@ -625,7 +625,7 @@ configuration.api_key['security_token'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['security_token'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with amparex.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = versions_api.VersionsApi(api_client)
     alias = "alias_example" # str | alias
@@ -635,7 +635,7 @@ with openapi_client.ApiClient(configuration) as api_client:
         # Get possible fields for orderby of version fields
         api_response = api_instance.get_version_order_by_fields_using_get(alias)
         pprint(api_response)
-    except openapi_client.ApiException as e:
+    except amparex.ApiException as e:
         print("Exception when calling VersionsApi->get_version_order_by_fields_using_get: %s\n" % e)
 ```
 
@@ -683,13 +683,13 @@ Get one specific version by id
 
 ```python
 import time
-import openapi_client
-from openapi_client.api import versions_api
-from openapi_client.model.version import Version
+import amparex
+from amparex.api import versions_api
+from amparex.model.version import Version
 from pprint import pprint
 # Defining the host is optional and defaults to http://trial.amparex.net:8078/amparex/webaxapi
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = amparex.Configuration(
     host = "http://trial.amparex.net:8078/amparex/webaxapi"
 )
 
@@ -705,7 +705,7 @@ configuration.api_key['security_token'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['security_token'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with amparex.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = versions_api.VersionsApi(api_client)
     alias = "alias_example" # str | alias
@@ -716,7 +716,7 @@ with openapi_client.ApiClient(configuration) as api_client:
         # Get one specific version by id
         api_response = api_instance.get_version_using_get(alias, id)
         pprint(api_response)
-    except openapi_client.ApiException as e:
+    except amparex.ApiException as e:
         print("Exception when calling VersionsApi->get_version_using_get: %s\n" % e)
 ```
 
@@ -767,14 +767,14 @@ Get a list of versions  by a search query, paging is used, specify limit and pag
 
 ```python
 import time
-import openapi_client
-from openapi_client.api import versions_api
-from openapi_client.model.list_result_wrapper_version import ListResultWrapperVersion
-from openapi_client.model.version_search_query import VersionSearchQuery
+import amparex
+from amparex.api import versions_api
+from amparex.model.list_result_wrapper_version import ListResultWrapperVersion
+from amparex.model.version_search_query import VersionSearchQuery
 from pprint import pprint
 # Defining the host is optional and defaults to http://trial.amparex.net:8078/amparex/webaxapi
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = amparex.Configuration(
     host = "http://trial.amparex.net:8078/amparex/webaxapi"
 )
 
@@ -790,7 +790,7 @@ configuration.api_key['security_token'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['security_token'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with amparex.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = versions_api.VersionsApi(api_client)
     alias = "alias_example" # str | alias
@@ -818,7 +818,7 @@ with openapi_client.ApiClient(configuration) as api_client:
         # Get a list of versions
         api_response = api_instance.search_versions_using_post(alias, version_search_query)
         pprint(api_response)
-    except openapi_client.ApiException as e:
+    except amparex.ApiException as e:
         print("Exception when calling VersionsApi->search_versions_using_post: %s\n" % e)
 ```
 
@@ -868,13 +868,13 @@ Update a version
 
 ```python
 import time
-import openapi_client
-from openapi_client.api import versions_api
-from openapi_client.model.version_to_save import VersionToSave
+import amparex
+from amparex.api import versions_api
+from amparex.model.version_to_save import VersionToSave
 from pprint import pprint
 # Defining the host is optional and defaults to http://trial.amparex.net:8078/amparex/webaxapi
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = amparex.Configuration(
     host = "http://trial.amparex.net:8078/amparex/webaxapi"
 )
 
@@ -890,7 +890,7 @@ configuration.api_key['security_token'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['security_token'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with amparex.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = versions_api.VersionsApi(api_client)
     alias = "alias_example" # str | alias
@@ -907,7 +907,7 @@ with openapi_client.ApiClient(configuration) as api_client:
     try:
         # Update a version
         api_instance.update_version_using_patch(alias, id, version)
-    except openapi_client.ApiException as e:
+    except amparex.ApiException as e:
         print("Exception when calling VersionsApi->update_version_using_patch: %s\n" % e)
 ```
 

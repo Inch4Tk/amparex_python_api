@@ -11,8 +11,8 @@
 import re  # noqa: F401
 import sys  # noqa: F401
 
-from openapi_client.api_client import ApiClient, Endpoint as _Endpoint
-from openapi_client.model_utils import (  # noqa: F401
+from amparex.api_client import ApiClient, Endpoint as _Endpoint
+from amparex.model_utils import (  # noqa: F401
     check_allowed_values,
     check_validations,
     date,
@@ -21,12 +21,12 @@ from openapi_client.model_utils import (  # noqa: F401
     none_type,
     validate_and_convert_types
 )
-from openapi_client.model.article_detail import ArticleDetail
-from openapi_client.model.article_search_query import ArticleSearchQuery
-from openapi_client.model.list_result_wrapper_article_detail import ListResultWrapperArticleDetail
-from openapi_client.model.list_result_wrapper_article_overview import ListResultWrapperArticleOverview
-from openapi_client.model.list_result_wrapper_sales_price import ListResultWrapperSalesPrice
-from openapi_client.model.sales_price_search_query import SalesPriceSearchQuery
+from amparex.model.article_detail import ArticleDetail
+from amparex.model.article_search_query import ArticleSearchQuery
+from amparex.model.list_result_wrapper_article_detail import ListResultWrapperArticleDetail
+from amparex.model.list_result_wrapper_article_overview import ListResultWrapperArticleOverview
+from amparex.model.list_result_wrapper_sales_price import ListResultWrapperSalesPrice
+from amparex.model.sales_price_search_query import SalesPriceSearchQuery
 
 
 class ArticlesApi(object):

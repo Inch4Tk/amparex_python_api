@@ -11,8 +11,8 @@
 import sys
 import unittest
 
-import openapi_client
-from openapi_client.model.server import Server
+import amparex
+from amparex.model.server import Server
 
 
 class TestServer(unittest.TestCase):

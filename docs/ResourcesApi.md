@@ -1,4 +1,4 @@
-# openapi_client.ResourcesApi
+# amparex.ResourcesApi
 
 All URIs are relative to *http://trial.amparex.net:8078/amparex/webaxapi*
 
@@ -22,14 +22,14 @@ Create a new resource
 
 ```python
 import time
-import openapi_client
-from openapi_client.api import resources_api
-from openapi_client.model.creation_response import CreationResponse
-from openapi_client.model.resource_to_save import ResourceToSave
+import amparex
+from amparex.api import resources_api
+from amparex.model.creation_response import CreationResponse
+from amparex.model.resource_to_save import ResourceToSave
 from pprint import pprint
 # Defining the host is optional and defaults to http://trial.amparex.net:8078/amparex/webaxapi
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = amparex.Configuration(
     host = "http://trial.amparex.net:8078/amparex/webaxapi"
 )
 
@@ -45,7 +45,7 @@ configuration.api_key['security_token'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['security_token'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with amparex.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = resources_api.ResourcesApi(api_client)
     alias = "alias_example" # str | alias
@@ -69,7 +69,7 @@ with openapi_client.ApiClient(configuration) as api_client:
         # Create a new resource
         api_response = api_instance.create_resource_using_post(alias, to_save)
         pprint(api_response)
-    except openapi_client.ApiException as e:
+    except amparex.ApiException as e:
         print("Exception when calling ResourcesApi->create_resource_using_post: %s\n" % e)
 ```
 
@@ -119,12 +119,12 @@ Delete a resource with given id, only resources which have no future appointment
 
 ```python
 import time
-import openapi_client
-from openapi_client.api import resources_api
+import amparex
+from amparex.api import resources_api
 from pprint import pprint
 # Defining the host is optional and defaults to http://trial.amparex.net:8078/amparex/webaxapi
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = amparex.Configuration(
     host = "http://trial.amparex.net:8078/amparex/webaxapi"
 )
 
@@ -140,7 +140,7 @@ configuration.api_key['security_token'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['security_token'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with amparex.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = resources_api.ResourcesApi(api_client)
     alias = "alias_example" # str | alias
@@ -150,7 +150,7 @@ with openapi_client.ApiClient(configuration) as api_client:
     try:
         # Delete a resource with given id, only resources which have no future appointments could be deleted
         api_instance.delete_resource_using_delete(alias, id)
-    except openapi_client.ApiException as e:
+    except amparex.ApiException as e:
         print("Exception when calling ResourcesApi->delete_resource_using_delete: %s\n" % e)
 ```
 
@@ -199,13 +199,13 @@ Get one specific resource by id
 
 ```python
 import time
-import openapi_client
-from openapi_client.api import resources_api
-from openapi_client.model.resource import Resource
+import amparex
+from amparex.api import resources_api
+from amparex.model.resource import Resource
 from pprint import pprint
 # Defining the host is optional and defaults to http://trial.amparex.net:8078/amparex/webaxapi
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = amparex.Configuration(
     host = "http://trial.amparex.net:8078/amparex/webaxapi"
 )
 
@@ -221,7 +221,7 @@ configuration.api_key['security_token'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['security_token'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with amparex.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = resources_api.ResourcesApi(api_client)
     alias = "alias_example" # str | alias
@@ -232,7 +232,7 @@ with openapi_client.ApiClient(configuration) as api_client:
         # Get one specific resource by id
         api_response = api_instance.get_resource_using_get(alias, id)
         pprint(api_response)
-    except openapi_client.ApiException as e:
+    except amparex.ApiException as e:
         print("Exception when calling ResourcesApi->get_resource_using_get: %s\n" % e)
 ```
 
@@ -283,14 +283,14 @@ Get a list of resources  by a search query, paging is used, specify limit and pa
 
 ```python
 import time
-import openapi_client
-from openapi_client.api import resources_api
-from openapi_client.model.list_result_wrapper_resource import ListResultWrapperResource
-from openapi_client.model.resource_search_query import ResourceSearchQuery
+import amparex
+from amparex.api import resources_api
+from amparex.model.list_result_wrapper_resource import ListResultWrapperResource
+from amparex.model.resource_search_query import ResourceSearchQuery
 from pprint import pprint
 # Defining the host is optional and defaults to http://trial.amparex.net:8078/amparex/webaxapi
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = amparex.Configuration(
     host = "http://trial.amparex.net:8078/amparex/webaxapi"
 )
 
@@ -306,7 +306,7 @@ configuration.api_key['security_token'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['security_token'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with amparex.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = resources_api.ResourcesApi(api_client)
     alias = "alias_example" # str | alias
@@ -329,7 +329,7 @@ with openapi_client.ApiClient(configuration) as api_client:
         # Get a list of resources
         api_response = api_instance.search_resources_using_post(alias, resource_search_query)
         pprint(api_response)
-    except openapi_client.ApiException as e:
+    except amparex.ApiException as e:
         print("Exception when calling ResourcesApi->search_resources_using_post: %s\n" % e)
 ```
 
@@ -379,13 +379,13 @@ Update resource with given id
 
 ```python
 import time
-import openapi_client
-from openapi_client.api import resources_api
-from openapi_client.model.resource_to_save import ResourceToSave
+import amparex
+from amparex.api import resources_api
+from amparex.model.resource_to_save import ResourceToSave
 from pprint import pprint
 # Defining the host is optional and defaults to http://trial.amparex.net:8078/amparex/webaxapi
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = amparex.Configuration(
     host = "http://trial.amparex.net:8078/amparex/webaxapi"
 )
 
@@ -401,7 +401,7 @@ configuration.api_key['security_token'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['security_token'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with amparex.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = resources_api.ResourcesApi(api_client)
     alias = "alias_example" # str | alias
@@ -425,7 +425,7 @@ with openapi_client.ApiClient(configuration) as api_client:
     try:
         # Update resource with given id
         api_instance.update_resource_using_patch(alias, id, to_update)
-    except openapi_client.ApiException as e:
+    except amparex.ApiException as e:
         print("Exception when calling ResourcesApi->update_resource_using_patch: %s\n" % e)
 ```
 

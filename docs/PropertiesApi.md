@@ -1,4 +1,4 @@
-# openapi_client.PropertiesApi
+# amparex.PropertiesApi
 
 All URIs are relative to *http://trial.amparex.net:8078/amparex/webaxapi*
 
@@ -23,12 +23,12 @@ Get possible values for category of propertytype
 
 ```python
 import time
-import openapi_client
-from openapi_client.api import properties_api
+import amparex
+from amparex.api import properties_api
 from pprint import pprint
 # Defining the host is optional and defaults to http://trial.amparex.net:8078/amparex/webaxapi
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = amparex.Configuration(
     host = "http://trial.amparex.net:8078/amparex/webaxapi"
 )
 
@@ -44,7 +44,7 @@ configuration.api_key['security_token'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['security_token'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with amparex.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = properties_api.PropertiesApi(api_client)
     alias = "alias_example" # str | alias
@@ -54,7 +54,7 @@ with openapi_client.ApiClient(configuration) as api_client:
         # Get possible values for category of propertytype
         api_response = api_instance.find_all_categories_using_get(alias)
         pprint(api_response)
-    except openapi_client.ApiException as e:
+    except amparex.ApiException as e:
         print("Exception when calling PropertiesApi->find_all_categories_using_get: %s\n" % e)
 ```
 
@@ -102,13 +102,13 @@ Get one predefinedProperty by id
 
 ```python
 import time
-import openapi_client
-from openapi_client.api import properties_api
-from openapi_client.model.predefined_property import PredefinedProperty
+import amparex
+from amparex.api import properties_api
+from amparex.model.predefined_property import PredefinedProperty
 from pprint import pprint
 # Defining the host is optional and defaults to http://trial.amparex.net:8078/amparex/webaxapi
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = amparex.Configuration(
     host = "http://trial.amparex.net:8078/amparex/webaxapi"
 )
 
@@ -124,7 +124,7 @@ configuration.api_key['security_token'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['security_token'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with amparex.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = properties_api.PropertiesApi(api_client)
     alias = "alias_example" # str | alias
@@ -135,7 +135,7 @@ with openapi_client.ApiClient(configuration) as api_client:
         # Get one predefinedProperty by id
         api_response = api_instance.get_predefined_property_using_get(alias, id)
         pprint(api_response)
-    except openapi_client.ApiException as e:
+    except amparex.ApiException as e:
         print("Exception when calling PropertiesApi->get_predefined_property_using_get: %s\n" % e)
 ```
 
@@ -184,13 +184,13 @@ Get one propertytype by id
 
 ```python
 import time
-import openapi_client
-from openapi_client.api import properties_api
-from openapi_client.model.property_type import PropertyType
+import amparex
+from amparex.api import properties_api
+from amparex.model.property_type import PropertyType
 from pprint import pprint
 # Defining the host is optional and defaults to http://trial.amparex.net:8078/amparex/webaxapi
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = amparex.Configuration(
     host = "http://trial.amparex.net:8078/amparex/webaxapi"
 )
 
@@ -206,7 +206,7 @@ configuration.api_key['security_token'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['security_token'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with amparex.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = properties_api.PropertiesApi(api_client)
     alias = "alias_example" # str | alias
@@ -217,7 +217,7 @@ with openapi_client.ApiClient(configuration) as api_client:
         # Get one propertytype by id
         api_response = api_instance.get_property_type_using_get(alias, id)
         pprint(api_response)
-    except openapi_client.ApiException as e:
+    except amparex.ApiException as e:
         print("Exception when calling PropertiesApi->get_property_type_using_get: %s\n" % e)
 ```
 
@@ -266,14 +266,14 @@ Get possible values for article type
 
 ```python
 import time
-import openapi_client
-from openapi_client.api import properties_api
-from openapi_client.model.article_type_search_query import ArticleTypeSearchQuery
-from openapi_client.model.article_type import ArticleType
+import amparex
+from amparex.api import properties_api
+from amparex.model.article_type_search_query import ArticleTypeSearchQuery
+from amparex.model.article_type import ArticleType
 from pprint import pprint
 # Defining the host is optional and defaults to http://trial.amparex.net:8078/amparex/webaxapi
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = amparex.Configuration(
     host = "http://trial.amparex.net:8078/amparex/webaxapi"
 )
 
@@ -289,7 +289,7 @@ configuration.api_key['security_token'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['security_token'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with amparex.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = properties_api.PropertiesApi(api_client)
     alias = "alias_example" # str | alias
@@ -302,7 +302,7 @@ with openapi_client.ApiClient(configuration) as api_client:
         # Get possible values for article type
         api_response = api_instance.search_article_types_using_post(alias, search_query)
         pprint(api_response)
-    except openapi_client.ApiException as e:
+    except amparex.ApiException as e:
         print("Exception when calling PropertiesApi->search_article_types_using_post: %s\n" % e)
 ```
 
@@ -354,14 +354,14 @@ Get a list of predefined properties by search query, paging is used, specify lim
 
 ```python
 import time
-import openapi_client
-from openapi_client.api import properties_api
-from openapi_client.model.predefined_property_search_query import PredefinedPropertySearchQuery
-from openapi_client.model.list_result_wrapper_predefined_property import ListResultWrapperPredefinedProperty
+import amparex
+from amparex.api import properties_api
+from amparex.model.predefined_property_search_query import PredefinedPropertySearchQuery
+from amparex.model.list_result_wrapper_predefined_property import ListResultWrapperPredefinedProperty
 from pprint import pprint
 # Defining the host is optional and defaults to http://trial.amparex.net:8078/amparex/webaxapi
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = amparex.Configuration(
     host = "http://trial.amparex.net:8078/amparex/webaxapi"
 )
 
@@ -377,7 +377,7 @@ configuration.api_key['security_token'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['security_token'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with amparex.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = properties_api.PropertiesApi(api_client)
     alias = "alias_example" # str | alias
@@ -399,7 +399,7 @@ with openapi_client.ApiClient(configuration) as api_client:
         # Get a list of predefined properties
         api_response = api_instance.search_predefined_properties_using_post(alias, search_query)
         pprint(api_response)
-    except openapi_client.ApiException as e:
+    except amparex.ApiException as e:
         print("Exception when calling PropertiesApi->search_predefined_properties_using_post: %s\n" % e)
 ```
 
@@ -451,14 +451,14 @@ Get a list of property types by search query, paging is used, specify limit and 
 
 ```python
 import time
-import openapi_client
-from openapi_client.api import properties_api
-from openapi_client.model.list_result_wrapper_property_type import ListResultWrapperPropertyType
-from openapi_client.model.property_type_search_query import PropertyTypeSearchQuery
+import amparex
+from amparex.api import properties_api
+from amparex.model.list_result_wrapper_property_type import ListResultWrapperPropertyType
+from amparex.model.property_type_search_query import PropertyTypeSearchQuery
 from pprint import pprint
 # Defining the host is optional and defaults to http://trial.amparex.net:8078/amparex/webaxapi
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = amparex.Configuration(
     host = "http://trial.amparex.net:8078/amparex/webaxapi"
 )
 
@@ -474,7 +474,7 @@ configuration.api_key['security_token'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['security_token'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with amparex.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = properties_api.PropertiesApi(api_client)
     alias = "alias_example" # str | alias
@@ -497,7 +497,7 @@ with openapi_client.ApiClient(configuration) as api_client:
         # Get a list of property types
         api_response = api_instance.search_property_types_using_post(alias, search_query)
         pprint(api_response)
-    except openapi_client.ApiException as e:
+    except amparex.ApiException as e:
         print("Exception when calling PropertiesApi->search_property_types_using_post: %s\n" % e)
 ```
 

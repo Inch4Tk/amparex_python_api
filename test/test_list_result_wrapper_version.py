@@ -11,12 +11,12 @@
 import sys
 import unittest
 
-import openapi_client
-from openapi_client.model.result_meta_data import ResultMetaData
-from openapi_client.model.version import Version
+import amparex
+from amparex.model.result_meta_data import ResultMetaData
+from amparex.model.version import Version
 globals()['ResultMetaData'] = ResultMetaData
 globals()['Version'] = Version
-from openapi_client.model.list_result_wrapper_version import ListResultWrapperVersion
+from amparex.model.list_result_wrapper_version import ListResultWrapperVersion
 
 
 class TestListResultWrapperVersion(unittest.TestCase):

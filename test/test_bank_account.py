@@ -11,10 +11,10 @@
 import sys
 import unittest
 
-import openapi_client
-from openapi_client.model.translated_string import TranslatedString
+import amparex
+from amparex.model.translated_string import TranslatedString
 globals()['TranslatedString'] = TranslatedString
-from openapi_client.model.bank_account import BankAccount
+from amparex.model.bank_account import BankAccount
 
 
 class TestBankAccount(unittest.TestCase):

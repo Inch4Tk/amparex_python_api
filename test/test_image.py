@@ -11,8 +11,8 @@
 import sys
 import unittest
 
-import openapi_client
-from openapi_client.model.image import Image
+import amparex
+from amparex.model.image import Image
 
 
 class TestImage(unittest.TestCase):

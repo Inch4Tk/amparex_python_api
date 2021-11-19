@@ -11,12 +11,12 @@
 import sys
 import unittest
 
-import openapi_client
-from openapi_client.model.program_move import ProgramMove
-from openapi_client.model.result_meta_data import ResultMetaData
+import amparex
+from amparex.model.program_move import ProgramMove
+from amparex.model.result_meta_data import ResultMetaData
 globals()['ProgramMove'] = ProgramMove
 globals()['ResultMetaData'] = ResultMetaData
-from openapi_client.model.list_result_wrapper_program_move import ListResultWrapperProgramMove
+from amparex.model.list_result_wrapper_program_move import ListResultWrapperProgramMove
 
 
 class TestListResultWrapperProgramMove(unittest.TestCase):

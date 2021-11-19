@@ -10,8 +10,8 @@
 
 import unittest
 
-import openapi_client
-from openapi_client.api.documents_api import DocumentsApi  # noqa: E501
+import amparex
+from amparex.api.documents_api import DocumentsApi  # noqa: E501
 
 
 class TestDocumentsApi(unittest.TestCase):

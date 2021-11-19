@@ -11,12 +11,12 @@
 import sys
 import unittest
 
-import openapi_client
-from openapi_client.model.order_by import OrderBy
-from openapi_client.model.search_query_meta_data import SearchQueryMetaData
+import amparex
+from amparex.model.order_by import OrderBy
+from amparex.model.search_query_meta_data import SearchQueryMetaData
 globals()['OrderBy'] = OrderBy
 globals()['SearchQueryMetaData'] = SearchQueryMetaData
-from openapi_client.model.program_move_search_query import ProgramMoveSearchQuery
+from amparex.model.program_move_search_query import ProgramMoveSearchQuery
 
 
 class TestProgramMoveSearchQuery(unittest.TestCase):

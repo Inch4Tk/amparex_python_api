@@ -1,4 +1,4 @@
-# openapi_client.ArticlesApi
+# amparex.ArticlesApi
 
 All URIs are relative to *http://trial.amparex.net:8078/amparex/webaxapi*
 
@@ -23,12 +23,12 @@ Get image of article as blob
 
 ```python
 import time
-import openapi_client
-from openapi_client.api import articles_api
+import amparex
+from amparex.api import articles_api
 from pprint import pprint
 # Defining the host is optional and defaults to http://trial.amparex.net:8078/amparex/webaxapi
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = amparex.Configuration(
     host = "http://trial.amparex.net:8078/amparex/webaxapi"
 )
 
@@ -44,7 +44,7 @@ configuration.api_key['security_token'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['security_token'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with amparex.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = articles_api.ArticlesApi(api_client)
     alias = "alias_example" # str | alias
@@ -57,7 +57,7 @@ with openapi_client.ApiClient(configuration) as api_client:
         # Get image of article as blob
         api_response = api_instance.get_article_image_using_get(alias, articleid, imageid)
         pprint(api_response)
-    except openapi_client.ApiException as e:
+    except amparex.ApiException as e:
         print("Exception when calling ArticlesApi->get_article_image_using_get: %s\n" % e)
 
     # example passing only required values which don't have defaults set
@@ -66,7 +66,7 @@ with openapi_client.ApiClient(configuration) as api_client:
         # Get image of article as blob
         api_response = api_instance.get_article_image_using_get(alias, articleid, imageid, image_width=image_width)
         pprint(api_response)
-    except openapi_client.ApiException as e:
+    except amparex.ApiException as e:
         print("Exception when calling ArticlesApi->get_article_image_using_get: %s\n" % e)
 ```
 
@@ -117,12 +117,12 @@ Get possible fields for orderby of article fields
 
 ```python
 import time
-import openapi_client
-from openapi_client.api import articles_api
+import amparex
+from amparex.api import articles_api
 from pprint import pprint
 # Defining the host is optional and defaults to http://trial.amparex.net:8078/amparex/webaxapi
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = amparex.Configuration(
     host = "http://trial.amparex.net:8078/amparex/webaxapi"
 )
 
@@ -138,7 +138,7 @@ configuration.api_key['security_token'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['security_token'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with amparex.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = articles_api.ArticlesApi(api_client)
     alias = "alias_example" # str | alias
@@ -148,7 +148,7 @@ with openapi_client.ApiClient(configuration) as api_client:
         # Get possible fields for orderby of article fields
         api_response = api_instance.get_article_order_by_fields_using_get(alias)
         pprint(api_response)
-    except openapi_client.ApiException as e:
+    except amparex.ApiException as e:
         print("Exception when calling ArticlesApi->get_article_order_by_fields_using_get: %s\n" % e)
 ```
 
@@ -196,13 +196,13 @@ Get one specific article detail by id
 
 ```python
 import time
-import openapi_client
-from openapi_client.api import articles_api
-from openapi_client.model.article_detail import ArticleDetail
+import amparex
+from amparex.api import articles_api
+from amparex.model.article_detail import ArticleDetail
 from pprint import pprint
 # Defining the host is optional and defaults to http://trial.amparex.net:8078/amparex/webaxapi
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = amparex.Configuration(
     host = "http://trial.amparex.net:8078/amparex/webaxapi"
 )
 
@@ -218,7 +218,7 @@ configuration.api_key['security_token'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['security_token'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with amparex.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = articles_api.ArticlesApi(api_client)
     alias = "alias_example" # str | alias
@@ -229,7 +229,7 @@ with openapi_client.ApiClient(configuration) as api_client:
         # Get one specific article detail by id
         api_response = api_instance.get_article_using_get(alias, id)
         pprint(api_response)
-    except openapi_client.ApiException as e:
+    except amparex.ApiException as e:
         print("Exception when calling ArticlesApi->get_article_using_get: %s\n" % e)
 ```
 
@@ -280,14 +280,14 @@ Get a list of articles  by a search query, paging is used, specify limit and pag
 
 ```python
 import time
-import openapi_client
-from openapi_client.api import articles_api
-from openapi_client.model.list_result_wrapper_article_overview import ListResultWrapperArticleOverview
-from openapi_client.model.article_search_query import ArticleSearchQuery
+import amparex
+from amparex.api import articles_api
+from amparex.model.list_result_wrapper_article_overview import ListResultWrapperArticleOverview
+from amparex.model.article_search_query import ArticleSearchQuery
 from pprint import pprint
 # Defining the host is optional and defaults to http://trial.amparex.net:8078/amparex/webaxapi
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = amparex.Configuration(
     host = "http://trial.amparex.net:8078/amparex/webaxapi"
 )
 
@@ -303,7 +303,7 @@ configuration.api_key['security_token'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['security_token'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with amparex.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = articles_api.ArticlesApi(api_client)
     alias = "alias_example" # str | alias
@@ -350,7 +350,7 @@ with openapi_client.ApiClient(configuration) as api_client:
         # Get a list of articles
         api_response = api_instance.search_articles_using_post(alias, article_search_query)
         pprint(api_response)
-    except openapi_client.ApiException as e:
+    except amparex.ApiException as e:
         print("Exception when calling ArticlesApi->search_articles_using_post: %s\n" % e)
 ```
 
@@ -402,14 +402,14 @@ Get a list of detailed articles  by a search query, contains more details than /
 
 ```python
 import time
-import openapi_client
-from openapi_client.api import articles_api
-from openapi_client.model.list_result_wrapper_article_detail import ListResultWrapperArticleDetail
-from openapi_client.model.article_search_query import ArticleSearchQuery
+import amparex
+from amparex.api import articles_api
+from amparex.model.list_result_wrapper_article_detail import ListResultWrapperArticleDetail
+from amparex.model.article_search_query import ArticleSearchQuery
 from pprint import pprint
 # Defining the host is optional and defaults to http://trial.amparex.net:8078/amparex/webaxapi
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = amparex.Configuration(
     host = "http://trial.amparex.net:8078/amparex/webaxapi"
 )
 
@@ -425,7 +425,7 @@ configuration.api_key['security_token'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['security_token'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with amparex.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = articles_api.ArticlesApi(api_client)
     alias = "alias_example" # str | alias
@@ -472,7 +472,7 @@ with openapi_client.ApiClient(configuration) as api_client:
         # Get a list of detailed articles
         api_response = api_instance.search_detailed_articles_using_post(alias, article_search_query)
         pprint(api_response)
-    except openapi_client.ApiException as e:
+    except amparex.ApiException as e:
         print("Exception when calling ArticlesApi->search_detailed_articles_using_post: %s\n" % e)
 ```
 
@@ -524,14 +524,14 @@ Get a list of sales prices by a search query, paging is used, specify limit and 
 
 ```python
 import time
-import openapi_client
-from openapi_client.api import articles_api
-from openapi_client.model.list_result_wrapper_sales_price import ListResultWrapperSalesPrice
-from openapi_client.model.sales_price_search_query import SalesPriceSearchQuery
+import amparex
+from amparex.api import articles_api
+from amparex.model.list_result_wrapper_sales_price import ListResultWrapperSalesPrice
+from amparex.model.sales_price_search_query import SalesPriceSearchQuery
 from pprint import pprint
 # Defining the host is optional and defaults to http://trial.amparex.net:8078/amparex/webaxapi
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = amparex.Configuration(
     host = "http://trial.amparex.net:8078/amparex/webaxapi"
 )
 
@@ -547,7 +547,7 @@ configuration.api_key['security_token'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['security_token'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with amparex.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = articles_api.ArticlesApi(api_client)
     alias = "alias_example" # str | alias
@@ -571,7 +571,7 @@ with openapi_client.ApiClient(configuration) as api_client:
         # Get a list of article sales prices
         api_response = api_instance.search_sales_prices_using_post(alias, search_query)
         pprint(api_response)
-    except openapi_client.ApiException as e:
+    except amparex.ApiException as e:
         print("Exception when calling ArticlesApi->search_sales_prices_using_post: %s\n" % e)
 ```
 

@@ -11,8 +11,8 @@
 import sys
 import unittest
 
-import openapi_client
-from openapi_client.model.availability_to_save import AvailabilityToSave
+import amparex
+from amparex.model.availability_to_save import AvailabilityToSave
 
 
 class TestAvailabilityToSave(unittest.TestCase):

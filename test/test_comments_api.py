@@ -10,8 +10,8 @@
 
 import unittest
 
-import openapi_client
-from openapi_client.api.comments_api import CommentsApi  # noqa: E501
+import amparex
+from amparex.api.comments_api import CommentsApi  # noqa: E501
 
 
 class TestCommentsApi(unittest.TestCase):

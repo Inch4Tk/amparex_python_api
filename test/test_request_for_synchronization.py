@@ -11,8 +11,8 @@
 import sys
 import unittest
 
-import openapi_client
-from openapi_client.model.request_for_synchronization import RequestForSynchronization
+import amparex
+from amparex.model.request_for_synchronization import RequestForSynchronization
 
 
 class TestRequestForSynchronization(unittest.TestCase):

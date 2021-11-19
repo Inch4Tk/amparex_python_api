@@ -1,4 +1,4 @@
-# openapi_client.SurveyTemplatesApi
+# amparex.SurveyTemplatesApi
 
 All URIs are relative to *http://trial.amparex.net:8078/amparex/webaxapi*
 
@@ -22,13 +22,13 @@ Create a new surveytemplate
 
 ```python
 import time
-import openapi_client
-from openapi_client.api import survey_templates_api
-from openapi_client.model.creation_response import CreationResponse
+import amparex
+from amparex.api import survey_templates_api
+from amparex.model.creation_response import CreationResponse
 from pprint import pprint
 # Defining the host is optional and defaults to http://trial.amparex.net:8078/amparex/webaxapi
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = amparex.Configuration(
     host = "http://trial.amparex.net:8078/amparex/webaxapi"
 )
 
@@ -44,7 +44,7 @@ configuration.api_key['security_token'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['security_token'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with amparex.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = survey_templates_api.SurveyTemplatesApi(api_client)
     alias = "alias_example" # str | alias
@@ -55,7 +55,7 @@ with openapi_client.ApiClient(configuration) as api_client:
         # Create a new surveytemplate
         api_response = api_instance.create_survey_template_using_post(alias, to_save)
         pprint(api_response)
-    except openapi_client.ApiException as e:
+    except amparex.ApiException as e:
         print("Exception when calling SurveyTemplatesApi->create_survey_template_using_post: %s\n" % e)
 ```
 
@@ -105,12 +105,12 @@ Delete a surveytemplate with given id
 
 ```python
 import time
-import openapi_client
-from openapi_client.api import survey_templates_api
+import amparex
+from amparex.api import survey_templates_api
 from pprint import pprint
 # Defining the host is optional and defaults to http://trial.amparex.net:8078/amparex/webaxapi
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = amparex.Configuration(
     host = "http://trial.amparex.net:8078/amparex/webaxapi"
 )
 
@@ -126,7 +126,7 @@ configuration.api_key['security_token'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['security_token'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with amparex.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = survey_templates_api.SurveyTemplatesApi(api_client)
     alias = "alias_example" # str | alias
@@ -136,7 +136,7 @@ with openapi_client.ApiClient(configuration) as api_client:
     try:
         # Delete a surveytemplate with given id
         api_instance.delete_survey_template_using_delete(alias, id)
-    except openapi_client.ApiException as e:
+    except amparex.ApiException as e:
         print("Exception when calling SurveyTemplatesApi->delete_survey_template_using_delete: %s\n" % e)
 ```
 
@@ -185,13 +185,13 @@ Get one specific surveytemplate by id
 
 ```python
 import time
-import openapi_client
-from openapi_client.api import survey_templates_api
-from openapi_client.model.survey_template import SurveyTemplate
+import amparex
+from amparex.api import survey_templates_api
+from amparex.model.survey_template import SurveyTemplate
 from pprint import pprint
 # Defining the host is optional and defaults to http://trial.amparex.net:8078/amparex/webaxapi
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = amparex.Configuration(
     host = "http://trial.amparex.net:8078/amparex/webaxapi"
 )
 
@@ -207,7 +207,7 @@ configuration.api_key['security_token'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['security_token'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with amparex.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = survey_templates_api.SurveyTemplatesApi(api_client)
     alias = "alias_example" # str | alias
@@ -218,7 +218,7 @@ with openapi_client.ApiClient(configuration) as api_client:
         # Get one specific surveytemplate by id
         api_response = api_instance.get_survey_template_using_get(alias, id)
         pprint(api_response)
-    except openapi_client.ApiException as e:
+    except amparex.ApiException as e:
         print("Exception when calling SurveyTemplatesApi->get_survey_template_using_get: %s\n" % e)
 ```
 
@@ -269,14 +269,14 @@ Get a list of surveytemplates  by a search query, paging is used, specify limit 
 
 ```python
 import time
-import openapi_client
-from openapi_client.api import survey_templates_api
-from openapi_client.model.survey_template_search_query import SurveyTemplateSearchQuery
-from openapi_client.model.list_result_wrapper_survey_template import ListResultWrapperSurveyTemplate
+import amparex
+from amparex.api import survey_templates_api
+from amparex.model.survey_template_search_query import SurveyTemplateSearchQuery
+from amparex.model.list_result_wrapper_survey_template import ListResultWrapperSurveyTemplate
 from pprint import pprint
 # Defining the host is optional and defaults to http://trial.amparex.net:8078/amparex/webaxapi
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = amparex.Configuration(
     host = "http://trial.amparex.net:8078/amparex/webaxapi"
 )
 
@@ -292,7 +292,7 @@ configuration.api_key['security_token'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['security_token'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with amparex.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = survey_templates_api.SurveyTemplatesApi(api_client)
     alias = "alias_example" # str | alias
@@ -312,7 +312,7 @@ with openapi_client.ApiClient(configuration) as api_client:
         # Get a list of surveytemplates
         api_response = api_instance.search_survey_templates_using_post(alias, surveytemplate_search_query)
         pprint(api_response)
-    except openapi_client.ApiException as e:
+    except amparex.ApiException as e:
         print("Exception when calling SurveyTemplatesApi->search_survey_templates_using_post: %s\n" % e)
 ```
 
@@ -362,12 +362,12 @@ Update surveytemplate with given id
 
 ```python
 import time
-import openapi_client
-from openapi_client.api import survey_templates_api
+import amparex
+from amparex.api import survey_templates_api
 from pprint import pprint
 # Defining the host is optional and defaults to http://trial.amparex.net:8078/amparex/webaxapi
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = amparex.Configuration(
     host = "http://trial.amparex.net:8078/amparex/webaxapi"
 )
 
@@ -383,7 +383,7 @@ configuration.api_key['security_token'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['security_token'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with amparex.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = survey_templates_api.SurveyTemplatesApi(api_client)
     alias = "alias_example" # str | alias
@@ -394,7 +394,7 @@ with openapi_client.ApiClient(configuration) as api_client:
     try:
         # Update surveytemplate with given id
         api_instance.update_survey_template_using_patch(alias, id, to_update)
-    except openapi_client.ApiException as e:
+    except amparex.ApiException as e:
         print("Exception when calling SurveyTemplatesApi->update_survey_template_using_patch: %s\n" % e)
 ```
 

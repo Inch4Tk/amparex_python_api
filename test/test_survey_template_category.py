@@ -11,8 +11,8 @@
 import sys
 import unittest
 
-import openapi_client
-from openapi_client.model.survey_template_category import SurveyTemplateCategory
+import amparex
+from amparex.model.survey_template_category import SurveyTemplateCategory
 
 
 class TestSurveyTemplateCategory(unittest.TestCase):

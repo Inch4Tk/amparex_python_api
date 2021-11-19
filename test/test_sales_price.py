@@ -11,8 +11,8 @@
 import sys
 import unittest
 
-import openapi_client
-from openapi_client.model.sales_price import SalesPrice
+import amparex
+from amparex.model.sales_price import SalesPrice
 
 
 class TestSalesPrice(unittest.TestCase):

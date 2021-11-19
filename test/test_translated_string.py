@@ -11,8 +11,8 @@
 import sys
 import unittest
 
-import openapi_client
-from openapi_client.model.translated_string import TranslatedString
+import amparex
+from amparex.model.translated_string import TranslatedString
 
 
 class TestTranslatedString(unittest.TestCase):

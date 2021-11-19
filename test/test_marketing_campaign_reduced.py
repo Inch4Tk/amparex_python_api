@@ -11,8 +11,8 @@
 import sys
 import unittest
 
-import openapi_client
-from openapi_client.model.marketing_campaign_reduced import MarketingCampaignReduced
+import amparex
+from amparex.model.marketing_campaign_reduced import MarketingCampaignReduced
 
 
 class TestMarketingCampaignReduced(unittest.TestCase):

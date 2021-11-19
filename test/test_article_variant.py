@@ -11,10 +11,10 @@
 import sys
 import unittest
 
-import openapi_client
-from openapi_client.model.translated_string import TranslatedString
+import amparex
+from amparex.model.translated_string import TranslatedString
 globals()['TranslatedString'] = TranslatedString
-from openapi_client.model.article_variant import ArticleVariant
+from amparex.model.article_variant import ArticleVariant
 
 
 class TestArticleVariant(unittest.TestCase):

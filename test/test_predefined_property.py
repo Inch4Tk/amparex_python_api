@@ -11,12 +11,12 @@
 import sys
 import unittest
 
-import openapi_client
-from openapi_client.model.property_type import PropertyType
-from openapi_client.model.translated_string import TranslatedString
+import amparex
+from amparex.model.property_type import PropertyType
+from amparex.model.translated_string import TranslatedString
 globals()['PropertyType'] = PropertyType
 globals()['TranslatedString'] = TranslatedString
-from openapi_client.model.predefined_property import PredefinedProperty
+from amparex.model.predefined_property import PredefinedProperty
 
 
 class TestPredefinedProperty(unittest.TestCase):

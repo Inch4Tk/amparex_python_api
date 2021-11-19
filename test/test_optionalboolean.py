@@ -11,8 +11,8 @@
 import sys
 import unittest
 
-import openapi_client
-from openapi_client.model.optionalboolean import Optionalboolean
+import amparex
+from amparex.model.optionalboolean import Optionalboolean
 
 
 class TestOptionalboolean(unittest.TestCase):

@@ -10,8 +10,8 @@
 
 import unittest
 
-import openapi_client
-from openapi_client.api.marketing_campaigns_api import MarketingCampaignsApi  # noqa: E501
+import amparex
+from amparex.api.marketing_campaigns_api import MarketingCampaignsApi  # noqa: E501
 
 
 class TestMarketingCampaignsApi(unittest.TestCase):

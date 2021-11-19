@@ -11,18 +11,18 @@
 import sys
 import unittest
 
-import openapi_client
-from openapi_client.model.application_type import ApplicationType
-from openapi_client.model.complaint import Complaint
-from openapi_client.model.customer_reduced import CustomerReduced
-from openapi_client.model.doctor_reduced import DoctorReduced
-from openapi_client.model.health_insurance_reduced import HealthInsuranceReduced
-from openapi_client.model.hearing_care import HearingCare
-from openapi_client.model.invoice import Invoice
-from openapi_client.model.refraction_report import RefractionReport
-from openapi_client.model.staff_reduced import StaffReduced
-from openapi_client.model.translated_string import TranslatedString
-from openapi_client.model.treatment_position import TreatmentPosition
+import amparex
+from amparex.model.application_type import ApplicationType
+from amparex.model.complaint import Complaint
+from amparex.model.customer_reduced import CustomerReduced
+from amparex.model.doctor_reduced import DoctorReduced
+from amparex.model.health_insurance_reduced import HealthInsuranceReduced
+from amparex.model.hearing_care import HearingCare
+from amparex.model.invoice import Invoice
+from amparex.model.refraction_report import RefractionReport
+from amparex.model.staff_reduced import StaffReduced
+from amparex.model.translated_string import TranslatedString
+from amparex.model.treatment_position import TreatmentPosition
 globals()['ApplicationType'] = ApplicationType
 globals()['Complaint'] = Complaint
 globals()['CustomerReduced'] = CustomerReduced
@@ -34,7 +34,7 @@ globals()['RefractionReport'] = RefractionReport
 globals()['StaffReduced'] = StaffReduced
 globals()['TranslatedString'] = TranslatedString
 globals()['TreatmentPosition'] = TreatmentPosition
-from openapi_client.model.therapeutics_treatment import TherapeuticsTreatment
+from amparex.model.therapeutics_treatment import TherapeuticsTreatment
 
 
 class TestTherapeuticsTreatment(unittest.TestCase):

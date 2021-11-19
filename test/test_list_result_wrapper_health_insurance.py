@@ -11,12 +11,12 @@
 import sys
 import unittest
 
-import openapi_client
-from openapi_client.model.health_insurance import HealthInsurance
-from openapi_client.model.result_meta_data import ResultMetaData
+import amparex
+from amparex.model.health_insurance import HealthInsurance
+from amparex.model.result_meta_data import ResultMetaData
 globals()['HealthInsurance'] = HealthInsurance
 globals()['ResultMetaData'] = ResultMetaData
-from openapi_client.model.list_result_wrapper_health_insurance import ListResultWrapperHealthInsurance
+from amparex.model.list_result_wrapper_health_insurance import ListResultWrapperHealthInsurance
 
 
 class TestListResultWrapperHealthInsurance(unittest.TestCase):

@@ -11,15 +11,15 @@
 import sys
 import unittest
 
-import openapi_client
-from openapi_client.model.article_item import ArticleItem
-from openapi_client.model.branch_reduced import BranchReduced
-from openapi_client.model.glasses_configuration import GlassesConfiguration
-from openapi_client.model.invoice import Invoice
-from openapi_client.model.predefined_property_reduced import PredefinedPropertyReduced
-from openapi_client.model.refraction_report import RefractionReport
-from openapi_client.model.staff_reduced import StaffReduced
-from openapi_client.model.treatment import Treatment
+import amparex
+from amparex.model.article_item import ArticleItem
+from amparex.model.branch_reduced import BranchReduced
+from amparex.model.glasses_configuration import GlassesConfiguration
+from amparex.model.invoice import Invoice
+from amparex.model.predefined_property_reduced import PredefinedPropertyReduced
+from amparex.model.refraction_report import RefractionReport
+from amparex.model.staff_reduced import StaffReduced
+from amparex.model.treatment import Treatment
 globals()['ArticleItem'] = ArticleItem
 globals()['BranchReduced'] = BranchReduced
 globals()['GlassesConfiguration'] = GlassesConfiguration
@@ -28,7 +28,7 @@ globals()['PredefinedPropertyReduced'] = PredefinedPropertyReduced
 globals()['RefractionReport'] = RefractionReport
 globals()['StaffReduced'] = StaffReduced
 globals()['Treatment'] = Treatment
-from openapi_client.model.glasses_care import GlassesCare
+from amparex.model.glasses_care import GlassesCare
 
 
 class TestGlassesCare(unittest.TestCase):

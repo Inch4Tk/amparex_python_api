@@ -11,18 +11,18 @@
 import sys
 import unittest
 
-import openapi_client
-from openapi_client.model.article_property import ArticleProperty
-from openapi_client.model.article_type_reduced import ArticleTypeReduced
-from openapi_client.model.image import Image
-from openapi_client.model.procurement import Procurement
-from openapi_client.model.translated_string import TranslatedString
+import amparex
+from amparex.model.article_property import ArticleProperty
+from amparex.model.article_type_reduced import ArticleTypeReduced
+from amparex.model.image import Image
+from amparex.model.procurement import Procurement
+from amparex.model.translated_string import TranslatedString
 globals()['ArticleProperty'] = ArticleProperty
 globals()['ArticleTypeReduced'] = ArticleTypeReduced
 globals()['Image'] = Image
 globals()['Procurement'] = Procurement
 globals()['TranslatedString'] = TranslatedString
-from openapi_client.model.article_detail import ArticleDetail
+from amparex.model.article_detail import ArticleDetail
 
 
 class TestArticleDetail(unittest.TestCase):

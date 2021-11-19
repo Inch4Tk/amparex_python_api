@@ -11,8 +11,8 @@
 import sys
 import unittest
 
-import openapi_client
-from openapi_client.model.lense_options import LenseOptions
+import amparex
+from amparex.model.lense_options import LenseOptions
 
 
 class TestLenseOptions(unittest.TestCase):

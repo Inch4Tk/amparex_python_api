@@ -1,4 +1,4 @@
-# openapi_client.AudiogramsApi
+# amparex.AudiogramsApi
 
 All URIs are relative to *http://trial.amparex.net:8078/amparex/webaxapi*
 
@@ -20,12 +20,12 @@ Get possible fields for orderby of audiogram fields
 
 ```python
 import time
-import openapi_client
-from openapi_client.api import audiograms_api
+import amparex
+from amparex.api import audiograms_api
 from pprint import pprint
 # Defining the host is optional and defaults to http://trial.amparex.net:8078/amparex/webaxapi
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = amparex.Configuration(
     host = "http://trial.amparex.net:8078/amparex/webaxapi"
 )
 
@@ -41,7 +41,7 @@ configuration.api_key['security_token'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['security_token'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with amparex.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = audiograms_api.AudiogramsApi(api_client)
     alias = "alias_example" # str | alias
@@ -51,7 +51,7 @@ with openapi_client.ApiClient(configuration) as api_client:
         # Get possible fields for orderby of audiogram fields
         api_response = api_instance.get_audiogram_order_by_fields_using_get(alias)
         pprint(api_response)
-    except openapi_client.ApiException as e:
+    except amparex.ApiException as e:
         print("Exception when calling AudiogramsApi->get_audiogram_order_by_fields_using_get: %s\n" % e)
 ```
 
@@ -99,13 +99,13 @@ Get one specific audiogram by id
 
 ```python
 import time
-import openapi_client
-from openapi_client.api import audiograms_api
-from openapi_client.model.audiogram import Audiogram
+import amparex
+from amparex.api import audiograms_api
+from amparex.model.audiogram import Audiogram
 from pprint import pprint
 # Defining the host is optional and defaults to http://trial.amparex.net:8078/amparex/webaxapi
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = amparex.Configuration(
     host = "http://trial.amparex.net:8078/amparex/webaxapi"
 )
 
@@ -121,7 +121,7 @@ configuration.api_key['security_token'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['security_token'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with amparex.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = audiograms_api.AudiogramsApi(api_client)
     alias = "alias_example" # str | alias
@@ -132,7 +132,7 @@ with openapi_client.ApiClient(configuration) as api_client:
         # Get one specific audiogram by id
         api_response = api_instance.get_audiogram_using_get(alias, id)
         pprint(api_response)
-    except openapi_client.ApiException as e:
+    except amparex.ApiException as e:
         print("Exception when calling AudiogramsApi->get_audiogram_using_get: %s\n" % e)
 ```
 
@@ -183,14 +183,14 @@ Get a list of audiograms  by a search query, paging is used, specify limit and p
 
 ```python
 import time
-import openapi_client
-from openapi_client.api import audiograms_api
-from openapi_client.model.audiogram_search_query import AudiogramSearchQuery
-from openapi_client.model.list_result_wrapper_audiogram import ListResultWrapperAudiogram
+import amparex
+from amparex.api import audiograms_api
+from amparex.model.audiogram_search_query import AudiogramSearchQuery
+from amparex.model.list_result_wrapper_audiogram import ListResultWrapperAudiogram
 from pprint import pprint
 # Defining the host is optional and defaults to http://trial.amparex.net:8078/amparex/webaxapi
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = amparex.Configuration(
     host = "http://trial.amparex.net:8078/amparex/webaxapi"
 )
 
@@ -206,7 +206,7 @@ configuration.api_key['security_token'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['security_token'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with amparex.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = audiograms_api.AudiogramsApi(api_client)
     alias = "alias_example" # str | alias
@@ -235,7 +235,7 @@ with openapi_client.ApiClient(configuration) as api_client:
         # Get a list of audiograms
         api_response = api_instance.search_audiograms_using_post(alias, audiogram_search_query)
         pprint(api_response)
-    except openapi_client.ApiException as e:
+    except amparex.ApiException as e:
         print("Exception when calling AudiogramsApi->search_audiograms_using_post: %s\n" % e)
 ```
 

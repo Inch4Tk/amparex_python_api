@@ -11,12 +11,12 @@
 import sys
 import unittest
 
-import openapi_client
-from openapi_client.model.result_meta_data import ResultMetaData
-from openapi_client.model.survey_template import SurveyTemplate
+import amparex
+from amparex.model.result_meta_data import ResultMetaData
+from amparex.model.survey_template import SurveyTemplate
 globals()['ResultMetaData'] = ResultMetaData
 globals()['SurveyTemplate'] = SurveyTemplate
-from openapi_client.model.list_result_wrapper_survey_template import ListResultWrapperSurveyTemplate
+from amparex.model.list_result_wrapper_survey_template import ListResultWrapperSurveyTemplate
 
 
 class TestListResultWrapperSurveyTemplate(unittest.TestCase):

@@ -1,4 +1,4 @@
-# openapi_client.HealthInsuranceApi
+# amparex.HealthInsuranceApi
 
 All URIs are relative to *http://trial.amparex.net:8078/amparex/webaxapi*
 
@@ -19,13 +19,13 @@ Get one specific healthinsurance by id
 
 ```python
 import time
-import openapi_client
-from openapi_client.api import health_insurance_api
-from openapi_client.model.health_insurance import HealthInsurance
+import amparex
+from amparex.api import health_insurance_api
+from amparex.model.health_insurance import HealthInsurance
 from pprint import pprint
 # Defining the host is optional and defaults to http://trial.amparex.net:8078/amparex/webaxapi
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = amparex.Configuration(
     host = "http://trial.amparex.net:8078/amparex/webaxapi"
 )
 
@@ -41,7 +41,7 @@ configuration.api_key['security_token'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['security_token'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with amparex.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = health_insurance_api.HealthInsuranceApi(api_client)
     alias = "alias_example" # str | alias
@@ -52,7 +52,7 @@ with openapi_client.ApiClient(configuration) as api_client:
         # Get one specific healthinsurance by id
         api_response = api_instance.get_health_insurance_using_get(alias, id)
         pprint(api_response)
-    except openapi_client.ApiException as e:
+    except amparex.ApiException as e:
         print("Exception when calling HealthInsuranceApi->get_health_insurance_using_get: %s\n" % e)
 ```
 
@@ -103,14 +103,14 @@ Get a list of healthinsurances  by a search query, paging is used, specify limit
 
 ```python
 import time
-import openapi_client
-from openapi_client.api import health_insurance_api
-from openapi_client.model.list_result_wrapper_health_insurance import ListResultWrapperHealthInsurance
-from openapi_client.model.health_insurance_search_query import HealthInsuranceSearchQuery
+import amparex
+from amparex.api import health_insurance_api
+from amparex.model.list_result_wrapper_health_insurance import ListResultWrapperHealthInsurance
+from amparex.model.health_insurance_search_query import HealthInsuranceSearchQuery
 from pprint import pprint
 # Defining the host is optional and defaults to http://trial.amparex.net:8078/amparex/webaxapi
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = amparex.Configuration(
     host = "http://trial.amparex.net:8078/amparex/webaxapi"
 )
 
@@ -126,7 +126,7 @@ configuration.api_key['security_token'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['security_token'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with amparex.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = health_insurance_api.HealthInsuranceApi(api_client)
     alias = "alias_example" # str | alias
@@ -145,7 +145,7 @@ with openapi_client.ApiClient(configuration) as api_client:
         # Get a list of healthinsurances
         api_response = api_instance.search_health_insurances_using_post(alias, healthinsurance_search_query)
         pprint(api_response)
-    except openapi_client.ApiException as e:
+    except amparex.ApiException as e:
         print("Exception when calling HealthInsuranceApi->search_health_insurances_using_post: %s\n" % e)
 ```
 

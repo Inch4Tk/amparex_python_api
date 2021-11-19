@@ -11,12 +11,12 @@
 import sys
 import unittest
 
-import openapi_client
-from openapi_client.model.audiogram import Audiogram
-from openapi_client.model.result_meta_data import ResultMetaData
+import amparex
+from amparex.model.audiogram import Audiogram
+from amparex.model.result_meta_data import ResultMetaData
 globals()['Audiogram'] = Audiogram
 globals()['ResultMetaData'] = ResultMetaData
-from openapi_client.model.list_result_wrapper_audiogram import ListResultWrapperAudiogram
+from amparex.model.list_result_wrapper_audiogram import ListResultWrapperAudiogram
 
 
 class TestListResultWrapperAudiogram(unittest.TestCase):

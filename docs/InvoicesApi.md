@@ -1,4 +1,4 @@
-# openapi_client.InvoicesApi
+# amparex.InvoicesApi
 
 All URIs are relative to *http://trial.amparex.net:8078/amparex/webaxapi*
 
@@ -20,13 +20,13 @@ Get one specific invoice by id
 
 ```python
 import time
-import openapi_client
-from openapi_client.api import invoices_api
-from openapi_client.model.invoice import Invoice
+import amparex
+from amparex.api import invoices_api
+from amparex.model.invoice import Invoice
 from pprint import pprint
 # Defining the host is optional and defaults to http://trial.amparex.net:8078/amparex/webaxapi
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = amparex.Configuration(
     host = "http://trial.amparex.net:8078/amparex/webaxapi"
 )
 
@@ -42,7 +42,7 @@ configuration.api_key['security_token'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['security_token'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with amparex.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = invoices_api.InvoicesApi(api_client)
     alias = "alias_example" # str | alias
@@ -53,7 +53,7 @@ with openapi_client.ApiClient(configuration) as api_client:
         # Get one specific invoice by id
         api_response = api_instance.get_invoice_using_get(alias, id)
         pprint(api_response)
-    except openapi_client.ApiException as e:
+    except amparex.ApiException as e:
         print("Exception when calling InvoicesApi->get_invoice_using_get: %s\n" % e)
 ```
 
@@ -104,12 +104,12 @@ The payment references for an invoice may depend on the country
 
 ```python
 import time
-import openapi_client
-from openapi_client.api import invoices_api
+import amparex
+from amparex.api import invoices_api
 from pprint import pprint
 # Defining the host is optional and defaults to http://trial.amparex.net:8078/amparex/webaxapi
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = amparex.Configuration(
     host = "http://trial.amparex.net:8078/amparex/webaxapi"
 )
 
@@ -125,7 +125,7 @@ configuration.api_key['security_token'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['security_token'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with amparex.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = invoices_api.InvoicesApi(api_client)
     alias = "alias_example" # str | alias
@@ -136,7 +136,7 @@ with openapi_client.ApiClient(configuration) as api_client:
         # Get a list of payment references for a given invoice
         api_response = api_instance.payment_references_using_get(alias, id)
         pprint(api_response)
-    except openapi_client.ApiException as e:
+    except amparex.ApiException as e:
         print("Exception when calling InvoicesApi->payment_references_using_get: %s\n" % e)
 ```
 
@@ -187,14 +187,14 @@ Get a list of invoices  by a search query, paging is used, specify limit and pag
 
 ```python
 import time
-import openapi_client
-from openapi_client.api import invoices_api
-from openapi_client.model.list_result_wrapper_invoice import ListResultWrapperInvoice
-from openapi_client.model.invoice_search_query import InvoiceSearchQuery
+import amparex
+from amparex.api import invoices_api
+from amparex.model.list_result_wrapper_invoice import ListResultWrapperInvoice
+from amparex.model.invoice_search_query import InvoiceSearchQuery
 from pprint import pprint
 # Defining the host is optional and defaults to http://trial.amparex.net:8078/amparex/webaxapi
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = amparex.Configuration(
     host = "http://trial.amparex.net:8078/amparex/webaxapi"
 )
 
@@ -210,7 +210,7 @@ configuration.api_key['security_token'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['security_token'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with amparex.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = invoices_api.InvoicesApi(api_client)
     alias = "alias_example" # str | alias
@@ -237,7 +237,7 @@ with openapi_client.ApiClient(configuration) as api_client:
         # Get a list of invoices
         api_response = api_instance.search_invoices_using_post(alias, invoice_search_query)
         pprint(api_response)
-    except openapi_client.ApiException as e:
+    except amparex.ApiException as e:
         print("Exception when calling InvoicesApi->search_invoices_using_post: %s\n" % e)
 ```
 

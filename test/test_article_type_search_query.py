@@ -11,8 +11,8 @@
 import sys
 import unittest
 
-import openapi_client
-from openapi_client.model.article_type_search_query import ArticleTypeSearchQuery
+import amparex
+from amparex.model.article_type_search_query import ArticleTypeSearchQuery
 
 
 class TestArticleTypeSearchQuery(unittest.TestCase):

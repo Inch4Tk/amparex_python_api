@@ -10,8 +10,8 @@
 
 import unittest
 
-import openapi_client
-from openapi_client.api.health_insurance_api import HealthInsuranceApi  # noqa: E501
+import amparex
+from amparex.api.health_insurance_api import HealthInsuranceApi  # noqa: E501
 
 
 class TestHealthInsuranceApi(unittest.TestCase):

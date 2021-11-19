@@ -10,8 +10,8 @@
 
 import unittest
 
-import openapi_client
-from openapi_client.api.doctors_api import DoctorsApi  # noqa: E501
+import amparex
+from amparex.api.doctors_api import DoctorsApi  # noqa: E501
 
 
 class TestDoctorsApi(unittest.TestCase):

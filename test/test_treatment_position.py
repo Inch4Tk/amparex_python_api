@@ -11,8 +11,8 @@
 import sys
 import unittest
 
-import openapi_client
-from openapi_client.model.treatment_position import TreatmentPosition
+import amparex
+from amparex.model.treatment_position import TreatmentPosition
 
 
 class TestTreatmentPosition(unittest.TestCase):

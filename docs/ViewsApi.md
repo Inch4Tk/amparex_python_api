@@ -1,4 +1,4 @@
-# openapi_client.ViewsApi
+# amparex.ViewsApi
 
 All URIs are relative to *http://trial.amparex.net:8078/amparex/webaxapi*
 
@@ -22,14 +22,14 @@ Create a new view
 
 ```python
 import time
-import openapi_client
-from openapi_client.api import views_api
-from openapi_client.model.creation_response import CreationResponse
-from openapi_client.model.view_to_save import ViewToSave
+import amparex
+from amparex.api import views_api
+from amparex.model.creation_response import CreationResponse
+from amparex.model.view_to_save import ViewToSave
 from pprint import pprint
 # Defining the host is optional and defaults to http://trial.amparex.net:8078/amparex/webaxapi
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = amparex.Configuration(
     host = "http://trial.amparex.net:8078/amparex/webaxapi"
 )
 
@@ -45,7 +45,7 @@ configuration.api_key['security_token'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['security_token'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with amparex.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = views_api.ViewsApi(api_client)
     alias = "alias_example" # str | alias
@@ -73,7 +73,7 @@ with openapi_client.ApiClient(configuration) as api_client:
         # Create a new view
         api_response = api_instance.create_view_using_post(alias, to_save)
         pprint(api_response)
-    except openapi_client.ApiException as e:
+    except amparex.ApiException as e:
         print("Exception when calling ViewsApi->create_view_using_post: %s\n" % e)
 ```
 
@@ -123,12 +123,12 @@ Delete a view with given id
 
 ```python
 import time
-import openapi_client
-from openapi_client.api import views_api
+import amparex
+from amparex.api import views_api
 from pprint import pprint
 # Defining the host is optional and defaults to http://trial.amparex.net:8078/amparex/webaxapi
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = amparex.Configuration(
     host = "http://trial.amparex.net:8078/amparex/webaxapi"
 )
 
@@ -144,7 +144,7 @@ configuration.api_key['security_token'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['security_token'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with amparex.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = views_api.ViewsApi(api_client)
     alias = "alias_example" # str | alias
@@ -154,7 +154,7 @@ with openapi_client.ApiClient(configuration) as api_client:
     try:
         # Delete a view with given id
         api_instance.delete_view_using_delete(alias, id)
-    except openapi_client.ApiException as e:
+    except amparex.ApiException as e:
         print("Exception when calling ViewsApi->delete_view_using_delete: %s\n" % e)
 ```
 
@@ -203,13 +203,13 @@ Get one specific view by id
 
 ```python
 import time
-import openapi_client
-from openapi_client.api import views_api
-from openapi_client.model.view import View
+import amparex
+from amparex.api import views_api
+from amparex.model.view import View
 from pprint import pprint
 # Defining the host is optional and defaults to http://trial.amparex.net:8078/amparex/webaxapi
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = amparex.Configuration(
     host = "http://trial.amparex.net:8078/amparex/webaxapi"
 )
 
@@ -225,7 +225,7 @@ configuration.api_key['security_token'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['security_token'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with amparex.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = views_api.ViewsApi(api_client)
     alias = "alias_example" # str | alias
@@ -236,7 +236,7 @@ with openapi_client.ApiClient(configuration) as api_client:
         # Get one specific view by id
         api_response = api_instance.get_view_using_get(alias, id)
         pprint(api_response)
-    except openapi_client.ApiException as e:
+    except amparex.ApiException as e:
         print("Exception when calling ViewsApi->get_view_using_get: %s\n" % e)
 ```
 
@@ -287,14 +287,14 @@ Get a list of views  by a search query, paging is used, specify limit and page; 
 
 ```python
 import time
-import openapi_client
-from openapi_client.api import views_api
-from openapi_client.model.view_search_query import ViewSearchQuery
-from openapi_client.model.list_result_wrapper_view import ListResultWrapperView
+import amparex
+from amparex.api import views_api
+from amparex.model.view_search_query import ViewSearchQuery
+from amparex.model.list_result_wrapper_view import ListResultWrapperView
 from pprint import pprint
 # Defining the host is optional and defaults to http://trial.amparex.net:8078/amparex/webaxapi
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = amparex.Configuration(
     host = "http://trial.amparex.net:8078/amparex/webaxapi"
 )
 
@@ -310,7 +310,7 @@ configuration.api_key['security_token'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['security_token'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with amparex.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = views_api.ViewsApi(api_client)
     alias = "alias_example" # str | alias
@@ -330,7 +330,7 @@ with openapi_client.ApiClient(configuration) as api_client:
         # Get a list of views
         api_response = api_instance.search_views_using_post(alias, view_search_query)
         pprint(api_response)
-    except openapi_client.ApiException as e:
+    except amparex.ApiException as e:
         print("Exception when calling ViewsApi->search_views_using_post: %s\n" % e)
 ```
 
@@ -380,13 +380,13 @@ Update view with given id
 
 ```python
 import time
-import openapi_client
-from openapi_client.api import views_api
-from openapi_client.model.view_to_save import ViewToSave
+import amparex
+from amparex.api import views_api
+from amparex.model.view_to_save import ViewToSave
 from pprint import pprint
 # Defining the host is optional and defaults to http://trial.amparex.net:8078/amparex/webaxapi
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = amparex.Configuration(
     host = "http://trial.amparex.net:8078/amparex/webaxapi"
 )
 
@@ -402,7 +402,7 @@ configuration.api_key['security_token'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['security_token'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with amparex.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = views_api.ViewsApi(api_client)
     alias = "alias_example" # str | alias
@@ -430,7 +430,7 @@ with openapi_client.ApiClient(configuration) as api_client:
     try:
         # Update view with given id
         api_instance.update_view_using_patch(alias, id, to_update)
-    except openapi_client.ApiException as e:
+    except amparex.ApiException as e:
         print("Exception when calling ViewsApi->update_view_using_patch: %s\n" % e)
 ```
 

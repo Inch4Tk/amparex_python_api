@@ -11,12 +11,12 @@
 import sys
 import unittest
 
-import openapi_client
-from openapi_client.model.doctor import Doctor
-from openapi_client.model.result_meta_data import ResultMetaData
+import amparex
+from amparex.model.doctor import Doctor
+from amparex.model.result_meta_data import ResultMetaData
 globals()['Doctor'] = Doctor
 globals()['ResultMetaData'] = ResultMetaData
-from openapi_client.model.list_result_wrapper_doctor import ListResultWrapperDoctor
+from amparex.model.list_result_wrapper_doctor import ListResultWrapperDoctor
 
 
 class TestListResultWrapperDoctor(unittest.TestCase):

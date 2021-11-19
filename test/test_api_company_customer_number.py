@@ -11,8 +11,8 @@
 import sys
 import unittest
 
-import openapi_client
-from openapi_client.model.api_company_customer_number import ApiCompanyCustomerNumber
+import amparex
+from amparex.model.api_company_customer_number import ApiCompanyCustomerNumber
 
 
 class TestApiCompanyCustomerNumber(unittest.TestCase):

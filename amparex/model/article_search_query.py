@@ -11,7 +11,7 @@
 import re  # noqa: F401
 import sys  # noqa: F401
 
-from openapi_client.model_utils import (  # noqa: F401
+from amparex.model_utils import (  # noqa: F401
     ApiTypeError,
     ModelComposed,
     ModelNormal,
@@ -26,13 +26,13 @@ from openapi_client.model_utils import (  # noqa: F401
     validate_get_composed_info,
 )
 from ..model_utils import OpenApiModel
-from openapi_client.exceptions import ApiAttributeError
+from amparex.exceptions import ApiAttributeError
 
 
 def lazy_import():
-    from openapi_client.model.article_properties_meta import ArticlePropertiesMeta
-    from openapi_client.model.order_by import OrderBy
-    from openapi_client.model.search_query_meta_data import SearchQueryMetaData
+    from amparex.model.article_properties_meta import ArticlePropertiesMeta
+    from amparex.model.order_by import OrderBy
+    from amparex.model.search_query_meta_data import SearchQueryMetaData
     globals()['ArticlePropertiesMeta'] = ArticlePropertiesMeta
     globals()['OrderBy'] = OrderBy
     globals()['SearchQueryMetaData'] = SearchQueryMetaData

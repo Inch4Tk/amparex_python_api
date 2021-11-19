@@ -11,8 +11,8 @@
 import re  # noqa: F401
 import sys  # noqa: F401
 
-from openapi_client.api_client import ApiClient, Endpoint as _Endpoint
-from openapi_client.model_utils import (  # noqa: F401
+from amparex.api_client import ApiClient, Endpoint as _Endpoint
+from amparex.model_utils import (  # noqa: F401
     check_allowed_values,
     check_validations,
     date,
@@ -21,14 +21,14 @@ from openapi_client.model_utils import (  # noqa: F401
     none_type,
     validate_and_convert_types
 )
-from openapi_client.model.article_item import ArticleItem
-from openapi_client.model.article_item_search_query import ArticleItemSearchQuery
-from openapi_client.model.creation_response import CreationResponse
-from openapi_client.model.items_to_transfer import ItemsToTransfer
-from openapi_client.model.list_result_wrapper_article_item import ListResultWrapperArticleItem
-from openapi_client.model.list_result_wrapper_stock_amount import ListResultWrapperStockAmount
-from openapi_client.model.stock_amount_search_query import StockAmountSearchQuery
-from openapi_client.model.stock_availability import StockAvailability
+from amparex.model.article_item import ArticleItem
+from amparex.model.article_item_search_query import ArticleItemSearchQuery
+from amparex.model.creation_response import CreationResponse
+from amparex.model.items_to_transfer import ItemsToTransfer
+from amparex.model.list_result_wrapper_article_item import ListResultWrapperArticleItem
+from amparex.model.list_result_wrapper_stock_amount import ListResultWrapperStockAmount
+from amparex.model.stock_amount_search_query import StockAmountSearchQuery
+from amparex.model.stock_availability import StockAvailability
 
 
 class ArticleItemsApi(object):

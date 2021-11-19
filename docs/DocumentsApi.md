@@ -1,4 +1,4 @@
-# openapi_client.DocumentsApi
+# amparex.DocumentsApi
 
 All URIs are relative to *http://trial.amparex.net:8078/amparex/webaxapi*
 
@@ -18,12 +18,12 @@ Get document of treatment as blob
 
 ```python
 import time
-import openapi_client
-from openapi_client.api import documents_api
+import amparex
+from amparex.api import documents_api
 from pprint import pprint
 # Defining the host is optional and defaults to http://trial.amparex.net:8078/amparex/webaxapi
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = amparex.Configuration(
     host = "http://trial.amparex.net:8078/amparex/webaxapi"
 )
 
@@ -39,7 +39,7 @@ configuration.api_key['security_token'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['security_token'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with amparex.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = documents_api.DocumentsApi(api_client)
     alias = "alias_example" # str | alias
@@ -52,7 +52,7 @@ with openapi_client.ApiClient(configuration) as api_client:
         # Get document of treatment as blob
         api_response = api_instance.get_document_binary_using_get1(alias, id, did)
         pprint(api_response)
-    except openapi_client.ApiException as e:
+    except amparex.ApiException as e:
         print("Exception when calling DocumentsApi->get_document_binary_using_get1: %s\n" % e)
 
     # example passing only required values which don't have defaults set
@@ -61,7 +61,7 @@ with openapi_client.ApiClient(configuration) as api_client:
         # Get document of treatment as blob
         api_response = api_instance.get_document_binary_using_get1(alias, id, did, image_width=image_width)
         pprint(api_response)
-    except openapi_client.ApiException as e:
+    except amparex.ApiException as e:
         print("Exception when calling DocumentsApi->get_document_binary_using_get1: %s\n" % e)
 ```
 

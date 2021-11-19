@@ -11,12 +11,12 @@
 import sys
 import unittest
 
-import openapi_client
-from openapi_client.model.predefined_property_reduced import PredefinedPropertyReduced
-from openapi_client.model.translated_string import TranslatedString
+import amparex
+from amparex.model.predefined_property_reduced import PredefinedPropertyReduced
+from amparex.model.translated_string import TranslatedString
 globals()['PredefinedPropertyReduced'] = PredefinedPropertyReduced
 globals()['TranslatedString'] = TranslatedString
-from openapi_client.model.marketing_contact import MarketingContact
+from amparex.model.marketing_contact import MarketingContact
 
 
 class TestMarketingContact(unittest.TestCase):

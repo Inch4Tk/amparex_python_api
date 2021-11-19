@@ -11,12 +11,12 @@
 import sys
 import unittest
 
-import openapi_client
-from openapi_client.model.branch_reduced import BranchReduced
-from openapi_client.model.staff_reduced import StaffReduced
+import amparex
+from amparex.model.branch_reduced import BranchReduced
+from amparex.model.staff_reduced import StaffReduced
 globals()['BranchReduced'] = BranchReduced
 globals()['StaffReduced'] = StaffReduced
-from openapi_client.model.resource import Resource
+from amparex.model.resource import Resource
 
 
 class TestResource(unittest.TestCase):

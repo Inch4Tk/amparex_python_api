@@ -1,4 +1,4 @@
-# openapi_client.DoctorsApi
+# amparex.DoctorsApi
 
 All URIs are relative to *http://trial.amparex.net:8078/amparex/webaxapi*
 
@@ -20,12 +20,12 @@ Get possible fields for orderby of doctor fields
 
 ```python
 import time
-import openapi_client
-from openapi_client.api import doctors_api
+import amparex
+from amparex.api import doctors_api
 from pprint import pprint
 # Defining the host is optional and defaults to http://trial.amparex.net:8078/amparex/webaxapi
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = amparex.Configuration(
     host = "http://trial.amparex.net:8078/amparex/webaxapi"
 )
 
@@ -41,7 +41,7 @@ configuration.api_key['security_token'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['security_token'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with amparex.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = doctors_api.DoctorsApi(api_client)
     alias = "alias_example" # str | alias
@@ -51,7 +51,7 @@ with openapi_client.ApiClient(configuration) as api_client:
         # Get possible fields for orderby of doctor fields
         api_response = api_instance.get_doctor_order_by_fields_using_get(alias)
         pprint(api_response)
-    except openapi_client.ApiException as e:
+    except amparex.ApiException as e:
         print("Exception when calling DoctorsApi->get_doctor_order_by_fields_using_get: %s\n" % e)
 ```
 
@@ -99,13 +99,13 @@ Get one specific doctor by id
 
 ```python
 import time
-import openapi_client
-from openapi_client.api import doctors_api
-from openapi_client.model.doctor import Doctor
+import amparex
+from amparex.api import doctors_api
+from amparex.model.doctor import Doctor
 from pprint import pprint
 # Defining the host is optional and defaults to http://trial.amparex.net:8078/amparex/webaxapi
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = amparex.Configuration(
     host = "http://trial.amparex.net:8078/amparex/webaxapi"
 )
 
@@ -121,7 +121,7 @@ configuration.api_key['security_token'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['security_token'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with amparex.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = doctors_api.DoctorsApi(api_client)
     alias = "alias_example" # str | alias
@@ -132,7 +132,7 @@ with openapi_client.ApiClient(configuration) as api_client:
         # Get one specific doctor by id
         api_response = api_instance.get_doctor_using_get(alias, id)
         pprint(api_response)
-    except openapi_client.ApiException as e:
+    except amparex.ApiException as e:
         print("Exception when calling DoctorsApi->get_doctor_using_get: %s\n" % e)
 ```
 
@@ -183,14 +183,14 @@ Get a list of doctors  by a search query, paging is used, specify limit and page
 
 ```python
 import time
-import openapi_client
-from openapi_client.api import doctors_api
-from openapi_client.model.list_result_wrapper_doctor import ListResultWrapperDoctor
-from openapi_client.model.doctor_search_query import DoctorSearchQuery
+import amparex
+from amparex.api import doctors_api
+from amparex.model.list_result_wrapper_doctor import ListResultWrapperDoctor
+from amparex.model.doctor_search_query import DoctorSearchQuery
 from pprint import pprint
 # Defining the host is optional and defaults to http://trial.amparex.net:8078/amparex/webaxapi
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = amparex.Configuration(
     host = "http://trial.amparex.net:8078/amparex/webaxapi"
 )
 
@@ -206,7 +206,7 @@ configuration.api_key['security_token'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['security_token'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with amparex.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = doctors_api.DoctorsApi(api_client)
     alias = "alias_example" # str | alias
@@ -239,7 +239,7 @@ with openapi_client.ApiClient(configuration) as api_client:
         # Get a list of doctors
         api_response = api_instance.search_doctors_using_post(alias, doctor_search_query)
         pprint(api_response)
-    except openapi_client.ApiException as e:
+    except amparex.ApiException as e:
         print("Exception when calling DoctorsApi->search_doctors_using_post: %s\n" % e)
 ```
 

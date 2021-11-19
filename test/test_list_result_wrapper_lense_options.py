@@ -11,12 +11,12 @@
 import sys
 import unittest
 
-import openapi_client
-from openapi_client.model.lense_options import LenseOptions
-from openapi_client.model.result_meta_data import ResultMetaData
+import amparex
+from amparex.model.lense_options import LenseOptions
+from amparex.model.result_meta_data import ResultMetaData
 globals()['LenseOptions'] = LenseOptions
 globals()['ResultMetaData'] = ResultMetaData
-from openapi_client.model.list_result_wrapper_lense_options import ListResultWrapperLenseOptions
+from amparex.model.list_result_wrapper_lense_options import ListResultWrapperLenseOptions
 
 
 class TestListResultWrapperLenseOptions(unittest.TestCase):

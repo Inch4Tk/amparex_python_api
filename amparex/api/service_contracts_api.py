@@ -11,8 +11,8 @@
 import re  # noqa: F401
 import sys  # noqa: F401
 
-from openapi_client.api_client import ApiClient, Endpoint as _Endpoint
-from openapi_client.model_utils import (  # noqa: F401
+from amparex.api_client import ApiClient, Endpoint as _Endpoint
+from amparex.model_utils import (  # noqa: F401
     check_allowed_values,
     check_validations,
     date,
@@ -21,9 +21,9 @@ from openapi_client.model_utils import (  # noqa: F401
     none_type,
     validate_and_convert_types
 )
-from openapi_client.model.list_result_wrapper_service_contract import ListResultWrapperServiceContract
-from openapi_client.model.service_contract import ServiceContract
-from openapi_client.model.service_contract_search_query import ServiceContractSearchQuery
+from amparex.model.list_result_wrapper_service_contract import ListResultWrapperServiceContract
+from amparex.model.service_contract import ServiceContract
+from amparex.model.service_contract_search_query import ServiceContractSearchQuery
 
 
 class ServiceContractsApi(object):

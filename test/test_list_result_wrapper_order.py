@@ -11,12 +11,12 @@
 import sys
 import unittest
 
-import openapi_client
-from openapi_client.model.order import Order
-from openapi_client.model.result_meta_data import ResultMetaData
+import amparex
+from amparex.model.order import Order
+from amparex.model.result_meta_data import ResultMetaData
 globals()['Order'] = Order
 globals()['ResultMetaData'] = ResultMetaData
-from openapi_client.model.list_result_wrapper_order import ListResultWrapperOrder
+from amparex.model.list_result_wrapper_order import ListResultWrapperOrder
 
 
 class TestListResultWrapperOrder(unittest.TestCase):

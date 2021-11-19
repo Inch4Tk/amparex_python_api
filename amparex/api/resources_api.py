@@ -11,8 +11,8 @@
 import re  # noqa: F401
 import sys  # noqa: F401
 
-from openapi_client.api_client import ApiClient, Endpoint as _Endpoint
-from openapi_client.model_utils import (  # noqa: F401
+from amparex.api_client import ApiClient, Endpoint as _Endpoint
+from amparex.model_utils import (  # noqa: F401
     check_allowed_values,
     check_validations,
     date,
@@ -21,11 +21,11 @@ from openapi_client.model_utils import (  # noqa: F401
     none_type,
     validate_and_convert_types
 )
-from openapi_client.model.creation_response import CreationResponse
-from openapi_client.model.list_result_wrapper_resource import ListResultWrapperResource
-from openapi_client.model.resource import Resource
-from openapi_client.model.resource_search_query import ResourceSearchQuery
-from openapi_client.model.resource_to_save import ResourceToSave
+from amparex.model.creation_response import CreationResponse
+from amparex.model.list_result_wrapper_resource import ListResultWrapperResource
+from amparex.model.resource import Resource
+from amparex.model.resource_search_query import ResourceSearchQuery
+from amparex.model.resource_to_save import ResourceToSave
 
 
 class ResourcesApi(object):

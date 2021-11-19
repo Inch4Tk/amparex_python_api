@@ -11,8 +11,8 @@
 import sys
 import unittest
 
-import openapi_client
-from openapi_client.model.principal import Principal
+import amparex
+from amparex.model.principal import Principal
 
 
 class TestPrincipal(unittest.TestCase):

@@ -10,8 +10,8 @@
 
 import unittest
 
-import openapi_client
-from openapi_client.api.surveys_api import SurveysApi  # noqa: E501
+import amparex
+from amparex.api.surveys_api import SurveysApi  # noqa: E501
 
 
 class TestSurveysApi(unittest.TestCase):

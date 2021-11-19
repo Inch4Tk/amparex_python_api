@@ -11,10 +11,10 @@
 import sys
 import unittest
 
-import openapi_client
-from openapi_client.model.optionalstring import Optionalstring
+import amparex
+from amparex.model.optionalstring import Optionalstring
 globals()['Optionalstring'] = Optionalstring
-from openapi_client.model.staff_to_save import StaffToSave
+from amparex.model.staff_to_save import StaffToSave
 
 
 class TestStaffToSave(unittest.TestCase):

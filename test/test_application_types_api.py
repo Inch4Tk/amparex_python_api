@@ -10,8 +10,8 @@
 
 import unittest
 
-import openapi_client
-from openapi_client.api.application_types_api import ApplicationTypesApi  # noqa: E501
+import amparex
+from amparex.api.application_types_api import ApplicationTypesApi  # noqa: E501
 
 
 class TestApplicationTypesApi(unittest.TestCase):

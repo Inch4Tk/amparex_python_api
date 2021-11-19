@@ -11,8 +11,8 @@
 import sys
 import unittest
 
-import openapi_client
-from openapi_client.model.version_to_save import VersionToSave
+import amparex
+from amparex.model.version_to_save import VersionToSave
 
 
 class TestVersionToSave(unittest.TestCase):

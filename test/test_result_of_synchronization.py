@@ -11,10 +11,10 @@
 import sys
 import unittest
 
-import openapi_client
-from openapi_client.model.appointment_sync import AppointmentSync
+import amparex
+from amparex.model.appointment_sync import AppointmentSync
 globals()['AppointmentSync'] = AppointmentSync
-from openapi_client.model.result_of_synchronization import ResultOfSynchronization
+from amparex.model.result_of_synchronization import ResultOfSynchronization
 
 
 class TestResultOfSynchronization(unittest.TestCase):

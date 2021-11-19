@@ -11,8 +11,8 @@
 import sys
 import unittest
 
-import openapi_client
-from openapi_client.model.lense_type import LenseType
+import amparex
+from amparex.model.lense_type import LenseType
 
 
 class TestLenseType(unittest.TestCase):

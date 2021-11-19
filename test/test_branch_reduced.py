@@ -11,8 +11,8 @@
 import sys
 import unittest
 
-import openapi_client
-from openapi_client.model.branch_reduced import BranchReduced
+import amparex
+from amparex.model.branch_reduced import BranchReduced
 
 
 class TestBranchReduced(unittest.TestCase):

@@ -1,4 +1,4 @@
-# openapi_client.CommentsApi
+# amparex.CommentsApi
 
 All URIs are relative to *http://trial.amparex.net:8078/amparex/webaxapi*
 
@@ -23,14 +23,14 @@ Create a new comment
 
 ```python
 import time
-import openapi_client
-from openapi_client.api import comments_api
-from openapi_client.model.creation_response import CreationResponse
-from openapi_client.model.comment_to_save import CommentToSave
+import amparex
+from amparex.api import comments_api
+from amparex.model.creation_response import CreationResponse
+from amparex.model.comment_to_save import CommentToSave
 from pprint import pprint
 # Defining the host is optional and defaults to http://trial.amparex.net:8078/amparex/webaxapi
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = amparex.Configuration(
     host = "http://trial.amparex.net:8078/amparex/webaxapi"
 )
 
@@ -46,7 +46,7 @@ configuration.api_key['security_token'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['security_token'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with amparex.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = comments_api.CommentsApi(api_client)
     alias = "alias_example" # str | alias
@@ -65,7 +65,7 @@ with openapi_client.ApiClient(configuration) as api_client:
         # Create a new comment
         api_response = api_instance.create_comment_using_post(alias, to_save)
         pprint(api_response)
-    except openapi_client.ApiException as e:
+    except amparex.ApiException as e:
         print("Exception when calling CommentsApi->create_comment_using_post: %s\n" % e)
 ```
 
@@ -115,12 +115,12 @@ Delete a comment with given id
 
 ```python
 import time
-import openapi_client
-from openapi_client.api import comments_api
+import amparex
+from amparex.api import comments_api
 from pprint import pprint
 # Defining the host is optional and defaults to http://trial.amparex.net:8078/amparex/webaxapi
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = amparex.Configuration(
     host = "http://trial.amparex.net:8078/amparex/webaxapi"
 )
 
@@ -136,7 +136,7 @@ configuration.api_key['security_token'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['security_token'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with amparex.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = comments_api.CommentsApi(api_client)
     alias = "alias_example" # str | alias
@@ -146,7 +146,7 @@ with openapi_client.ApiClient(configuration) as api_client:
     try:
         # Delete a comment with given id
         api_instance.delete_comment_using_delete(alias, id)
-    except openapi_client.ApiException as e:
+    except amparex.ApiException as e:
         print("Exception when calling CommentsApi->delete_comment_using_delete: %s\n" % e)
 ```
 
@@ -195,12 +195,12 @@ Get possible fields for orderby of comment fields
 
 ```python
 import time
-import openapi_client
-from openapi_client.api import comments_api
+import amparex
+from amparex.api import comments_api
 from pprint import pprint
 # Defining the host is optional and defaults to http://trial.amparex.net:8078/amparex/webaxapi
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = amparex.Configuration(
     host = "http://trial.amparex.net:8078/amparex/webaxapi"
 )
 
@@ -216,7 +216,7 @@ configuration.api_key['security_token'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['security_token'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with amparex.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = comments_api.CommentsApi(api_client)
     alias = "alias_example" # str | alias
@@ -226,7 +226,7 @@ with openapi_client.ApiClient(configuration) as api_client:
         # Get possible fields for orderby of comment fields
         api_response = api_instance.get_comment_order_by_fields_using_get(alias)
         pprint(api_response)
-    except openapi_client.ApiException as e:
+    except amparex.ApiException as e:
         print("Exception when calling CommentsApi->get_comment_order_by_fields_using_get: %s\n" % e)
 ```
 
@@ -274,13 +274,13 @@ Get one specific comment by id
 
 ```python
 import time
-import openapi_client
-from openapi_client.api import comments_api
-from openapi_client.model.comment import Comment
+import amparex
+from amparex.api import comments_api
+from amparex.model.comment import Comment
 from pprint import pprint
 # Defining the host is optional and defaults to http://trial.amparex.net:8078/amparex/webaxapi
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = amparex.Configuration(
     host = "http://trial.amparex.net:8078/amparex/webaxapi"
 )
 
@@ -296,7 +296,7 @@ configuration.api_key['security_token'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['security_token'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with amparex.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = comments_api.CommentsApi(api_client)
     alias = "alias_example" # str | alias
@@ -307,7 +307,7 @@ with openapi_client.ApiClient(configuration) as api_client:
         # Get one specific comment by id
         api_response = api_instance.get_comment_using_get(alias, id)
         pprint(api_response)
-    except openapi_client.ApiException as e:
+    except amparex.ApiException as e:
         print("Exception when calling CommentsApi->get_comment_using_get: %s\n" % e)
 ```
 
@@ -358,14 +358,14 @@ Get a list of comments  by a search query, paging is used, specify limit and pag
 
 ```python
 import time
-import openapi_client
-from openapi_client.api import comments_api
-from openapi_client.model.list_result_wrapper_comment import ListResultWrapperComment
-from openapi_client.model.comment_search_query import CommentSearchQuery
+import amparex
+from amparex.api import comments_api
+from amparex.model.list_result_wrapper_comment import ListResultWrapperComment
+from amparex.model.comment_search_query import CommentSearchQuery
 from pprint import pprint
 # Defining the host is optional and defaults to http://trial.amparex.net:8078/amparex/webaxapi
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = amparex.Configuration(
     host = "http://trial.amparex.net:8078/amparex/webaxapi"
 )
 
@@ -381,7 +381,7 @@ configuration.api_key['security_token'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['security_token'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with amparex.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = comments_api.CommentsApi(api_client)
     alias = "alias_example" # str | alias
@@ -413,7 +413,7 @@ with openapi_client.ApiClient(configuration) as api_client:
         # Get a list of comments
         api_response = api_instance.search_comments_using_post(alias, comment_search_query)
         pprint(api_response)
-    except openapi_client.ApiException as e:
+    except amparex.ApiException as e:
         print("Exception when calling CommentsApi->search_comments_using_post: %s\n" % e)
 ```
 
@@ -463,13 +463,13 @@ Update comment with given id
 
 ```python
 import time
-import openapi_client
-from openapi_client.api import comments_api
-from openapi_client.model.comment_to_save import CommentToSave
+import amparex
+from amparex.api import comments_api
+from amparex.model.comment_to_save import CommentToSave
 from pprint import pprint
 # Defining the host is optional and defaults to http://trial.amparex.net:8078/amparex/webaxapi
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = amparex.Configuration(
     host = "http://trial.amparex.net:8078/amparex/webaxapi"
 )
 
@@ -485,7 +485,7 @@ configuration.api_key['security_token'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['security_token'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with amparex.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = comments_api.CommentsApi(api_client)
     alias = "alias_example" # str | alias
@@ -504,7 +504,7 @@ with openapi_client.ApiClient(configuration) as api_client:
     try:
         # Update comment with given id
         api_instance.update_comment_using_patch(alias, id, to_update)
-    except openapi_client.ApiException as e:
+    except amparex.ApiException as e:
         print("Exception when calling CommentsApi->update_comment_using_patch: %s\n" % e)
 ```
 

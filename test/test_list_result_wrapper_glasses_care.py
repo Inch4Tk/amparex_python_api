@@ -11,12 +11,12 @@
 import sys
 import unittest
 
-import openapi_client
-from openapi_client.model.glasses_care import GlassesCare
-from openapi_client.model.result_meta_data import ResultMetaData
+import amparex
+from amparex.model.glasses_care import GlassesCare
+from amparex.model.result_meta_data import ResultMetaData
 globals()['GlassesCare'] = GlassesCare
 globals()['ResultMetaData'] = ResultMetaData
-from openapi_client.model.list_result_wrapper_glasses_care import ListResultWrapperGlassesCare
+from amparex.model.list_result_wrapper_glasses_care import ListResultWrapperGlassesCare
 
 
 class TestListResultWrapperGlassesCare(unittest.TestCase):

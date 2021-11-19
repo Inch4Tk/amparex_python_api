@@ -11,14 +11,14 @@
 import sys
 import unittest
 
-import openapi_client
-from openapi_client.model.article_properties_meta import ArticlePropertiesMeta
-from openapi_client.model.order_by import OrderBy
-from openapi_client.model.search_query_meta_data import SearchQueryMetaData
+import amparex
+from amparex.model.article_properties_meta import ArticlePropertiesMeta
+from amparex.model.order_by import OrderBy
+from amparex.model.search_query_meta_data import SearchQueryMetaData
 globals()['ArticlePropertiesMeta'] = ArticlePropertiesMeta
 globals()['OrderBy'] = OrderBy
 globals()['SearchQueryMetaData'] = SearchQueryMetaData
-from openapi_client.model.article_search_query import ArticleSearchQuery
+from amparex.model.article_search_query import ArticleSearchQuery
 
 
 class TestArticleSearchQuery(unittest.TestCase):

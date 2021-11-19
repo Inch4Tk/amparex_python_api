@@ -11,8 +11,8 @@
 import re  # noqa: F401
 import sys  # noqa: F401
 
-from openapi_client.api_client import ApiClient, Endpoint as _Endpoint
-from openapi_client.model_utils import (  # noqa: F401
+from amparex.api_client import ApiClient, Endpoint as _Endpoint
+from amparex.model_utils import (  # noqa: F401
     check_allowed_values,
     check_validations,
     date,
@@ -21,9 +21,9 @@ from openapi_client.model_utils import (  # noqa: F401
     none_type,
     validate_and_convert_types
 )
-from openapi_client.model.api_cash_desk_balance import ApiCashDeskBalance
-from openapi_client.model.api_cash_desk_balance_search_query import ApiCashDeskBalanceSearchQuery
-from openapi_client.model.list_result_wrapper_api_cash_desk_balance import ListResultWrapperApiCashDeskBalance
+from amparex.model.api_cash_desk_balance import ApiCashDeskBalance
+from amparex.model.api_cash_desk_balance_search_query import ApiCashDeskBalanceSearchQuery
+from amparex.model.list_result_wrapper_api_cash_desk_balance import ListResultWrapperApiCashDeskBalance
 
 
 class CashDeskBalancesApi(object):

@@ -11,16 +11,16 @@
 import sys
 import unittest
 
-import openapi_client
-from openapi_client.model.api_service_contract_interval import ApiServiceContractInterval
-from openapi_client.model.bank_account import BankAccount
-from openapi_client.model.predefined_property_reduced import PredefinedPropertyReduced
-from openapi_client.model.translated_string import TranslatedString
+import amparex
+from amparex.model.api_service_contract_interval import ApiServiceContractInterval
+from amparex.model.bank_account import BankAccount
+from amparex.model.predefined_property_reduced import PredefinedPropertyReduced
+from amparex.model.translated_string import TranslatedString
 globals()['ApiServiceContractInterval'] = ApiServiceContractInterval
 globals()['BankAccount'] = BankAccount
 globals()['PredefinedPropertyReduced'] = PredefinedPropertyReduced
 globals()['TranslatedString'] = TranslatedString
-from openapi_client.model.service_contract import ServiceContract
+from amparex.model.service_contract import ServiceContract
 
 
 class TestServiceContract(unittest.TestCase):

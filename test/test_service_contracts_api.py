@@ -10,8 +10,8 @@
 
 import unittest
 
-import openapi_client
-from openapi_client.api.service_contracts_api import ServiceContractsApi  # noqa: E501
+import amparex
+from amparex.api.service_contracts_api import ServiceContractsApi  # noqa: E501
 
 
 class TestServiceContractsApi(unittest.TestCase):

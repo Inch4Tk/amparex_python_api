@@ -1,4 +1,4 @@
-# openapi_client.CustomersApi
+# amparex.CustomersApi
 
 All URIs are relative to *http://trial.amparex.net:8078/amparex/webaxapi*
 
@@ -29,14 +29,14 @@ Create a new customer
 
 ```python
 import time
-import openapi_client
-from openapi_client.api import customers_api
-from openapi_client.model.creation_response import CreationResponse
-from openapi_client.model.customer_to_save import CustomerToSave
+import amparex
+from amparex.api import customers_api
+from amparex.model.creation_response import CreationResponse
+from amparex.model.customer_to_save import CustomerToSave
 from pprint import pprint
 # Defining the host is optional and defaults to http://trial.amparex.net:8078/amparex/webaxapi
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = amparex.Configuration(
     host = "http://trial.amparex.net:8078/amparex/webaxapi"
 )
 
@@ -52,7 +52,7 @@ configuration.api_key['security_token'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['security_token'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with amparex.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = customers_api.CustomersApi(api_client)
     alias = "alias_example" # str | alias
@@ -105,7 +105,7 @@ with openapi_client.ApiClient(configuration) as api_client:
         # Create a new customer
         api_response = api_instance.create_customer_using_post(alias, to_save)
         pprint(api_response)
-    except openapi_client.ApiException as e:
+    except amparex.ApiException as e:
         print("Exception when calling CustomersApi->create_customer_using_post: %s\n" % e)
 ```
 
@@ -155,14 +155,14 @@ Create a new document for customer archive
 
 ```python
 import time
-import openapi_client
-from openapi_client.api import customers_api
-from openapi_client.model.document_to_save import DocumentToSave
-from openapi_client.model.creation_response import CreationResponse
+import amparex
+from amparex.api import customers_api
+from amparex.model.document_to_save import DocumentToSave
+from amparex.model.creation_response import CreationResponse
 from pprint import pprint
 # Defining the host is optional and defaults to http://trial.amparex.net:8078/amparex/webaxapi
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = amparex.Configuration(
     host = "http://trial.amparex.net:8078/amparex/webaxapi"
 )
 
@@ -178,7 +178,7 @@ configuration.api_key['security_token'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['security_token'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with amparex.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = customers_api.CustomersApi(api_client)
     alias = "alias_example" # str | alias
@@ -197,7 +197,7 @@ with openapi_client.ApiClient(configuration) as api_client:
         # Create a new document for customer archive
         api_response = api_instance.create_document_using_post(alias, id, to_save)
         pprint(api_response)
-    except openapi_client.ApiException as e:
+    except amparex.ApiException as e:
         print("Exception when calling CustomersApi->create_document_using_post: %s\n" % e)
 ```
 
@@ -248,12 +248,12 @@ Get possible fields for orderby of customer fields
 
 ```python
 import time
-import openapi_client
-from openapi_client.api import customers_api
+import amparex
+from amparex.api import customers_api
 from pprint import pprint
 # Defining the host is optional and defaults to http://trial.amparex.net:8078/amparex/webaxapi
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = amparex.Configuration(
     host = "http://trial.amparex.net:8078/amparex/webaxapi"
 )
 
@@ -269,7 +269,7 @@ configuration.api_key['security_token'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['security_token'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with amparex.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = customers_api.CustomersApi(api_client)
     alias = "alias_example" # str | alias
@@ -279,7 +279,7 @@ with openapi_client.ApiClient(configuration) as api_client:
         # Get possible fields for orderby of customer fields
         api_response = api_instance.get_customer_order_by_fields_using_get(alias)
         pprint(api_response)
-    except openapi_client.ApiException as e:
+    except amparex.ApiException as e:
         print("Exception when calling CustomersApi->get_customer_order_by_fields_using_get: %s\n" % e)
 ```
 
@@ -327,13 +327,13 @@ Get one specific customer by id
 
 ```python
 import time
-import openapi_client
-from openapi_client.api import customers_api
-from openapi_client.model.customer import Customer
+import amparex
+from amparex.api import customers_api
+from amparex.model.customer import Customer
 from pprint import pprint
 # Defining the host is optional and defaults to http://trial.amparex.net:8078/amparex/webaxapi
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = amparex.Configuration(
     host = "http://trial.amparex.net:8078/amparex/webaxapi"
 )
 
@@ -349,7 +349,7 @@ configuration.api_key['security_token'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['security_token'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with amparex.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = customers_api.CustomersApi(api_client)
     alias = "alias_example" # str | alias
@@ -360,7 +360,7 @@ with openapi_client.ApiClient(configuration) as api_client:
         # Get one specific customer by id
         api_response = api_instance.get_customer_using_get(alias, id)
         pprint(api_response)
-    except openapi_client.ApiException as e:
+    except amparex.ApiException as e:
         print("Exception when calling CustomersApi->get_customer_using_get: %s\n" % e)
 ```
 
@@ -409,12 +409,12 @@ Get document of customer as blob
 
 ```python
 import time
-import openapi_client
-from openapi_client.api import customers_api
+import amparex
+from amparex.api import customers_api
 from pprint import pprint
 # Defining the host is optional and defaults to http://trial.amparex.net:8078/amparex/webaxapi
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = amparex.Configuration(
     host = "http://trial.amparex.net:8078/amparex/webaxapi"
 )
 
@@ -430,7 +430,7 @@ configuration.api_key['security_token'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['security_token'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with amparex.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = customers_api.CustomersApi(api_client)
     alias = "alias_example" # str | alias
@@ -443,7 +443,7 @@ with openapi_client.ApiClient(configuration) as api_client:
         # Get document of customer as blob
         api_response = api_instance.get_document_binary_using_get(alias, cid, did)
         pprint(api_response)
-    except openapi_client.ApiException as e:
+    except amparex.ApiException as e:
         print("Exception when calling CustomersApi->get_document_binary_using_get: %s\n" % e)
 
     # example passing only required values which don't have defaults set
@@ -452,7 +452,7 @@ with openapi_client.ApiClient(configuration) as api_client:
         # Get document of customer as blob
         api_response = api_instance.get_document_binary_using_get(alias, cid, did, image_width=image_width)
         pprint(api_response)
-    except openapi_client.ApiException as e:
+    except amparex.ApiException as e:
         print("Exception when calling CustomersApi->get_document_binary_using_get: %s\n" % e)
 ```
 
@@ -503,13 +503,13 @@ Get one specfic document by id (without binary)
 
 ```python
 import time
-import openapi_client
-from openapi_client.api import customers_api
-from openapi_client.model.document import Document
+import amparex
+from amparex.api import customers_api
+from amparex.model.document import Document
 from pprint import pprint
 # Defining the host is optional and defaults to http://trial.amparex.net:8078/amparex/webaxapi
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = amparex.Configuration(
     host = "http://trial.amparex.net:8078/amparex/webaxapi"
 )
 
@@ -525,7 +525,7 @@ configuration.api_key['security_token'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['security_token'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with amparex.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = customers_api.CustomersApi(api_client)
     alias = "alias_example" # str | alias
@@ -537,7 +537,7 @@ with openapi_client.ApiClient(configuration) as api_client:
         # Get one specfic document by id (without binary)
         api_response = api_instance.get_document_using_get(alias, cid, did)
         pprint(api_response)
-    except openapi_client.ApiException as e:
+    except amparex.ApiException as e:
         print("Exception when calling CustomersApi->get_document_using_get: %s\n" % e)
 ```
 
@@ -587,13 +587,13 @@ Get marketingcontacts for specific customer
 
 ```python
 import time
-import openapi_client
-from openapi_client.api import customers_api
-from openapi_client.model.list_result_wrapper_marketing_contact import ListResultWrapperMarketingContact
+import amparex
+from amparex.api import customers_api
+from amparex.model.list_result_wrapper_marketing_contact import ListResultWrapperMarketingContact
 from pprint import pprint
 # Defining the host is optional and defaults to http://trial.amparex.net:8078/amparex/webaxapi
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = amparex.Configuration(
     host = "http://trial.amparex.net:8078/amparex/webaxapi"
 )
 
@@ -609,7 +609,7 @@ configuration.api_key['security_token'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['security_token'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with amparex.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = customers_api.CustomersApi(api_client)
     alias = "alias_example" # str | alias
@@ -620,7 +620,7 @@ with openapi_client.ApiClient(configuration) as api_client:
         # Get marketingcontacts for specific customer
         api_response = api_instance.get_marketing_contacts_using_get(alias, id)
         pprint(api_response)
-    except openapi_client.ApiException as e:
+    except amparex.ApiException as e:
         print("Exception when calling CustomersApi->get_marketing_contacts_using_get: %s\n" % e)
 ```
 
@@ -671,14 +671,14 @@ Get a list of customers  by a search query, paging is used, specify limit and pa
 
 ```python
 import time
-import openapi_client
-from openapi_client.api import customers_api
-from openapi_client.model.list_result_wrapper_customer import ListResultWrapperCustomer
-from openapi_client.model.customer_search_query import CustomerSearchQuery
+import amparex
+from amparex.api import customers_api
+from amparex.model.list_result_wrapper_customer import ListResultWrapperCustomer
+from amparex.model.customer_search_query import CustomerSearchQuery
 from pprint import pprint
 # Defining the host is optional and defaults to http://trial.amparex.net:8078/amparex/webaxapi
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = amparex.Configuration(
     host = "http://trial.amparex.net:8078/amparex/webaxapi"
 )
 
@@ -694,7 +694,7 @@ configuration.api_key['security_token'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['security_token'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with amparex.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = customers_api.CustomersApi(api_client)
     alias = "alias_example" # str | alias
@@ -730,7 +730,7 @@ with openapi_client.ApiClient(configuration) as api_client:
         # Get a list of customers
         api_response = api_instance.search_customers_using_post(alias, customer_search_query)
         pprint(api_response)
-    except openapi_client.ApiException as e:
+    except amparex.ApiException as e:
         print("Exception when calling CustomersApi->search_customers_using_post: %s\n" % e)
 ```
 
@@ -774,7 +774,7 @@ Name | Type | Description  | Notes
 
 Get a list of customer documents (without binary)
 
-Get a list of customer documents  by a search query, paging is used, specify limit and page; Model Type: Documents is returned. Document is a wrapper, use id with documents/{id}/binary to get document binary itself 
+Get a list of customer documents  by a search query, paging is used, specify limit and page; Model Type: Documents is returned. Document is a wrapper, use id with documents/{id}/binary to get document binary itself
 
 ### Example
 
@@ -782,14 +782,14 @@ Get a list of customer documents  by a search query, paging is used, specify lim
 
 ```python
 import time
-import openapi_client
-from openapi_client.api import customers_api
-from openapi_client.model.document_search_query import DocumentSearchQuery
-from openapi_client.model.list_result_wrapper_document import ListResultWrapperDocument
+import amparex
+from amparex.api import customers_api
+from amparex.model.document_search_query import DocumentSearchQuery
+from amparex.model.list_result_wrapper_document import ListResultWrapperDocument
 from pprint import pprint
 # Defining the host is optional and defaults to http://trial.amparex.net:8078/amparex/webaxapi
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = amparex.Configuration(
     host = "http://trial.amparex.net:8078/amparex/webaxapi"
 )
 
@@ -805,7 +805,7 @@ configuration.api_key['security_token'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['security_token'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with amparex.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = customers_api.CustomersApi(api_client)
     alias = "alias_example" # str | alias
@@ -831,7 +831,7 @@ with openapi_client.ApiClient(configuration) as api_client:
         # Get a list of customer documents (without binary)
         api_response = api_instance.search_documents_using_post(alias, id, search_query)
         pprint(api_response)
-    except openapi_client.ApiException as e:
+    except amparex.ApiException as e:
         print("Exception when calling CustomersApi->search_documents_using_post: %s\n" % e)
 ```
 
@@ -876,7 +876,7 @@ Name | Type | Description  | Notes
 
 Get a list of treatment documents (without binary)
 
-Get a list of treatment documents by a search query, paging is used, specify limit and page; Model Type: Documents is returned. Document is a wrapper, use id with documents/{id}/binary to get document binary itself 
+Get a list of treatment documents by a search query, paging is used, specify limit and page; Model Type: Documents is returned. Document is a wrapper, use id with documents/{id}/binary to get document binary itself
 
 ### Example
 
@@ -884,14 +884,14 @@ Get a list of treatment documents by a search query, paging is used, specify lim
 
 ```python
 import time
-import openapi_client
-from openapi_client.api import customers_api
-from openapi_client.model.document_search_query import DocumentSearchQuery
-from openapi_client.model.list_result_wrapper_document import ListResultWrapperDocument
+import amparex
+from amparex.api import customers_api
+from amparex.model.document_search_query import DocumentSearchQuery
+from amparex.model.list_result_wrapper_document import ListResultWrapperDocument
 from pprint import pprint
 # Defining the host is optional and defaults to http://trial.amparex.net:8078/amparex/webaxapi
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = amparex.Configuration(
     host = "http://trial.amparex.net:8078/amparex/webaxapi"
 )
 
@@ -907,7 +907,7 @@ configuration.api_key['security_token'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['security_token'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with amparex.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = customers_api.CustomersApi(api_client)
     alias = "alias_example" # str | alias
@@ -933,7 +933,7 @@ with openapi_client.ApiClient(configuration) as api_client:
         # Get a list of treatment documents (without binary)
         api_response = api_instance.search_documents_using_post1(alias, id, search_query)
         pprint(api_response)
-    except openapi_client.ApiException as e:
+    except amparex.ApiException as e:
         print("Exception when calling CustomersApi->search_documents_using_post1: %s\n" % e)
 ```
 
@@ -984,13 +984,13 @@ Update customer with given id
 
 ```python
 import time
-import openapi_client
-from openapi_client.api import customers_api
-from openapi_client.model.customer_to_save import CustomerToSave
+import amparex
+from amparex.api import customers_api
+from amparex.model.customer_to_save import CustomerToSave
 from pprint import pprint
 # Defining the host is optional and defaults to http://trial.amparex.net:8078/amparex/webaxapi
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = amparex.Configuration(
     host = "http://trial.amparex.net:8078/amparex/webaxapi"
 )
 
@@ -1006,7 +1006,7 @@ configuration.api_key['security_token'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['security_token'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with amparex.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = customers_api.CustomersApi(api_client)
     alias = "alias_example" # str | alias
@@ -1059,7 +1059,7 @@ with openapi_client.ApiClient(configuration) as api_client:
     try:
         # Update customer with given id
         api_instance.update_customer_using_patch(alias, id, to_update)
-    except openapi_client.ApiException as e:
+    except amparex.ApiException as e:
         print("Exception when calling CustomersApi->update_customer_using_patch: %s\n" % e)
 ```
 
@@ -1110,13 +1110,13 @@ Update document with given id
 
 ```python
 import time
-import openapi_client
-from openapi_client.api import customers_api
-from openapi_client.model.document_to_save import DocumentToSave
+import amparex
+from amparex.api import customers_api
+from amparex.model.document_to_save import DocumentToSave
 from pprint import pprint
 # Defining the host is optional and defaults to http://trial.amparex.net:8078/amparex/webaxapi
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = amparex.Configuration(
     host = "http://trial.amparex.net:8078/amparex/webaxapi"
 )
 
@@ -1132,7 +1132,7 @@ configuration.api_key['security_token'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['security_token'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with amparex.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = customers_api.CustomersApi(api_client)
     alias = "alias_example" # str | alias
@@ -1151,7 +1151,7 @@ with openapi_client.ApiClient(configuration) as api_client:
     try:
         # Update document with given id
         api_instance.update_document_using_patch(alias, cid, did, to_update)
-    except openapi_client.ApiException as e:
+    except amparex.ApiException as e:
         print("Exception when calling CustomersApi->update_document_using_patch: %s\n" % e)
 ```
 

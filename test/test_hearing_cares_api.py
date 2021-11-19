@@ -10,8 +10,8 @@
 
 import unittest
 
-import openapi_client
-from openapi_client.api.hearing_cares_api import HearingCaresApi  # noqa: E501
+import amparex
+from amparex.api.hearing_cares_api import HearingCaresApi  # noqa: E501
 
 
 class TestHearingCaresApi(unittest.TestCase):

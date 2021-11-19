@@ -11,8 +11,8 @@
 import sys
 import unittest
 
-import openapi_client
-from openapi_client.model.comment_to_save import CommentToSave
+import amparex
+from amparex.model.comment_to_save import CommentToSave
 
 
 class TestCommentToSave(unittest.TestCase):

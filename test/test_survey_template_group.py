@@ -11,10 +11,10 @@
 import sys
 import unittest
 
-import openapi_client
-from openapi_client.model.survey_template_question import SurveyTemplateQuestion
+import amparex
+from amparex.model.survey_template_question import SurveyTemplateQuestion
 globals()['SurveyTemplateQuestion'] = SurveyTemplateQuestion
-from openapi_client.model.survey_template_group import SurveyTemplateGroup
+from amparex.model.survey_template_group import SurveyTemplateGroup
 
 
 class TestSurveyTemplateGroup(unittest.TestCase):

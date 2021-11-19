@@ -10,8 +10,8 @@
 
 import unittest
 
-import openapi_client
-from openapi_client.api.companies_api import CompaniesApi  # noqa: E501
+import amparex
+from amparex.api.companies_api import CompaniesApi  # noqa: E501
 
 
 class TestCompaniesApi(unittest.TestCase):

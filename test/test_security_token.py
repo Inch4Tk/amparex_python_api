@@ -11,8 +11,8 @@
 import sys
 import unittest
 
-import openapi_client
-from openapi_client.model.security_token import SecurityToken
+import amparex
+from amparex.model.security_token import SecurityToken
 
 
 class TestSecurityToken(unittest.TestCase):

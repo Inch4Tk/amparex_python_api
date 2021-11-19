@@ -13,15 +13,15 @@
 __version__ = "1.0.0"
 
 # import ApiClient
-from openapi_client.api_client import ApiClient
+from amparex.api_client import ApiClient
 
 # import Configuration
-from openapi_client.configuration import Configuration
+from amparex.configuration import Configuration
 
 # import exceptions
-from openapi_client.exceptions import OpenApiException
-from openapi_client.exceptions import ApiAttributeError
-from openapi_client.exceptions import ApiTypeError
-from openapi_client.exceptions import ApiValueError
-from openapi_client.exceptions import ApiKeyError
-from openapi_client.exceptions import ApiException
+from amparex.exceptions import OpenApiException
+from amparex.exceptions import ApiAttributeError
+from amparex.exceptions import ApiTypeError
+from amparex.exceptions import ApiValueError
+from amparex.exceptions import ApiKeyError
+from amparex.exceptions import ApiException

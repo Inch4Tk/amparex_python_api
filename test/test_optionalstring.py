@@ -11,8 +11,8 @@
 import sys
 import unittest
 
-import openapi_client
-from openapi_client.model.optionalstring import Optionalstring
+import amparex
+from amparex.model.optionalstring import Optionalstring
 
 
 class TestOptionalstring(unittest.TestCase):

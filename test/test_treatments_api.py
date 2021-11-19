@@ -10,8 +10,8 @@
 
 import unittest
 
-import openapi_client
-from openapi_client.api.treatments_api import TreatmentsApi  # noqa: E501
+import amparex
+from amparex.api.treatments_api import TreatmentsApi  # noqa: E501
 
 
 class TestTreatmentsApi(unittest.TestCase):

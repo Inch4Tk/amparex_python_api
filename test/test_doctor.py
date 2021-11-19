@@ -11,10 +11,10 @@
 import sys
 import unittest
 
-import openapi_client
-from openapi_client.model.doctor_property import DoctorProperty
+import amparex
+from amparex.model.doctor_property import DoctorProperty
 globals()['DoctorProperty'] = DoctorProperty
-from openapi_client.model.doctor import Doctor
+from amparex.model.doctor import Doctor
 
 
 class TestDoctor(unittest.TestCase):

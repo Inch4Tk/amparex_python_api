@@ -11,12 +11,12 @@
 import sys
 import unittest
 
-import openapi_client
-from openapi_client.model.address import Address
-from openapi_client.model.api_company_customer_number import ApiCompanyCustomerNumber
+import amparex
+from amparex.model.address import Address
+from amparex.model.api_company_customer_number import ApiCompanyCustomerNumber
 globals()['Address'] = Address
 globals()['ApiCompanyCustomerNumber'] = ApiCompanyCustomerNumber
-from openapi_client.model.company import Company
+from amparex.model.company import Company
 
 
 class TestCompany(unittest.TestCase):

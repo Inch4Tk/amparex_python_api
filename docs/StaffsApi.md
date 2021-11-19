@@ -1,4 +1,4 @@
-# openapi_client.StaffsApi
+# amparex.StaffsApi
 
 All URIs are relative to *http://trial.amparex.net:8078/amparex/webaxapi*
 
@@ -21,14 +21,14 @@ Create a new staff
 
 ```python
 import time
-import openapi_client
-from openapi_client.api import staffs_api
-from openapi_client.model.creation_response import CreationResponse
-from openapi_client.model.staff_to_save import StaffToSave
+import amparex
+from amparex.api import staffs_api
+from amparex.model.creation_response import CreationResponse
+from amparex.model.staff_to_save import StaffToSave
 from pprint import pprint
 # Defining the host is optional and defaults to http://trial.amparex.net:8078/amparex/webaxapi
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = amparex.Configuration(
     host = "http://trial.amparex.net:8078/amparex/webaxapi"
 )
 
@@ -44,7 +44,7 @@ configuration.api_key['security_token'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['security_token'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with amparex.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = staffs_api.StaffsApi(api_client)
     alias = "alias_example" # str | alias
@@ -79,7 +79,7 @@ with openapi_client.ApiClient(configuration) as api_client:
         # Create a new staff
         api_response = api_instance.create_staff_using_post(alias, to_save)
         pprint(api_response)
-    except openapi_client.ApiException as e:
+    except amparex.ApiException as e:
         print("Exception when calling StaffsApi->create_staff_using_post: %s\n" % e)
 ```
 
@@ -129,13 +129,13 @@ Get one specific staff by id
 
 ```python
 import time
-import openapi_client
-from openapi_client.api import staffs_api
-from openapi_client.model.staff import Staff
+import amparex
+from amparex.api import staffs_api
+from amparex.model.staff import Staff
 from pprint import pprint
 # Defining the host is optional and defaults to http://trial.amparex.net:8078/amparex/webaxapi
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = amparex.Configuration(
     host = "http://trial.amparex.net:8078/amparex/webaxapi"
 )
 
@@ -151,7 +151,7 @@ configuration.api_key['security_token'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['security_token'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with amparex.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = staffs_api.StaffsApi(api_client)
     alias = "alias_example" # str | alias
@@ -162,7 +162,7 @@ with openapi_client.ApiClient(configuration) as api_client:
         # Get one specific staff by id
         api_response = api_instance.get_staff_using_get(alias, id)
         pprint(api_response)
-    except openapi_client.ApiException as e:
+    except amparex.ApiException as e:
         print("Exception when calling StaffsApi->get_staff_using_get: %s\n" % e)
 ```
 
@@ -213,14 +213,14 @@ Get a list of staffs by a search query; Model Type: Staff is returned
 
 ```python
 import time
-import openapi_client
-from openapi_client.api import staffs_api
-from openapi_client.model.staff_search_query import StaffSearchQuery
-from openapi_client.model.list_result_wrapper_staff import ListResultWrapperStaff
+import amparex
+from amparex.api import staffs_api
+from amparex.model.staff_search_query import StaffSearchQuery
+from amparex.model.list_result_wrapper_staff import ListResultWrapperStaff
 from pprint import pprint
 # Defining the host is optional and defaults to http://trial.amparex.net:8078/amparex/webaxapi
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = amparex.Configuration(
     host = "http://trial.amparex.net:8078/amparex/webaxapi"
 )
 
@@ -236,7 +236,7 @@ configuration.api_key['security_token'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['security_token'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with amparex.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = staffs_api.StaffsApi(api_client)
     alias = "alias_example" # str | alias
@@ -257,7 +257,7 @@ with openapi_client.ApiClient(configuration) as api_client:
         # Get a list of staffs
         api_response = api_instance.search_staffs_using_post(alias, search_query)
         pprint(api_response)
-    except openapi_client.ApiException as e:
+    except amparex.ApiException as e:
         print("Exception when calling StaffsApi->search_staffs_using_post: %s\n" % e)
 ```
 
@@ -307,13 +307,13 @@ Update staff with given id
 
 ```python
 import time
-import openapi_client
-from openapi_client.api import staffs_api
-from openapi_client.model.staff_to_save import StaffToSave
+import amparex
+from amparex.api import staffs_api
+from amparex.model.staff_to_save import StaffToSave
 from pprint import pprint
 # Defining the host is optional and defaults to http://trial.amparex.net:8078/amparex/webaxapi
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = amparex.Configuration(
     host = "http://trial.amparex.net:8078/amparex/webaxapi"
 )
 
@@ -329,7 +329,7 @@ configuration.api_key['security_token'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['security_token'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with amparex.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = staffs_api.StaffsApi(api_client)
     alias = "alias_example" # str | alias
@@ -364,7 +364,7 @@ with openapi_client.ApiClient(configuration) as api_client:
     try:
         # Update staff with given id
         api_instance.update_appointment_using_patch1(alias, id, to_update)
-    except openapi_client.ApiException as e:
+    except amparex.ApiException as e:
         print("Exception when calling StaffsApi->update_appointment_using_patch1: %s\n" % e)
 ```
 

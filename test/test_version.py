@@ -11,8 +11,8 @@
 import sys
 import unittest
 
-import openapi_client
-from openapi_client.model.version import Version
+import amparex
+from amparex.model.version import Version
 
 
 class TestVersion(unittest.TestCase):

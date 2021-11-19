@@ -11,8 +11,8 @@
 import sys
 import unittest
 
-import openapi_client
-from openapi_client.model.document_to_save import DocumentToSave
+import amparex
+from amparex.model.document_to_save import DocumentToSave
 
 
 class TestDocumentToSave(unittest.TestCase):

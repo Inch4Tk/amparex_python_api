@@ -11,14 +11,14 @@
 import sys
 import unittest
 
-import openapi_client
-from openapi_client.model.contact_lense_detail import ContactLenseDetail
-from openapi_client.model.invoice_position_to_save import InvoicePositionToSave
-from openapi_client.model.optionalboolean import Optionalboolean
+import amparex
+from amparex.model.contact_lense_detail import ContactLenseDetail
+from amparex.model.invoice_position_to_save import InvoicePositionToSave
+from amparex.model.optionalboolean import Optionalboolean
 globals()['ContactLenseDetail'] = ContactLenseDetail
 globals()['InvoicePositionToSave'] = InvoicePositionToSave
 globals()['Optionalboolean'] = Optionalboolean
-from openapi_client.model.contact_lense_to_save import ContactLenseToSave
+from amparex.model.contact_lense_to_save import ContactLenseToSave
 
 
 class TestContactLenseToSave(unittest.TestCase):

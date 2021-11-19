@@ -11,8 +11,8 @@
 import re  # noqa: F401
 import sys  # noqa: F401
 
-from openapi_client.api_client import ApiClient, Endpoint as _Endpoint
-from openapi_client.model_utils import (  # noqa: F401
+from amparex.api_client import ApiClient, Endpoint as _Endpoint
+from amparex.model_utils import (  # noqa: F401
     check_allowed_values,
     check_validations,
     date,
@@ -21,16 +21,16 @@ from openapi_client.model_utils import (  # noqa: F401
     none_type,
     validate_and_convert_types
 )
-from openapi_client.model.creation_response import CreationResponse
-from openapi_client.model.customer import Customer
-from openapi_client.model.customer_search_query import CustomerSearchQuery
-from openapi_client.model.customer_to_save import CustomerToSave
-from openapi_client.model.document import Document
-from openapi_client.model.document_search_query import DocumentSearchQuery
-from openapi_client.model.document_to_save import DocumentToSave
-from openapi_client.model.list_result_wrapper_customer import ListResultWrapperCustomer
-from openapi_client.model.list_result_wrapper_document import ListResultWrapperDocument
-from openapi_client.model.list_result_wrapper_marketing_contact import ListResultWrapperMarketingContact
+from amparex.model.creation_response import CreationResponse
+from amparex.model.customer import Customer
+from amparex.model.customer_search_query import CustomerSearchQuery
+from amparex.model.customer_to_save import CustomerToSave
+from amparex.model.document import Document
+from amparex.model.document_search_query import DocumentSearchQuery
+from amparex.model.document_to_save import DocumentToSave
+from amparex.model.list_result_wrapper_customer import ListResultWrapperCustomer
+from amparex.model.list_result_wrapper_document import ListResultWrapperDocument
+from amparex.model.list_result_wrapper_marketing_contact import ListResultWrapperMarketingContact
 
 
 class CustomersApi(object):

@@ -11,8 +11,8 @@
 import re  # noqa: F401
 import sys  # noqa: F401
 
-from openapi_client.api_client import ApiClient, Endpoint as _Endpoint
-from openapi_client.model_utils import (  # noqa: F401
+from amparex.api_client import ApiClient, Endpoint as _Endpoint
+from amparex.model_utils import (  # noqa: F401
     check_allowed_values,
     check_validations,
     date,
@@ -21,14 +21,14 @@ from openapi_client.model_utils import (  # noqa: F401
     none_type,
     validate_and_convert_types
 )
-from openapi_client.model.article_type import ArticleType
-from openapi_client.model.article_type_search_query import ArticleTypeSearchQuery
-from openapi_client.model.list_result_wrapper_predefined_property import ListResultWrapperPredefinedProperty
-from openapi_client.model.list_result_wrapper_property_type import ListResultWrapperPropertyType
-from openapi_client.model.predefined_property import PredefinedProperty
-from openapi_client.model.predefined_property_search_query import PredefinedPropertySearchQuery
-from openapi_client.model.property_type import PropertyType
-from openapi_client.model.property_type_search_query import PropertyTypeSearchQuery
+from amparex.model.article_type import ArticleType
+from amparex.model.article_type_search_query import ArticleTypeSearchQuery
+from amparex.model.list_result_wrapper_predefined_property import ListResultWrapperPredefinedProperty
+from amparex.model.list_result_wrapper_property_type import ListResultWrapperPropertyType
+from amparex.model.predefined_property import PredefinedProperty
+from amparex.model.predefined_property_search_query import PredefinedPropertySearchQuery
+from amparex.model.property_type import PropertyType
+from amparex.model.property_type_search_query import PropertyTypeSearchQuery
 
 
 class PropertiesApi(object):

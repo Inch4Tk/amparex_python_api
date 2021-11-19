@@ -10,8 +10,8 @@
 
 import unittest
 
-import openapi_client
-from openapi_client.api.survey_templates_api import SurveyTemplatesApi  # noqa: E501
+import amparex
+from amparex.api.survey_templates_api import SurveyTemplatesApi  # noqa: E501
 
 
 class TestSurveyTemplatesApi(unittest.TestCase):

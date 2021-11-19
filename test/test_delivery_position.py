@@ -11,8 +11,8 @@
 import sys
 import unittest
 
-import openapi_client
-from openapi_client.model.delivery_position import DeliveryPosition
+import amparex
+from amparex.model.delivery_position import DeliveryPosition
 
 
 class TestDeliveryPosition(unittest.TestCase):

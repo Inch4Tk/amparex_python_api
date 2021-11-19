@@ -11,8 +11,8 @@
 import sys
 import unittest
 
-import openapi_client
-from openapi_client.model.glasses_configuration import GlassesConfiguration
+import amparex
+from amparex.model.glasses_configuration import GlassesConfiguration
 
 
 class TestGlassesConfiguration(unittest.TestCase):

@@ -11,10 +11,10 @@
 import sys
 import unittest
 
-import openapi_client
-from openapi_client.model.address import Address
+import amparex
+from amparex.model.address import Address
 globals()['Address'] = Address
-from openapi_client.model.staff import Staff
+from amparex.model.staff import Staff
 
 
 class TestStaff(unittest.TestCase):

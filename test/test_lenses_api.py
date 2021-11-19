@@ -10,8 +10,8 @@
 
 import unittest
 
-import openapi_client
-from openapi_client.api.lenses_api import LensesApi  # noqa: E501
+import amparex
+from amparex.api.lenses_api import LensesApi  # noqa: E501
 
 
 class TestLensesApi(unittest.TestCase):

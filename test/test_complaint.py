@@ -11,14 +11,14 @@
 import sys
 import unittest
 
-import openapi_client
-from openapi_client.model.predefined_property_simple import PredefinedPropertySimple
-from openapi_client.model.staff_reduced import StaffReduced
-from openapi_client.model.translated_string import TranslatedString
+import amparex
+from amparex.model.predefined_property_simple import PredefinedPropertySimple
+from amparex.model.staff_reduced import StaffReduced
+from amparex.model.translated_string import TranslatedString
 globals()['PredefinedPropertySimple'] = PredefinedPropertySimple
 globals()['StaffReduced'] = StaffReduced
 globals()['TranslatedString'] = TranslatedString
-from openapi_client.model.complaint import Complaint
+from amparex.model.complaint import Complaint
 
 
 class TestComplaint(unittest.TestCase):

@@ -11,12 +11,12 @@
 import sys
 import unittest
 
-import openapi_client
-from openapi_client.model.api_cash_desk_balance import ApiCashDeskBalance
-from openapi_client.model.result_meta_data import ResultMetaData
+import amparex
+from amparex.model.api_cash_desk_balance import ApiCashDeskBalance
+from amparex.model.result_meta_data import ResultMetaData
 globals()['ApiCashDeskBalance'] = ApiCashDeskBalance
 globals()['ResultMetaData'] = ResultMetaData
-from openapi_client.model.list_result_wrapper_api_cash_desk_balance import ListResultWrapperApiCashDeskBalance
+from amparex.model.list_result_wrapper_api_cash_desk_balance import ListResultWrapperApiCashDeskBalance
 
 
 class TestListResultWrapperApiCashDeskBalance(unittest.TestCase):

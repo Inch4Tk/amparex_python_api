@@ -11,8 +11,8 @@
 import sys
 import unittest
 
-import openapi_client
-from openapi_client.model.refraction_report import RefractionReport
+import amparex
+from amparex.model.refraction_report import RefractionReport
 
 
 class TestRefractionReport(unittest.TestCase):

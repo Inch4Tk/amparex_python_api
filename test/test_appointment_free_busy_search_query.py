@@ -11,8 +11,8 @@
 import sys
 import unittest
 
-import openapi_client
-from openapi_client.model.appointment_free_busy_search_query import AppointmentFreeBusySearchQuery
+import amparex
+from amparex.model.appointment_free_busy_search_query import AppointmentFreeBusySearchQuery
 
 
 class TestAppointmentFreeBusySearchQuery(unittest.TestCase):

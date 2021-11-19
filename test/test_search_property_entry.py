@@ -11,8 +11,8 @@
 import sys
 import unittest
 
-import openapi_client
-from openapi_client.model.search_property_entry import SearchPropertyEntry
+import amparex
+from amparex.model.search_property_entry import SearchPropertyEntry
 
 
 class TestSearchPropertyEntry(unittest.TestCase):

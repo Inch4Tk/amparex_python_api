@@ -10,8 +10,8 @@
 
 import unittest
 
-import openapi_client
-from openapi_client.api.appointment_planner_api import AppointmentPlannerApi  # noqa: E501
+import amparex
+from amparex.api.appointment_planner_api import AppointmentPlannerApi  # noqa: E501
 
 
 class TestAppointmentPlannerApi(unittest.TestCase):

@@ -11,8 +11,8 @@
 import sys
 import unittest
 
-import openapi_client
-from openapi_client.model.treatment_creation_response import TreatmentCreationResponse
+import amparex
+from amparex.model.treatment_creation_response import TreatmentCreationResponse
 
 
 class TestTreatmentCreationResponse(unittest.TestCase):

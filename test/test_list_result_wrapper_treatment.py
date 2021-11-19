@@ -11,12 +11,12 @@
 import sys
 import unittest
 
-import openapi_client
-from openapi_client.model.result_meta_data import ResultMetaData
-from openapi_client.model.treatment import Treatment
+import amparex
+from amparex.model.result_meta_data import ResultMetaData
+from amparex.model.treatment import Treatment
 globals()['ResultMetaData'] = ResultMetaData
 globals()['Treatment'] = Treatment
-from openapi_client.model.list_result_wrapper_treatment import ListResultWrapperTreatment
+from amparex.model.list_result_wrapper_treatment import ListResultWrapperTreatment
 
 
 class TestListResultWrapperTreatment(unittest.TestCase):

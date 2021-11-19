@@ -1,4 +1,4 @@
-# openapi_client.MarketingActionsApi
+# amparex.MarketingActionsApi
 
 All URIs are relative to *http://trial.amparex.net:8078/amparex/webaxapi*
 
@@ -20,12 +20,12 @@ Get possible fields for orderby of marketingaction fields
 
 ```python
 import time
-import openapi_client
-from openapi_client.api import marketing_actions_api
+import amparex
+from amparex.api import marketing_actions_api
 from pprint import pprint
 # Defining the host is optional and defaults to http://trial.amparex.net:8078/amparex/webaxapi
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = amparex.Configuration(
     host = "http://trial.amparex.net:8078/amparex/webaxapi"
 )
 
@@ -41,7 +41,7 @@ configuration.api_key['security_token'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['security_token'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with amparex.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = marketing_actions_api.MarketingActionsApi(api_client)
     alias = "alias_example" # str | alias
@@ -51,7 +51,7 @@ with openapi_client.ApiClient(configuration) as api_client:
         # Get possible fields for orderby of marketingaction fields
         api_response = api_instance.get_marketing_action_order_by_fields_using_get(alias)
         pprint(api_response)
-    except openapi_client.ApiException as e:
+    except amparex.ApiException as e:
         print("Exception when calling MarketingActionsApi->get_marketing_action_order_by_fields_using_get: %s\n" % e)
 ```
 
@@ -99,13 +99,13 @@ Get one specific marketingaction by id
 
 ```python
 import time
-import openapi_client
-from openapi_client.api import marketing_actions_api
-from openapi_client.model.marketing_action import MarketingAction
+import amparex
+from amparex.api import marketing_actions_api
+from amparex.model.marketing_action import MarketingAction
 from pprint import pprint
 # Defining the host is optional and defaults to http://trial.amparex.net:8078/amparex/webaxapi
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = amparex.Configuration(
     host = "http://trial.amparex.net:8078/amparex/webaxapi"
 )
 
@@ -121,7 +121,7 @@ configuration.api_key['security_token'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['security_token'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with amparex.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = marketing_actions_api.MarketingActionsApi(api_client)
     alias = "alias_example" # str | alias
@@ -132,7 +132,7 @@ with openapi_client.ApiClient(configuration) as api_client:
         # Get one specific marketingaction by id
         api_response = api_instance.get_marketing_action_using_get(alias, id)
         pprint(api_response)
-    except openapi_client.ApiException as e:
+    except amparex.ApiException as e:
         print("Exception when calling MarketingActionsApi->get_marketing_action_using_get: %s\n" % e)
 ```
 
@@ -183,14 +183,14 @@ Get a list of marketingactions  by a search query, paging is used, specify limit
 
 ```python
 import time
-import openapi_client
-from openapi_client.api import marketing_actions_api
-from openapi_client.model.marketing_action_search_query import MarketingActionSearchQuery
-from openapi_client.model.list_result_wrapper_marketing_action import ListResultWrapperMarketingAction
+import amparex
+from amparex.api import marketing_actions_api
+from amparex.model.marketing_action_search_query import MarketingActionSearchQuery
+from amparex.model.list_result_wrapper_marketing_action import ListResultWrapperMarketingAction
 from pprint import pprint
 # Defining the host is optional and defaults to http://trial.amparex.net:8078/amparex/webaxapi
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = amparex.Configuration(
     host = "http://trial.amparex.net:8078/amparex/webaxapi"
 )
 
@@ -206,7 +206,7 @@ configuration.api_key['security_token'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['security_token'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with amparex.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = marketing_actions_api.MarketingActionsApi(api_client)
     alias = "alias_example" # str | alias
@@ -235,7 +235,7 @@ with openapi_client.ApiClient(configuration) as api_client:
         # Get a list of marketingactions
         api_response = api_instance.search_marketing_actions_using_post(alias, marketingaction_search_query)
         pprint(api_response)
-    except openapi_client.ApiException as e:
+    except amparex.ApiException as e:
         print("Exception when calling MarketingActionsApi->search_marketing_actions_using_post: %s\n" % e)
 ```
 

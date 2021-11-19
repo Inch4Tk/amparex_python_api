@@ -1,4 +1,4 @@
-# openapi_client.ArticleVariantsApi
+# amparex.ArticleVariantsApi
 
 All URIs are relative to *http://trial.amparex.net:8078/amparex/webaxapi*
 
@@ -19,13 +19,13 @@ Get one specific article variant by id
 
 ```python
 import time
-import openapi_client
-from openapi_client.api import article_variants_api
-from openapi_client.model.article_variant import ArticleVariant
+import amparex
+from amparex.api import article_variants_api
+from amparex.model.article_variant import ArticleVariant
 from pprint import pprint
 # Defining the host is optional and defaults to http://trial.amparex.net:8078/amparex/webaxapi
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = amparex.Configuration(
     host = "http://trial.amparex.net:8078/amparex/webaxapi"
 )
 
@@ -41,7 +41,7 @@ configuration.api_key['security_token'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['security_token'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with amparex.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = article_variants_api.ArticleVariantsApi(api_client)
     alias = "alias_example" # str | alias
@@ -52,7 +52,7 @@ with openapi_client.ApiClient(configuration) as api_client:
         # Get one specific article variant by id
         api_response = api_instance.get_article_variant_using_get(alias, id)
         pprint(api_response)
-    except openapi_client.ApiException as e:
+    except amparex.ApiException as e:
         print("Exception when calling ArticleVariantsApi->get_article_variant_using_get: %s\n" % e)
 ```
 
@@ -103,14 +103,14 @@ Get a list of article variants  by a search query, paging is used, specify limit
 
 ```python
 import time
-import openapi_client
-from openapi_client.api import article_variants_api
-from openapi_client.model.list_result_wrapper_article_variant import ListResultWrapperArticleVariant
-from openapi_client.model.article_variant_search_query import ArticleVariantSearchQuery
+import amparex
+from amparex.api import article_variants_api
+from amparex.model.list_result_wrapper_article_variant import ListResultWrapperArticleVariant
+from amparex.model.article_variant_search_query import ArticleVariantSearchQuery
 from pprint import pprint
 # Defining the host is optional and defaults to http://trial.amparex.net:8078/amparex/webaxapi
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = amparex.Configuration(
     host = "http://trial.amparex.net:8078/amparex/webaxapi"
 )
 
@@ -126,7 +126,7 @@ configuration.api_key['security_token'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['security_token'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with amparex.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = article_variants_api.ArticleVariantsApi(api_client)
     alias = "alias_example" # str | alias
@@ -150,7 +150,7 @@ with openapi_client.ApiClient(configuration) as api_client:
         # Get a list of article variants
         api_response = api_instance.search_article_variants_using_post(alias, articlevariant_search_query)
         pprint(api_response)
-    except openapi_client.ApiException as e:
+    except amparex.ApiException as e:
         print("Exception when calling ArticleVariantsApi->search_article_variants_using_post: %s\n" % e)
 ```
 

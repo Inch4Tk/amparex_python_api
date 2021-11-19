@@ -1,4 +1,4 @@
-# openapi_client.ApplicationTypesApi
+# amparex.ApplicationTypesApi
 
 All URIs are relative to *http://trial.amparex.net:8078/amparex/webaxapi*
 
@@ -18,13 +18,13 @@ Get possible values for application type
 
 ```python
 import time
-import openapi_client
-from openapi_client.api import application_types_api
-from openapi_client.model.application_type import ApplicationType
+import amparex
+from amparex.api import application_types_api
+from amparex.model.application_type import ApplicationType
 from pprint import pprint
 # Defining the host is optional and defaults to http://trial.amparex.net:8078/amparex/webaxapi
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = amparex.Configuration(
     host = "http://trial.amparex.net:8078/amparex/webaxapi"
 )
 
@@ -40,7 +40,7 @@ configuration.api_key['security_token'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['security_token'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with amparex.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = application_types_api.ApplicationTypesApi(api_client)
     alias = "alias_example" # str | alias
@@ -50,7 +50,7 @@ with openapi_client.ApiClient(configuration) as api_client:
         # Get possible values for application type
         api_response = api_instance.find_all_app_types_using_get(alias)
         pprint(api_response)
-    except openapi_client.ApiException as e:
+    except amparex.ApiException as e:
         print("Exception when calling ApplicationTypesApi->find_all_app_types_using_get: %s\n" % e)
 ```
 

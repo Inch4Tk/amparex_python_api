@@ -11,8 +11,8 @@
 import sys
 import unittest
 
-import openapi_client
-from openapi_client.model.item_ref import ItemRef
+import amparex
+from amparex.model.item_ref import ItemRef
 
 
 class TestItemRef(unittest.TestCase):

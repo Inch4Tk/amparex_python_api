@@ -11,8 +11,8 @@
 import sys
 import unittest
 
-import openapi_client
-from openapi_client.model.order_position import OrderPosition
+import amparex
+from amparex.model.order_position import OrderPosition
 
 
 class TestOrderPosition(unittest.TestCase):

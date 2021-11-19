@@ -11,16 +11,16 @@
 import sys
 import unittest
 
-import openapi_client
-from openapi_client.model.address import Address
-from openapi_client.model.health_insurance_reduced import HealthInsuranceReduced
-from openapi_client.model.predefined_property_reduced import PredefinedPropertyReduced
-from openapi_client.model.translated_string import TranslatedString
+import amparex
+from amparex.model.address import Address
+from amparex.model.health_insurance_reduced import HealthInsuranceReduced
+from amparex.model.predefined_property_reduced import PredefinedPropertyReduced
+from amparex.model.translated_string import TranslatedString
 globals()['Address'] = Address
 globals()['HealthInsuranceReduced'] = HealthInsuranceReduced
 globals()['PredefinedPropertyReduced'] = PredefinedPropertyReduced
 globals()['TranslatedString'] = TranslatedString
-from openapi_client.model.customer import Customer
+from amparex.model.customer import Customer
 
 
 class TestCustomer(unittest.TestCase):

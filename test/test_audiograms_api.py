@@ -10,8 +10,8 @@
 
 import unittest
 
-import openapi_client
-from openapi_client.api.audiograms_api import AudiogramsApi  # noqa: E501
+import amparex
+from amparex.api.audiograms_api import AudiogramsApi  # noqa: E501
 
 
 class TestAudiogramsApi(unittest.TestCase):

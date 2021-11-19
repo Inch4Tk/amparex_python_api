@@ -11,12 +11,12 @@
 import sys
 import unittest
 
-import openapi_client
-from openapi_client.model.availability import Availability
-from openapi_client.model.result_meta_data import ResultMetaData
+import amparex
+from amparex.model.availability import Availability
+from amparex.model.result_meta_data import ResultMetaData
 globals()['Availability'] = Availability
 globals()['ResultMetaData'] = ResultMetaData
-from openapi_client.model.list_result_wrapper_availability import ListResultWrapperAvailability
+from amparex.model.list_result_wrapper_availability import ListResultWrapperAvailability
 
 
 class TestListResultWrapperAvailability(unittest.TestCase):

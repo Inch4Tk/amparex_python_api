@@ -11,10 +11,10 @@
 import sys
 import unittest
 
-import openapi_client
-from openapi_client.model.item_ref import ItemRef
+import amparex
+from amparex.model.item_ref import ItemRef
 globals()['ItemRef'] = ItemRef
-from openapi_client.model.items_to_transfer import ItemsToTransfer
+from amparex.model.items_to_transfer import ItemsToTransfer
 
 
 class TestItemsToTransfer(unittest.TestCase):

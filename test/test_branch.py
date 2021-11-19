@@ -11,12 +11,12 @@
 import sys
 import unittest
 
-import openapi_client
-from openapi_client.model.address import Address
-from openapi_client.model.staff_reduced import StaffReduced
+import amparex
+from amparex.model.address import Address
+from amparex.model.staff_reduced import StaffReduced
 globals()['Address'] = Address
 globals()['StaffReduced'] = StaffReduced
-from openapi_client.model.branch import Branch
+from amparex.model.branch import Branch
 
 
 class TestBranch(unittest.TestCase):

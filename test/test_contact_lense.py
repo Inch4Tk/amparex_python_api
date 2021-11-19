@@ -11,20 +11,20 @@
 import sys
 import unittest
 
-import openapi_client
-from openapi_client.model.branch_reduced import BranchReduced
-from openapi_client.model.contact_lense_detail import ContactLenseDetail
-from openapi_client.model.invoice import Invoice
-from openapi_client.model.order import Order
-from openapi_client.model.predefined_property_reduced import PredefinedPropertyReduced
-from openapi_client.model.staff_reduced import StaffReduced
+import amparex
+from amparex.model.branch_reduced import BranchReduced
+from amparex.model.contact_lense_detail import ContactLenseDetail
+from amparex.model.invoice import Invoice
+from amparex.model.order import Order
+from amparex.model.predefined_property_reduced import PredefinedPropertyReduced
+from amparex.model.staff_reduced import StaffReduced
 globals()['BranchReduced'] = BranchReduced
 globals()['ContactLenseDetail'] = ContactLenseDetail
 globals()['Invoice'] = Invoice
 globals()['Order'] = Order
 globals()['PredefinedPropertyReduced'] = PredefinedPropertyReduced
 globals()['StaffReduced'] = StaffReduced
-from openapi_client.model.contact_lense import ContactLense
+from amparex.model.contact_lense import ContactLense
 
 
 class TestContactLense(unittest.TestCase):

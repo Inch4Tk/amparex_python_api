@@ -11,8 +11,8 @@
 import sys
 import unittest
 
-import openapi_client
-from openapi_client.model.brand import Brand
+import amparex
+from amparex.model.brand import Brand
 
 
 class TestBrand(unittest.TestCase):

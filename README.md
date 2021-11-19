@@ -36,7 +36,7 @@ pip install git+https://github.com/GIT_USER_ID/GIT_REPO_ID.git
 
 Then import the package:
 ```python
-import openapi_client
+import amparex
 ```
 
 ### Setuptools
@@ -50,7 +50,7 @@ python setup.py install --user
 
 Then import the package:
 ```python
-import openapi_client
+import amparex
 ```
 
 ## Getting Started
@@ -60,17 +60,17 @@ Please follow the [installation procedure](#installation--usage) and then run th
 ```python
 
 import time
-import openapi_client
+import amparex
 from pprint import pprint
-from openapi_client.api import addresses_api
-from openapi_client.model.address import Address
-from openapi_client.model.address_search_query import AddressSearchQuery
-from openapi_client.model.address_to_save import AddressToSave
-from openapi_client.model.creation_response import CreationResponse
-from openapi_client.model.list_result_wrapper_address import ListResultWrapperAddress
+from amparex.api import addresses_api
+from amparex.model.address import Address
+from amparex.model.address_search_query import AddressSearchQuery
+from amparex.model.address_to_save import AddressToSave
+from amparex.model.creation_response import CreationResponse
+from amparex.model.list_result_wrapper_address import ListResultWrapperAddress
 # Defining the host is optional and defaults to http://trial.amparex.net:8078/amparex/webaxapi
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = amparex.Configuration(
     host = "http://trial.amparex.net:8078/amparex/webaxapi"
 )
 
@@ -87,7 +87,7 @@ configuration.api_key['security_token'] = 'YOUR_API_KEY'
 
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with amparex.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = addresses_api.AddressesApi(api_client)
     alias = "alias_example" # str | alias
@@ -119,7 +119,7 @@ to_save = AddressToSave(
         # Create a new address
         api_response = api_instance.create_address_using_post(alias, to_save)
         pprint(api_response)
-    except openapi_client.ApiException as e:
+    except amparex.ApiException as e:
         print("Exception when calling AddressesApi->create_address_using_post: %s\n" % e)
 ```
 
@@ -537,21 +537,21 @@ Class | Method | HTTP request | Description
 
 
 ## Notes for Large OpenAPI documents
-If the OpenAPI document is large, imports in openapi_client.apis and openapi_client.models may fail with a
+If the OpenAPI document is large, imports in amparex.apis and amparex.models may fail with a
 RecursionError indicating the maximum recursion limit has been exceeded. In that case, there are a couple of solutions:
 
 Solution 1:
 Use specific imports for apis and models like:
-- `from openapi_client.api.default_api import DefaultApi`
-- `from openapi_client.model.pet import Pet`
+- `from amparex.api.default_api import DefaultApi`
+- `from amparex.model.pet import Pet`
 
 Solution 2:
 Before importing the package, adjust the maximum recursion limit as shown below:
 ```
 import sys
 sys.setrecursionlimit(1500)
-import openapi_client
-from openapi_client.apis import *
-from openapi_client.models import *
+import amparex
+from amparex.apis import *
+from amparex.models import *
 ```
 

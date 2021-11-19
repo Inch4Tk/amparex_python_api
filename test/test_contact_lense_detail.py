@@ -11,10 +11,10 @@
 import sys
 import unittest
 
-import openapi_client
-from openapi_client.model.optional_mapstringstring import OptionalMapstringstring
+import amparex
+from amparex.model.optional_mapstringstring import OptionalMapstringstring
 globals()['OptionalMapstringstring'] = OptionalMapstringstring
-from openapi_client.model.contact_lense_detail import ContactLenseDetail
+from amparex.model.contact_lense_detail import ContactLenseDetail
 
 
 class TestContactLenseDetail(unittest.TestCase):

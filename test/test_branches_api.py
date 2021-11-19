@@ -10,8 +10,8 @@
 
 import unittest
 
-import openapi_client
-from openapi_client.api.branches_api import BranchesApi  # noqa: E501
+import amparex
+from amparex.api.branches_api import BranchesApi  # noqa: E501
 
 
 class TestBranchesApi(unittest.TestCase):

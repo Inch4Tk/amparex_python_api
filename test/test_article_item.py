@@ -11,10 +11,10 @@
 import sys
 import unittest
 
-import openapi_client
-from openapi_client.model.timestamp import Timestamp
+import amparex
+from amparex.model.timestamp import Timestamp
 globals()['Timestamp'] = Timestamp
-from openapi_client.model.article_item import ArticleItem
+from amparex.model.article_item import ArticleItem
 
 
 class TestArticleItem(unittest.TestCase):

@@ -1,4 +1,4 @@
-# openapi_client.LoginApi
+# amparex.LoginApi
 
 All URIs are relative to *http://trial.amparex.net:8078/amparex/webaxapi*
 
@@ -22,13 +22,13 @@ Relogin or change user with pincode, use alias from AMPAREX service account. Eac
 
 ```python
 import time
-import openapi_client
-from openapi_client.api import login_api
-from openapi_client.model.security_token import SecurityToken
+import amparex
+from amparex.api import login_api
+from amparex.model.security_token import SecurityToken
 from pprint import pprint
 # Defining the host is optional and defaults to http://trial.amparex.net:8078/amparex/webaxapi
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = amparex.Configuration(
     host = "http://trial.amparex.net:8078/amparex/webaxapi"
 )
 
@@ -44,7 +44,7 @@ configuration.api_key['security_token'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['security_token'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with amparex.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = login_api.LoginApi(api_client)
     pincode = "pincode_example" # str | pincode
@@ -55,7 +55,7 @@ with openapi_client.ApiClient(configuration) as api_client:
         # Relogin or change user with pincode, use alias from AMPAREX service account. Each consecutive request, other than login, grants a new security-token with a default validity of 60 minutes. Use the new token to avoid expiration.
         api_response = api_instance.change_user_using_post(pincode, alias)
         pprint(api_response)
-    except openapi_client.ApiException as e:
+    except amparex.ApiException as e:
         print("Exception when calling LoginApi->change_user_using_post: %s\n" % e)
 ```
 
@@ -104,19 +104,19 @@ Login with user and password, use alias from AMPAREX service account. Each conse
 
 ```python
 import time
-import openapi_client
-from openapi_client.api import login_api
-from openapi_client.model.security_token import SecurityToken
+import amparex
+from amparex.api import login_api
+from amparex.model.security_token import SecurityToken
 from pprint import pprint
 # Defining the host is optional and defaults to http://trial.amparex.net:8078/amparex/webaxapi
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = amparex.Configuration(
     host = "http://trial.amparex.net:8078/amparex/webaxapi"
 )
 
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient() as api_client:
+with amparex.ApiClient() as api_client:
     # Create an instance of the API class
     api_instance = login_api.LoginApi(api_client)
     alias = "alias_example" # str | alias
@@ -130,7 +130,7 @@ with openapi_client.ApiClient() as api_client:
         # Login with user and password, use alias from AMPAREX service account. Each consecutive request, other than login, grants a new security-token with a default validity of 60 minutes. Use the new token to avoid expiration.The use of URL parameters is a securirty isse, whenever possible use the header parameters!
         api_response = api_instance.get_sec_token_using_post(alias)
         pprint(api_response)
-    except openapi_client.ApiException as e:
+    except amparex.ApiException as e:
         print("Exception when calling LoginApi->get_sec_token_using_post: %s\n" % e)
 
     # example passing only required values which don't have defaults set
@@ -139,7 +139,7 @@ with openapi_client.ApiClient() as api_client:
         # Login with user and password, use alias from AMPAREX service account. Each consecutive request, other than login, grants a new security-token with a default validity of 60 minutes. Use the new token to avoid expiration.The use of URL parameters is a securirty isse, whenever possible use the header parameters!
         api_response = api_instance.get_sec_token_using_post(alias, username=username, password=password, username2=username2, password2=password2)
         pprint(api_response)
-    except openapi_client.ApiException as e:
+    except amparex.ApiException as e:
         print("Exception when calling LoginApi->get_sec_token_using_post: %s\n" % e)
 ```
 
@@ -193,13 +193,13 @@ Login with AMPAREX user, password and branchId, use alias from AMPAREX service a
 
 ```python
 import time
-import openapi_client
-from openapi_client.api import login_api
-from openapi_client.model.security_token import SecurityToken
+import amparex
+from amparex.api import login_api
+from amparex.model.security_token import SecurityToken
 from pprint import pprint
 # Defining the host is optional and defaults to http://trial.amparex.net:8078/amparex/webaxapi
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = amparex.Configuration(
     host = "http://trial.amparex.net:8078/amparex/webaxapi"
 )
 
@@ -215,7 +215,7 @@ configuration.api_key['security_token'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['security_token'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with amparex.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = login_api.LoginApi(api_client)
     username = "username_example" # str | username
@@ -228,7 +228,7 @@ with openapi_client.ApiClient(configuration) as api_client:
         # Login with AMPAREX user, password and branchId, use alias from AMPAREX service account. Each consecutive request, other than login, grants a new security-token with a default validity of 60 minutes. Use the new token to avoid expiration. This login can be used to switch branches for a current logged-in AMPAREX user.
         api_response = api_instance.get_sec_token_using_post1(username, password, branchid, alias)
         pprint(api_response)
-    except openapi_client.ApiException as e:
+    except amparex.ApiException as e:
         print("Exception when calling LoginApi->get_sec_token_using_post1: %s\n" % e)
 ```
 
@@ -280,12 +280,12 @@ Logout, invalidate security token
 
 ```python
 import time
-import openapi_client
-from openapi_client.api import login_api
+import amparex
+from amparex.api import login_api
 from pprint import pprint
 # Defining the host is optional and defaults to http://trial.amparex.net:8078/amparex/webaxapi
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = amparex.Configuration(
     host = "http://trial.amparex.net:8078/amparex/webaxapi"
 )
 
@@ -301,7 +301,7 @@ configuration.api_key['security_token'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['security_token'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with amparex.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = login_api.LoginApi(api_client)
     alias = "alias_example" # str | alias
@@ -310,7 +310,7 @@ with openapi_client.ApiClient(configuration) as api_client:
     try:
         # Logout, invalidate security token
         api_instance.invalidate_sec_token_using_post(alias)
-    except openapi_client.ApiException as e:
+    except amparex.ApiException as e:
         print("Exception when calling LoginApi->invalidate_sec_token_using_post: %s\n" % e)
 ```
 
@@ -359,13 +359,13 @@ Get information about the current userlogin
 
 ```python
 import time
-import openapi_client
-from openapi_client.api import login_api
-from openapi_client.model.who_am_i import WhoAmI
+import amparex
+from amparex.api import login_api
+from amparex.model.who_am_i import WhoAmI
 from pprint import pprint
 # Defining the host is optional and defaults to http://trial.amparex.net:8078/amparex/webaxapi
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = amparex.Configuration(
     host = "http://trial.amparex.net:8078/amparex/webaxapi"
 )
 
@@ -381,7 +381,7 @@ configuration.api_key['security_token'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['security_token'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with amparex.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = login_api.LoginApi(api_client)
     alias = "alias_example" # str | alias
@@ -391,7 +391,7 @@ with openapi_client.ApiClient(configuration) as api_client:
         # Get information about the current userlogin
         api_response = api_instance.who_am_i_using_get(alias)
         pprint(api_response)
-    except openapi_client.ApiException as e:
+    except amparex.ApiException as e:
         print("Exception when calling LoginApi->who_am_i_using_get: %s\n" % e)
 ```
 

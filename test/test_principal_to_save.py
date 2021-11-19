@@ -11,8 +11,8 @@
 import sys
 import unittest
 
-import openapi_client
-from openapi_client.model.principal_to_save import PrincipalToSave
+import amparex
+from amparex.model.principal_to_save import PrincipalToSave
 
 
 class TestPrincipalToSave(unittest.TestCase):

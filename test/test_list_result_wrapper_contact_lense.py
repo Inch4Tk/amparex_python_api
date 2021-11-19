@@ -11,12 +11,12 @@
 import sys
 import unittest
 
-import openapi_client
-from openapi_client.model.contact_lense import ContactLense
-from openapi_client.model.result_meta_data import ResultMetaData
+import amparex
+from amparex.model.contact_lense import ContactLense
+from amparex.model.result_meta_data import ResultMetaData
 globals()['ContactLense'] = ContactLense
 globals()['ResultMetaData'] = ResultMetaData
-from openapi_client.model.list_result_wrapper_contact_lense import ListResultWrapperContactLense
+from amparex.model.list_result_wrapper_contact_lense import ListResultWrapperContactLense
 
 
 class TestListResultWrapperContactLense(unittest.TestCase):

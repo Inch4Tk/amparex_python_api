@@ -11,12 +11,12 @@
 import sys
 import unittest
 
-import openapi_client
-from openapi_client.model.resource import Resource
-from openapi_client.model.result_meta_data import ResultMetaData
+import amparex
+from amparex.model.resource import Resource
+from amparex.model.result_meta_data import ResultMetaData
 globals()['Resource'] = Resource
 globals()['ResultMetaData'] = ResultMetaData
-from openapi_client.model.list_result_wrapper_resource import ListResultWrapperResource
+from amparex.model.list_result_wrapper_resource import ListResultWrapperResource
 
 
 class TestListResultWrapperResource(unittest.TestCase):

@@ -11,12 +11,12 @@
 import sys
 import unittest
 
-import openapi_client
-from openapi_client.model.delivery_position import DeliveryPosition
-from openapi_client.model.translated_string import TranslatedString
+import amparex
+from amparex.model.delivery_position import DeliveryPosition
+from amparex.model.translated_string import TranslatedString
 globals()['DeliveryPosition'] = DeliveryPosition
 globals()['TranslatedString'] = TranslatedString
-from openapi_client.model.delivery import Delivery
+from amparex.model.delivery import Delivery
 
 
 class TestDelivery(unittest.TestCase):

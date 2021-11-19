@@ -1,4 +1,4 @@
-# openapi_client.AppointmentPlannerApi
+# amparex.AppointmentPlannerApi
 
 All URIs are relative to *http://trial.amparex.net:8078/amparex/webaxapi*
 
@@ -23,14 +23,14 @@ Create a new appointment
 
 ```python
 import time
-import openapi_client
-from openapi_client.api import appointment_planner_api
-from openapi_client.model.book_appointment_by_template import BookAppointmentByTemplate
-from openapi_client.model.creation_response import CreationResponse
+import amparex
+from amparex.api import appointment_planner_api
+from amparex.model.book_appointment_by_template import BookAppointmentByTemplate
+from amparex.model.creation_response import CreationResponse
 from pprint import pprint
 # Defining the host is optional and defaults to http://trial.amparex.net:8078/amparex/webaxapi
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = amparex.Configuration(
     host = "http://trial.amparex.net:8078/amparex/webaxapi"
 )
 
@@ -46,7 +46,7 @@ configuration.api_key['security_token'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['security_token'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with amparex.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = appointment_planner_api.AppointmentPlannerApi(api_client)
     alias = "alias_example" # str | alias
@@ -68,7 +68,7 @@ with openapi_client.ApiClient(configuration) as api_client:
         # Book appointment for template
         api_response = api_instance.book_appointment_using_post(alias, data)
         pprint(api_response)
-    except openapi_client.ApiException as e:
+    except amparex.ApiException as e:
         print("Exception when calling AppointmentPlannerApi->book_appointment_using_post: %s\n" % e)
 ```
 
@@ -118,13 +118,13 @@ Get appointment planner information
 
 ```python
 import time
-import openapi_client
-from openapi_client.api import appointment_planner_api
-from openapi_client.model.appointment_planner import AppointmentPlanner
+import amparex
+from amparex.api import appointment_planner_api
+from amparex.model.appointment_planner import AppointmentPlanner
 from pprint import pprint
 # Defining the host is optional and defaults to http://trial.amparex.net:8078/amparex/webaxapi
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = amparex.Configuration(
     host = "http://trial.amparex.net:8078/amparex/webaxapi"
 )
 
@@ -140,7 +140,7 @@ configuration.api_key['security_token'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['security_token'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with amparex.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = appointment_planner_api.AppointmentPlannerApi(api_client)
     alias = "alias_example" # str | alias
@@ -150,7 +150,7 @@ with openapi_client.ApiClient(configuration) as api_client:
         # Get appointment planner information
         api_response = api_instance.get_appointment_planner_information_using_get(alias)
         pprint(api_response)
-    except openapi_client.ApiException as e:
+    except amparex.ApiException as e:
         print("Exception when calling AppointmentPlannerApi->get_appointment_planner_information_using_get: %s\n" % e)
 ```
 
@@ -200,14 +200,14 @@ Get a list of time slots in appointment planner
 
 ```python
 import time
-import openapi_client
-from openapi_client.api import appointment_planner_api
-from openapi_client.model.free_busy_appointment import FreeBusyAppointment
-from openapi_client.model.appointment_free_busy_search_query import AppointmentFreeBusySearchQuery
+import amparex
+from amparex.api import appointment_planner_api
+from amparex.model.free_busy_appointment import FreeBusyAppointment
+from amparex.model.appointment_free_busy_search_query import AppointmentFreeBusySearchQuery
 from pprint import pprint
 # Defining the host is optional and defaults to http://trial.amparex.net:8078/amparex/webaxapi
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = amparex.Configuration(
     host = "http://trial.amparex.net:8078/amparex/webaxapi"
 )
 
@@ -223,7 +223,7 @@ configuration.api_key['security_token'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['security_token'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with amparex.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = appointment_planner_api.AppointmentPlannerApi(api_client)
     alias = "alias_example" # str | alias
@@ -249,7 +249,7 @@ with openapi_client.ApiClient(configuration) as api_client:
         # Get a list of time slots free/busy
         api_response = api_instance.search_free_busy_using_post(alias, search_query)
         pprint(api_response)
-    except openapi_client.ApiException as e:
+    except amparex.ApiException as e:
         print("Exception when calling AppointmentPlannerApi->search_free_busy_using_post: %s\n" % e)
 ```
 
@@ -301,14 +301,14 @@ Ask for changes in appointment planner
 
 ```python
 import time
-import openapi_client
-from openapi_client.api import appointment_planner_api
-from openapi_client.model.request_for_synchronization import RequestForSynchronization
-from openapi_client.model.result_of_synchronization import ResultOfSynchronization
+import amparex
+from amparex.api import appointment_planner_api
+from amparex.model.request_for_synchronization import RequestForSynchronization
+from amparex.model.result_of_synchronization import ResultOfSynchronization
 from pprint import pprint
 # Defining the host is optional and defaults to http://trial.amparex.net:8078/amparex/webaxapi
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = amparex.Configuration(
     host = "http://trial.amparex.net:8078/amparex/webaxapi"
 )
 
@@ -324,7 +324,7 @@ configuration.api_key['security_token'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['security_token'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with amparex.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = appointment_planner_api.AppointmentPlannerApi(api_client)
     alias = "alias_example" # str | alias
@@ -342,7 +342,7 @@ with openapi_client.ApiClient(configuration) as api_client:
         # Request for synchronization
         api_response = api_instance.synchronize_using_post(alias, sync_request)
         pprint(api_response)
-    except openapi_client.ApiException as e:
+    except amparex.ApiException as e:
         print("Exception when calling AppointmentPlannerApi->synchronize_using_post: %s\n" % e)
 ```
 

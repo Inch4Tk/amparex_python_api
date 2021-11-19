@@ -19,7 +19,7 @@ import tempfile
 
 from dateutil.parser import parse
 
-from openapi_client.exceptions import (
+from amparex.exceptions import (
     ApiKeyError,
     ApiAttributeError,
     ApiTypeError,

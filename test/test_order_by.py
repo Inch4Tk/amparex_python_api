@@ -11,8 +11,8 @@
 import sys
 import unittest
 
-import openapi_client
-from openapi_client.model.order_by import OrderBy
+import amparex
+from amparex.model.order_by import OrderBy
 
 
 class TestOrderBy(unittest.TestCase):

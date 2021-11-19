@@ -11,12 +11,12 @@
 import sys
 import unittest
 
-import openapi_client
-from openapi_client.model.api_article_item_overview import ApiArticleItemOverview
-from openapi_client.model.translated_string import TranslatedString
+import amparex
+from amparex.model.api_article_item_overview import ApiArticleItemOverview
+from amparex.model.translated_string import TranslatedString
 globals()['ApiArticleItemOverview'] = ApiArticleItemOverview
 globals()['TranslatedString'] = TranslatedString
-from openapi_client.model.hearing_care import HearingCare
+from amparex.model.hearing_care import HearingCare
 
 
 class TestHearingCare(unittest.TestCase):

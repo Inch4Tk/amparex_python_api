@@ -11,12 +11,12 @@
 import sys
 import unittest
 
-import openapi_client
-from openapi_client.model.hearing_care import HearingCare
-from openapi_client.model.result_meta_data import ResultMetaData
+import amparex
+from amparex.model.hearing_care import HearingCare
+from amparex.model.result_meta_data import ResultMetaData
 globals()['HearingCare'] = HearingCare
 globals()['ResultMetaData'] = ResultMetaData
-from openapi_client.model.list_result_wrapper_hearing_care import ListResultWrapperHearingCare
+from amparex.model.list_result_wrapper_hearing_care import ListResultWrapperHearingCare
 
 
 class TestListResultWrapperHearingCare(unittest.TestCase):

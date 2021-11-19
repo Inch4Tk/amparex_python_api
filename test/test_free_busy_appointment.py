@@ -11,8 +11,8 @@
 import sys
 import unittest
 
-import openapi_client
-from openapi_client.model.free_busy_appointment import FreeBusyAppointment
+import amparex
+from amparex.model.free_busy_appointment import FreeBusyAppointment
 
 
 class TestFreeBusyAppointment(unittest.TestCase):

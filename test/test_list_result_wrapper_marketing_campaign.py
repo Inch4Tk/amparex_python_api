@@ -11,12 +11,12 @@
 import sys
 import unittest
 
-import openapi_client
-from openapi_client.model.marketing_campaign import MarketingCampaign
-from openapi_client.model.result_meta_data import ResultMetaData
+import amparex
+from amparex.model.marketing_campaign import MarketingCampaign
+from amparex.model.result_meta_data import ResultMetaData
 globals()['MarketingCampaign'] = MarketingCampaign
 globals()['ResultMetaData'] = ResultMetaData
-from openapi_client.model.list_result_wrapper_marketing_campaign import ListResultWrapperMarketingCampaign
+from amparex.model.list_result_wrapper_marketing_campaign import ListResultWrapperMarketingCampaign
 
 
 class TestListResultWrapperMarketingCampaign(unittest.TestCase):

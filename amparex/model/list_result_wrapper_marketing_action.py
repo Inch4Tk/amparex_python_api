@@ -11,7 +11,7 @@
 import re  # noqa: F401
 import sys  # noqa: F401
 
-from openapi_client.model_utils import (  # noqa: F401
+from amparex.model_utils import (  # noqa: F401
     ApiTypeError,
     ModelComposed,
     ModelNormal,
@@ -26,12 +26,12 @@ from openapi_client.model_utils import (  # noqa: F401
     validate_get_composed_info,
 )
 from ..model_utils import OpenApiModel
-from openapi_client.exceptions import ApiAttributeError
+from amparex.exceptions import ApiAttributeError
 
 
 def lazy_import():
-    from openapi_client.model.marketing_action import MarketingAction
-    from openapi_client.model.result_meta_data import ResultMetaData
+    from amparex.model.marketing_action import MarketingAction
+    from amparex.model.result_meta_data import ResultMetaData
     globals()['MarketingAction'] = MarketingAction
     globals()['ResultMetaData'] = ResultMetaData
 

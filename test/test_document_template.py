@@ -11,10 +11,10 @@
 import sys
 import unittest
 
-import openapi_client
-from openapi_client.model.predefined_property_reduced import PredefinedPropertyReduced
+import amparex
+from amparex.model.predefined_property_reduced import PredefinedPropertyReduced
 globals()['PredefinedPropertyReduced'] = PredefinedPropertyReduced
-from openapi_client.model.document_template import DocumentTemplate
+from amparex.model.document_template import DocumentTemplate
 
 
 class TestDocumentTemplate(unittest.TestCase):

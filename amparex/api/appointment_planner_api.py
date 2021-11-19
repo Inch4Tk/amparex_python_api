@@ -11,8 +11,8 @@
 import re  # noqa: F401
 import sys  # noqa: F401
 
-from openapi_client.api_client import ApiClient, Endpoint as _Endpoint
-from openapi_client.model_utils import (  # noqa: F401
+from amparex.api_client import ApiClient, Endpoint as _Endpoint
+from amparex.model_utils import (  # noqa: F401
     check_allowed_values,
     check_validations,
     date,
@@ -21,13 +21,13 @@ from openapi_client.model_utils import (  # noqa: F401
     none_type,
     validate_and_convert_types
 )
-from openapi_client.model.appointment_free_busy_search_query import AppointmentFreeBusySearchQuery
-from openapi_client.model.appointment_planner import AppointmentPlanner
-from openapi_client.model.book_appointment_by_template import BookAppointmentByTemplate
-from openapi_client.model.creation_response import CreationResponse
-from openapi_client.model.free_busy_appointment import FreeBusyAppointment
-from openapi_client.model.request_for_synchronization import RequestForSynchronization
-from openapi_client.model.result_of_synchronization import ResultOfSynchronization
+from amparex.model.appointment_free_busy_search_query import AppointmentFreeBusySearchQuery
+from amparex.model.appointment_planner import AppointmentPlanner
+from amparex.model.book_appointment_by_template import BookAppointmentByTemplate
+from amparex.model.creation_response import CreationResponse
+from amparex.model.free_busy_appointment import FreeBusyAppointment
+from amparex.model.request_for_synchronization import RequestForSynchronization
+from amparex.model.result_of_synchronization import ResultOfSynchronization
 
 
 class AppointmentPlannerApi(object):

@@ -11,14 +11,14 @@
 import sys
 import unittest
 
-import openapi_client
-from openapi_client.model.branch_reduced import BranchReduced
-from openapi_client.model.marketing_campaign_reduced import MarketingCampaignReduced
-from openapi_client.model.predefined_property_reduced import PredefinedPropertyReduced
+import amparex
+from amparex.model.branch_reduced import BranchReduced
+from amparex.model.marketing_campaign_reduced import MarketingCampaignReduced
+from amparex.model.predefined_property_reduced import PredefinedPropertyReduced
 globals()['BranchReduced'] = BranchReduced
 globals()['MarketingCampaignReduced'] = MarketingCampaignReduced
 globals()['PredefinedPropertyReduced'] = PredefinedPropertyReduced
-from openapi_client.model.marketing_action import MarketingAction
+from amparex.model.marketing_action import MarketingAction
 
 
 class TestMarketingAction(unittest.TestCase):

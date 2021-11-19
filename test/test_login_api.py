@@ -10,8 +10,8 @@
 
 import unittest
 
-import openapi_client
-from openapi_client.api.login_api import LoginApi  # noqa: E501
+import amparex
+from amparex.api.login_api import LoginApi  # noqa: E501
 
 
 class TestLoginApi(unittest.TestCase):

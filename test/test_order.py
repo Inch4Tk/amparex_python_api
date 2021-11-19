@@ -11,10 +11,10 @@
 import sys
 import unittest
 
-import openapi_client
-from openapi_client.model.order_position import OrderPosition
+import amparex
+from amparex.model.order_position import OrderPosition
 globals()['OrderPosition'] = OrderPosition
-from openapi_client.model.order import Order
+from amparex.model.order import Order
 
 
 class TestOrder(unittest.TestCase):

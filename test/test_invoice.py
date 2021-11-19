@@ -11,12 +11,12 @@
 import sys
 import unittest
 
-import openapi_client
-from openapi_client.model.document import Document
-from openapi_client.model.invoice_position import InvoicePosition
+import amparex
+from amparex.model.document import Document
+from amparex.model.invoice_position import InvoicePosition
 globals()['Document'] = Document
 globals()['InvoicePosition'] = InvoicePosition
-from openapi_client.model.invoice import Invoice
+from amparex.model.invoice import Invoice
 
 
 class TestInvoice(unittest.TestCase):

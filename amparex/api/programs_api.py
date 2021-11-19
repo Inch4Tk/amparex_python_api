@@ -11,8 +11,8 @@
 import re  # noqa: F401
 import sys  # noqa: F401
 
-from openapi_client.api_client import ApiClient, Endpoint as _Endpoint
-from openapi_client.model_utils import (  # noqa: F401
+from amparex.api_client import ApiClient, Endpoint as _Endpoint
+from amparex.model_utils import (  # noqa: F401
     check_allowed_values,
     check_validations,
     date,
@@ -21,8 +21,8 @@ from openapi_client.model_utils import (  # noqa: F401
     none_type,
     validate_and_convert_types
 )
-from openapi_client.model.list_result_wrapper_program_move import ListResultWrapperProgramMove
-from openapi_client.model.program_move_search_query import ProgramMoveSearchQuery
+from amparex.model.list_result_wrapper_program_move import ListResultWrapperProgramMove
+from amparex.model.program_move_search_query import ProgramMoveSearchQuery
 
 
 class ProgramsApi(object):

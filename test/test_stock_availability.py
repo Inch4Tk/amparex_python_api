@@ -11,8 +11,8 @@
 import sys
 import unittest
 
-import openapi_client
-from openapi_client.model.stock_availability import StockAvailability
+import amparex
+from amparex.model.stock_availability import StockAvailability
 
 
 class TestStockAvailability(unittest.TestCase):

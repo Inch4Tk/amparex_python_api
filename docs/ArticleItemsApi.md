@@ -1,4 +1,4 @@
-# openapi_client.ArticleItemsApi
+# amparex.ArticleItemsApi
 
 All URIs are relative to *http://trial.amparex.net:8078/amparex/webaxapi*
 
@@ -22,13 +22,13 @@ Get one specific articleitem by id
 
 ```python
 import time
-import openapi_client
-from openapi_client.api import article_items_api
-from openapi_client.model.article_item import ArticleItem
+import amparex
+from amparex.api import article_items_api
+from amparex.model.article_item import ArticleItem
 from pprint import pprint
 # Defining the host is optional and defaults to http://trial.amparex.net:8078/amparex/webaxapi
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = amparex.Configuration(
     host = "http://trial.amparex.net:8078/amparex/webaxapi"
 )
 
@@ -44,7 +44,7 @@ configuration.api_key['security_token'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['security_token'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with amparex.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = article_items_api.ArticleItemsApi(api_client)
     alias = "alias_example" # str | alias
@@ -55,7 +55,7 @@ with openapi_client.ApiClient(configuration) as api_client:
         # Get one specific articleitem by id
         api_response = api_instance.get_article_item_using_get(alias, id)
         pprint(api_response)
-    except openapi_client.ApiException as e:
+    except amparex.ApiException as e:
         print("Exception when calling ArticleItemsApi->get_article_item_using_get: %s\n" % e)
 ```
 
@@ -104,13 +104,13 @@ Fetches stock amount per branch (shop)
 
 ```python
 import time
-import openapi_client
-from openapi_client.api import article_items_api
-from openapi_client.model.stock_availability import StockAvailability
+import amparex
+from amparex.api import article_items_api
+from amparex.model.stock_availability import StockAvailability
 from pprint import pprint
 # Defining the host is optional and defaults to http://trial.amparex.net:8078/amparex/webaxapi
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = amparex.Configuration(
     host = "http://trial.amparex.net:8078/amparex/webaxapi"
 )
 
@@ -126,7 +126,7 @@ configuration.api_key['security_token'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['security_token'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with amparex.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = article_items_api.ArticleItemsApi(api_client)
     alias = "alias_example" # str | alias
@@ -137,7 +137,7 @@ with openapi_client.ApiClient(configuration) as api_client:
         # Fetches stock amount per branch (shop)
         api_response = api_instance.get_article_items_stock_availability_per_branch_using_get(alias, articleid)
         pprint(api_response)
-    except openapi_client.ApiException as e:
+    except amparex.ApiException as e:
         print("Exception when calling ArticleItemsApi->get_article_items_stock_availability_per_branch_using_get: %s\n" % e)
 ```
 
@@ -188,14 +188,14 @@ Get a list of article items  by a search query, paging is used, specify limit an
 
 ```python
 import time
-import openapi_client
-from openapi_client.api import article_items_api
-from openapi_client.model.list_result_wrapper_article_item import ListResultWrapperArticleItem
-from openapi_client.model.article_item_search_query import ArticleItemSearchQuery
+import amparex
+from amparex.api import article_items_api
+from amparex.model.list_result_wrapper_article_item import ListResultWrapperArticleItem
+from amparex.model.article_item_search_query import ArticleItemSearchQuery
 from pprint import pprint
 # Defining the host is optional and defaults to http://trial.amparex.net:8078/amparex/webaxapi
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = amparex.Configuration(
     host = "http://trial.amparex.net:8078/amparex/webaxapi"
 )
 
@@ -211,7 +211,7 @@ configuration.api_key['security_token'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['security_token'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with amparex.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = article_items_api.ArticleItemsApi(api_client)
     alias = "alias_example" # str | alias
@@ -242,7 +242,7 @@ with openapi_client.ApiClient(configuration) as api_client:
         # Get a list of articleitems
         api_response = api_instance.search_article_items_using_post(alias, article_item_search_query)
         pprint(api_response)
-    except openapi_client.ApiException as e:
+    except amparex.ApiException as e:
         print("Exception when calling ArticleItemsApi->search_article_items_using_post: %s\n" % e)
 ```
 
@@ -294,14 +294,14 @@ Stock amount an deliverability per branch
 
 ```python
 import time
-import openapi_client
-from openapi_client.api import article_items_api
-from openapi_client.model.stock_amount_search_query import StockAmountSearchQuery
-from openapi_client.model.list_result_wrapper_stock_amount import ListResultWrapperStockAmount
+import amparex
+from amparex.api import article_items_api
+from amparex.model.stock_amount_search_query import StockAmountSearchQuery
+from amparex.model.list_result_wrapper_stock_amount import ListResultWrapperStockAmount
 from pprint import pprint
 # Defining the host is optional and defaults to http://trial.amparex.net:8078/amparex/webaxapi
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = amparex.Configuration(
     host = "http://trial.amparex.net:8078/amparex/webaxapi"
 )
 
@@ -317,7 +317,7 @@ configuration.api_key['security_token'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['security_token'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with amparex.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = article_items_api.ArticleItemsApi(api_client)
     alias = "alias_example" # str | alias
@@ -342,7 +342,7 @@ with openapi_client.ApiClient(configuration) as api_client:
         # Get a list item stock amounts
         api_response = api_instance.search_stock_amounts_using_post(alias, search_query)
         pprint(api_response)
-    except openapi_client.ApiException as e:
+    except amparex.ApiException as e:
         print("Exception when calling ArticleItemsApi->search_stock_amounts_using_post: %s\n" % e)
 ```
 
@@ -394,14 +394,14 @@ Move items from source- to destination branch. If destination status is 'ai_stat
 
 ```python
 import time
-import openapi_client
-from openapi_client.api import article_items_api
-from openapi_client.model.creation_response import CreationResponse
-from openapi_client.model.items_to_transfer import ItemsToTransfer
+import amparex
+from amparex.api import article_items_api
+from amparex.model.creation_response import CreationResponse
+from amparex.model.items_to_transfer import ItemsToTransfer
 from pprint import pprint
 # Defining the host is optional and defaults to http://trial.amparex.net:8078/amparex/webaxapi
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = amparex.Configuration(
     host = "http://trial.amparex.net:8078/amparex/webaxapi"
 )
 
@@ -417,7 +417,7 @@ configuration.api_key['security_token'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['security_token'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with amparex.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = article_items_api.ArticleItemsApi(api_client)
     alias = "alias_example" # str | alias
@@ -439,7 +439,7 @@ with openapi_client.ApiClient(configuration) as api_client:
         # transfer article items from one branch to another
         api_response = api_instance.transfer_items_using_post(alias, to_transfer)
         pprint(api_response)
-    except openapi_client.ApiException as e:
+    except amparex.ApiException as e:
         print("Exception when calling ArticleItemsApi->transfer_items_using_post: %s\n" % e)
 ```
 

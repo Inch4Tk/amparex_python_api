@@ -11,10 +11,10 @@
 import sys
 import unittest
 
-import openapi_client
-from openapi_client.model.view_resource_to_save import ViewResourceToSave
+import amparex
+from amparex.model.view_resource_to_save import ViewResourceToSave
 globals()['ViewResourceToSave'] = ViewResourceToSave
-from openapi_client.model.view_to_save import ViewToSave
+from amparex.model.view_to_save import ViewToSave
 
 
 class TestViewToSave(unittest.TestCase):

@@ -11,14 +11,14 @@
 import sys
 import unittest
 
-import openapi_client
-from openapi_client.model.branch_reduced import BranchReduced
-from openapi_client.model.translated_string import TranslatedString
-from openapi_client.model.view_resource import ViewResource
+import amparex
+from amparex.model.branch_reduced import BranchReduced
+from amparex.model.translated_string import TranslatedString
+from amparex.model.view_resource import ViewResource
 globals()['BranchReduced'] = BranchReduced
 globals()['TranslatedString'] = TranslatedString
 globals()['ViewResource'] = ViewResource
-from openapi_client.model.view import View
+from amparex.model.view import View
 
 
 class TestView(unittest.TestCase):

@@ -11,12 +11,12 @@
 import sys
 import unittest
 
-import openapi_client
-from openapi_client.model.article_variant import ArticleVariant
-from openapi_client.model.result_meta_data import ResultMetaData
+import amparex
+from amparex.model.article_variant import ArticleVariant
+from amparex.model.result_meta_data import ResultMetaData
 globals()['ArticleVariant'] = ArticleVariant
 globals()['ResultMetaData'] = ResultMetaData
-from openapi_client.model.list_result_wrapper_article_variant import ListResultWrapperArticleVariant
+from amparex.model.list_result_wrapper_article_variant import ListResultWrapperArticleVariant
 
 
 class TestListResultWrapperArticleVariant(unittest.TestCase):

@@ -11,8 +11,8 @@
 import sys
 import unittest
 
-import openapi_client
-from openapi_client.model.survey_answer import SurveyAnswer
+import amparex
+from amparex.model.survey_answer import SurveyAnswer
 
 
 class TestSurveyAnswer(unittest.TestCase):

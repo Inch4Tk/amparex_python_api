@@ -11,12 +11,12 @@
 import sys
 import unittest
 
-import openapi_client
-from openapi_client.model.appointment import Appointment
-from openapi_client.model.result_meta_data import ResultMetaData
+import amparex
+from amparex.model.appointment import Appointment
+from amparex.model.result_meta_data import ResultMetaData
 globals()['Appointment'] = Appointment
 globals()['ResultMetaData'] = ResultMetaData
-from openapi_client.model.list_result_wrapper_appointment import ListResultWrapperAppointment
+from amparex.model.list_result_wrapper_appointment import ListResultWrapperAppointment
 
 
 class TestListResultWrapperAppointment(unittest.TestCase):

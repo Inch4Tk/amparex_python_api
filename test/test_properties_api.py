@@ -10,8 +10,8 @@
 
 import unittest
 
-import openapi_client
-from openapi_client.api.properties_api import PropertiesApi  # noqa: E501
+import amparex
+from amparex.api.properties_api import PropertiesApi  # noqa: E501
 
 
 class TestPropertiesApi(unittest.TestCase):

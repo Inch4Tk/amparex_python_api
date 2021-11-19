@@ -11,8 +11,8 @@
 import sys
 import unittest
 
-import openapi_client
-from openapi_client.model.color import Color
+import amparex
+from amparex.model.color import Color
 
 
 class TestColor(unittest.TestCase):

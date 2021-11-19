@@ -11,7 +11,7 @@
 import re  # noqa: F401
 import sys  # noqa: F401
 
-from openapi_client.model_utils import (  # noqa: F401
+from amparex.model_utils import (  # noqa: F401
     ApiTypeError,
     ModelComposed,
     ModelNormal,
@@ -26,15 +26,15 @@ from openapi_client.model_utils import (  # noqa: F401
     validate_get_composed_info,
 )
 from ..model_utils import OpenApiModel
-from openapi_client.exceptions import ApiAttributeError
+from amparex.exceptions import ApiAttributeError
 
 
 def lazy_import():
-    from openapi_client.model.article_property import ArticleProperty
-    from openapi_client.model.article_type_reduced import ArticleTypeReduced
-    from openapi_client.model.image import Image
-    from openapi_client.model.procurement import Procurement
-    from openapi_client.model.translated_string import TranslatedString
+    from amparex.model.article_property import ArticleProperty
+    from amparex.model.article_type_reduced import ArticleTypeReduced
+    from amparex.model.image import Image
+    from amparex.model.procurement import Procurement
+    from amparex.model.translated_string import TranslatedString
     globals()['ArticleProperty'] = ArticleProperty
     globals()['ArticleTypeReduced'] = ArticleTypeReduced
     globals()['Image'] = Image

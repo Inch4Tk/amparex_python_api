@@ -10,8 +10,8 @@
 
 import unittest
 
-import openapi_client
-from openapi_client.api.cash_desk_balances_api import CashDeskBalancesApi  # noqa: E501
+import amparex
+from amparex.api.cash_desk_balances_api import CashDeskBalancesApi  # noqa: E501
 
 
 class TestCashDeskBalancesApi(unittest.TestCase):

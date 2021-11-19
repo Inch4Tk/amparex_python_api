@@ -11,7 +11,7 @@
 import re  # noqa: F401
 import sys  # noqa: F401
 
-from openapi_client.model_utils import (  # noqa: F401
+from amparex.model_utils import (  # noqa: F401
     ApiTypeError,
     ModelComposed,
     ModelNormal,
@@ -26,18 +26,18 @@ from openapi_client.model_utils import (  # noqa: F401
     validate_get_composed_info,
 )
 from ..model_utils import OpenApiModel
-from openapi_client.exceptions import ApiAttributeError
+from amparex.exceptions import ApiAttributeError
 
 
 def lazy_import():
-    from openapi_client.model.article_item import ArticleItem
-    from openapi_client.model.branch_reduced import BranchReduced
-    from openapi_client.model.glasses_configuration import GlassesConfiguration
-    from openapi_client.model.invoice import Invoice
-    from openapi_client.model.predefined_property_reduced import PredefinedPropertyReduced
-    from openapi_client.model.refraction_report import RefractionReport
-    from openapi_client.model.staff_reduced import StaffReduced
-    from openapi_client.model.treatment import Treatment
+    from amparex.model.article_item import ArticleItem
+    from amparex.model.branch_reduced import BranchReduced
+    from amparex.model.glasses_configuration import GlassesConfiguration
+    from amparex.model.invoice import Invoice
+    from amparex.model.predefined_property_reduced import PredefinedPropertyReduced
+    from amparex.model.refraction_report import RefractionReport
+    from amparex.model.staff_reduced import StaffReduced
+    from amparex.model.treatment import Treatment
     globals()['ArticleItem'] = ArticleItem
     globals()['BranchReduced'] = BranchReduced
     globals()['GlassesConfiguration'] = GlassesConfiguration

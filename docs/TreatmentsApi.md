@@ -1,4 +1,4 @@
-# openapi_client.TreatmentsApi
+# amparex.TreatmentsApi
 
 All URIs are relative to *http://trial.amparex.net:8078/amparex/webaxapi*
 
@@ -25,14 +25,14 @@ Create a new sales order
 
 ```python
 import time
-import openapi_client
-from openapi_client.api import treatments_api
-from openapi_client.model.sales_treatment_to_create import SalesTreatmentToCreate
-from openapi_client.model.treatment_creation_response import TreatmentCreationResponse
+import amparex
+from amparex.api import treatments_api
+from amparex.model.sales_treatment_to_create import SalesTreatmentToCreate
+from amparex.model.treatment_creation_response import TreatmentCreationResponse
 from pprint import pprint
 # Defining the host is optional and defaults to http://trial.amparex.net:8078/amparex/webaxapi
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = amparex.Configuration(
     host = "http://trial.amparex.net:8078/amparex/webaxapi"
 )
 
@@ -48,7 +48,7 @@ configuration.api_key['security_token'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['security_token'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with amparex.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = treatments_api.TreatmentsApi(api_client)
     alias = "alias_example" # str | alias
@@ -177,7 +177,7 @@ with openapi_client.ApiClient(configuration) as api_client:
         # Create a new sales order
         api_response = api_instance.create_sales_order_using_post(alias, to_save)
         pprint(api_response)
-    except openapi_client.ApiException as e:
+    except amparex.ApiException as e:
         print("Exception when calling TreatmentsApi->create_sales_order_using_post: %s\n" % e)
 ```
 
@@ -227,13 +227,13 @@ Get the assigned doctor for the treatment
 
 ```python
 import time
-import openapi_client
-from openapi_client.api import treatments_api
-from openapi_client.model.doctor import Doctor
+import amparex
+from amparex.api import treatments_api
+from amparex.model.doctor import Doctor
 from pprint import pprint
 # Defining the host is optional and defaults to http://trial.amparex.net:8078/amparex/webaxapi
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = amparex.Configuration(
     host = "http://trial.amparex.net:8078/amparex/webaxapi"
 )
 
@@ -249,7 +249,7 @@ configuration.api_key['security_token'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['security_token'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with amparex.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = treatments_api.TreatmentsApi(api_client)
     alias = "alias_example" # str | alias
@@ -260,7 +260,7 @@ with openapi_client.ApiClient(configuration) as api_client:
         # Get the assigned doctor for the treatment
         api_response = api_instance.get_doctor_for_treatment_using_get(alias, id)
         pprint(api_response)
-    except openapi_client.ApiException as e:
+    except amparex.ApiException as e:
         print("Exception when calling TreatmentsApi->get_doctor_for_treatment_using_get: %s\n" % e)
 ```
 
@@ -309,12 +309,12 @@ Get document of treatment as blob
 
 ```python
 import time
-import openapi_client
-from openapi_client.api import treatments_api
+import amparex
+from amparex.api import treatments_api
 from pprint import pprint
 # Defining the host is optional and defaults to http://trial.amparex.net:8078/amparex/webaxapi
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = amparex.Configuration(
     host = "http://trial.amparex.net:8078/amparex/webaxapi"
 )
 
@@ -330,7 +330,7 @@ configuration.api_key['security_token'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['security_token'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with amparex.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = treatments_api.TreatmentsApi(api_client)
     alias = "alias_example" # str | alias
@@ -343,7 +343,7 @@ with openapi_client.ApiClient(configuration) as api_client:
         # Get document of treatment as blob
         api_response = api_instance.get_document_binary_using_get1(alias, id, did)
         pprint(api_response)
-    except openapi_client.ApiException as e:
+    except amparex.ApiException as e:
         print("Exception when calling TreatmentsApi->get_document_binary_using_get1: %s\n" % e)
 
     # example passing only required values which don't have defaults set
@@ -352,7 +352,7 @@ with openapi_client.ApiClient(configuration) as api_client:
         # Get document of treatment as blob
         api_response = api_instance.get_document_binary_using_get1(alias, id, did, image_width=image_width)
         pprint(api_response)
-    except openapi_client.ApiException as e:
+    except amparex.ApiException as e:
         print("Exception when calling TreatmentsApi->get_document_binary_using_get1: %s\n" % e)
 ```
 
@@ -403,13 +403,13 @@ Get one specific therapeutics treatment by id
 
 ```python
 import time
-import openapi_client
-from openapi_client.api import treatments_api
-from openapi_client.model.therapeutics_treatment import TherapeuticsTreatment
+import amparex
+from amparex.api import treatments_api
+from amparex.model.therapeutics_treatment import TherapeuticsTreatment
 from pprint import pprint
 # Defining the host is optional and defaults to http://trial.amparex.net:8078/amparex/webaxapi
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = amparex.Configuration(
     host = "http://trial.amparex.net:8078/amparex/webaxapi"
 )
 
@@ -425,7 +425,7 @@ configuration.api_key['security_token'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['security_token'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with amparex.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = treatments_api.TreatmentsApi(api_client)
     alias = "alias_example" # str | alias
@@ -436,7 +436,7 @@ with openapi_client.ApiClient(configuration) as api_client:
         # Get one specific therapeutics treatment by id
         api_response = api_instance.get_therapeutics_treatment_using_get(alias, id)
         pprint(api_response)
-    except openapi_client.ApiException as e:
+    except amparex.ApiException as e:
         print("Exception when calling TreatmentsApi->get_therapeutics_treatment_using_get: %s\n" % e)
 ```
 
@@ -485,13 +485,13 @@ Get all documents of all types for one specific treatment
 
 ```python
 import time
-import openapi_client
-from openapi_client.api import treatments_api
-from openapi_client.model.list_result_wrapper_invoice import ListResultWrapperInvoice
+import amparex
+from amparex.api import treatments_api
+from amparex.model.list_result_wrapper_invoice import ListResultWrapperInvoice
 from pprint import pprint
 # Defining the host is optional and defaults to http://trial.amparex.net:8078/amparex/webaxapi
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = amparex.Configuration(
     host = "http://trial.amparex.net:8078/amparex/webaxapi"
 )
 
@@ -507,7 +507,7 @@ configuration.api_key['security_token'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['security_token'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with amparex.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = treatments_api.TreatmentsApi(api_client)
     alias = "alias_example" # str | alias
@@ -518,7 +518,7 @@ with openapi_client.ApiClient(configuration) as api_client:
         # Get all documents of all types for one specific treatment
         api_response = api_instance.get_treatment_invoices_using_get(alias, id)
         pprint(api_response)
-    except openapi_client.ApiException as e:
+    except amparex.ApiException as e:
         print("Exception when calling TreatmentsApi->get_treatment_invoices_using_get: %s\n" % e)
 ```
 
@@ -567,13 +567,13 @@ Get one specific treatment by id
 
 ```python
 import time
-import openapi_client
-from openapi_client.api import treatments_api
-from openapi_client.model.treatment import Treatment
+import amparex
+from amparex.api import treatments_api
+from amparex.model.treatment import Treatment
 from pprint import pprint
 # Defining the host is optional and defaults to http://trial.amparex.net:8078/amparex/webaxapi
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = amparex.Configuration(
     host = "http://trial.amparex.net:8078/amparex/webaxapi"
 )
 
@@ -589,7 +589,7 @@ configuration.api_key['security_token'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['security_token'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with amparex.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = treatments_api.TreatmentsApi(api_client)
     alias = "alias_example" # str | alias
@@ -600,7 +600,7 @@ with openapi_client.ApiClient(configuration) as api_client:
         # Get one specific treatment by id
         api_response = api_instance.get_treatment_using_get(alias, id)
         pprint(api_response)
-    except openapi_client.ApiException as e:
+    except amparex.ApiException as e:
         print("Exception when calling TreatmentsApi->get_treatment_using_get: %s\n" % e)
 ```
 
@@ -643,7 +643,7 @@ Name | Type | Description  | Notes
 
 Get a list of treatment documents (without binary)
 
-Get a list of treatment documents by a search query, paging is used, specify limit and page; Model Type: Documents is returned. Document is a wrapper, use id with documents/{id}/binary to get document binary itself 
+Get a list of treatment documents by a search query, paging is used, specify limit and page; Model Type: Documents is returned. Document is a wrapper, use id with documents/{id}/binary to get document binary itself
 
 ### Example
 
@@ -651,14 +651,14 @@ Get a list of treatment documents by a search query, paging is used, specify lim
 
 ```python
 import time
-import openapi_client
-from openapi_client.api import treatments_api
-from openapi_client.model.document_search_query import DocumentSearchQuery
-from openapi_client.model.list_result_wrapper_document import ListResultWrapperDocument
+import amparex
+from amparex.api import treatments_api
+from amparex.model.document_search_query import DocumentSearchQuery
+from amparex.model.list_result_wrapper_document import ListResultWrapperDocument
 from pprint import pprint
 # Defining the host is optional and defaults to http://trial.amparex.net:8078/amparex/webaxapi
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = amparex.Configuration(
     host = "http://trial.amparex.net:8078/amparex/webaxapi"
 )
 
@@ -674,7 +674,7 @@ configuration.api_key['security_token'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['security_token'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with amparex.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = treatments_api.TreatmentsApi(api_client)
     alias = "alias_example" # str | alias
@@ -700,7 +700,7 @@ with openapi_client.ApiClient(configuration) as api_client:
         # Get a list of treatment documents (without binary)
         api_response = api_instance.search_documents_using_post1(alias, id, search_query)
         pprint(api_response)
-    except openapi_client.ApiException as e:
+    except amparex.ApiException as e:
         print("Exception when calling TreatmentsApi->search_documents_using_post1: %s\n" % e)
 ```
 
@@ -753,14 +753,14 @@ Get a list of treatments by a search query, paging is used, specify limit and pa
 
 ```python
 import time
-import openapi_client
-from openapi_client.api import treatments_api
-from openapi_client.model.treatment_search_query import TreatmentSearchQuery
-from openapi_client.model.list_result_wrapper_treatment import ListResultWrapperTreatment
+import amparex
+from amparex.api import treatments_api
+from amparex.model.treatment_search_query import TreatmentSearchQuery
+from amparex.model.list_result_wrapper_treatment import ListResultWrapperTreatment
 from pprint import pprint
 # Defining the host is optional and defaults to http://trial.amparex.net:8078/amparex/webaxapi
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = amparex.Configuration(
     host = "http://trial.amparex.net:8078/amparex/webaxapi"
 )
 
@@ -776,7 +776,7 @@ configuration.api_key['security_token'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['security_token'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with amparex.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = treatments_api.TreatmentsApi(api_client)
     alias = "alias_example" # str | alias
@@ -813,7 +813,7 @@ with openapi_client.ApiClient(configuration) as api_client:
         # Get a list of treatments
         api_response = api_instance.search_treatments_using_post(alias, treatment_search_query)
         pprint(api_response)
-    except openapi_client.ApiException as e:
+    except amparex.ApiException as e:
         print("Exception when calling TreatmentsApi->search_treatments_using_post: %s\n" % e)
 ```
 

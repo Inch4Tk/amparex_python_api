@@ -11,8 +11,8 @@
 import sys
 import unittest
 
-import openapi_client
-from openapi_client.model.result_meta_data import ResultMetaData
+import amparex
+from amparex.model.result_meta_data import ResultMetaData
 
 
 class TestResultMetaData(unittest.TestCase):

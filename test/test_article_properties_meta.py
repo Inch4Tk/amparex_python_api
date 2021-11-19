@@ -11,10 +11,10 @@
 import sys
 import unittest
 
-import openapi_client
-from openapi_client.model.search_property_entry import SearchPropertyEntry
+import amparex
+from amparex.model.search_property_entry import SearchPropertyEntry
 globals()['SearchPropertyEntry'] = SearchPropertyEntry
-from openapi_client.model.article_properties_meta import ArticlePropertiesMeta
+from amparex.model.article_properties_meta import ArticlePropertiesMeta
 
 
 class TestArticlePropertiesMeta(unittest.TestCase):

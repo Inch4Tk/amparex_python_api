@@ -10,8 +10,8 @@
 
 import unittest
 
-import openapi_client
-from openapi_client.api.versions_api import VersionsApi  # noqa: E501
+import amparex
+from amparex.api.versions_api import VersionsApi  # noqa: E501
 
 
 class TestVersionsApi(unittest.TestCase):

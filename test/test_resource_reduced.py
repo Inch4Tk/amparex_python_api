@@ -11,8 +11,8 @@
 import sys
 import unittest
 
-import openapi_client
-from openapi_client.model.resource_reduced import ResourceReduced
+import amparex
+from amparex.model.resource_reduced import ResourceReduced
 
 
 class TestResourceReduced(unittest.TestCase):

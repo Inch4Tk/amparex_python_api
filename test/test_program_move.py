@@ -11,12 +11,12 @@
 import sys
 import unittest
 
-import openapi_client
-from openapi_client.model.customer_reduced import CustomerReduced
-from openapi_client.model.staff_reduced import StaffReduced
+import amparex
+from amparex.model.customer_reduced import CustomerReduced
+from amparex.model.staff_reduced import StaffReduced
 globals()['CustomerReduced'] = CustomerReduced
 globals()['StaffReduced'] = StaffReduced
-from openapi_client.model.program_move import ProgramMove
+from amparex.model.program_move import ProgramMove
 
 
 class TestProgramMove(unittest.TestCase):

@@ -11,12 +11,12 @@
 import sys
 import unittest
 
-import openapi_client
-from openapi_client.model.result_meta_data import ResultMetaData
-from openapi_client.model.stock_amount import StockAmount
+import amparex
+from amparex.model.result_meta_data import ResultMetaData
+from amparex.model.stock_amount import StockAmount
 globals()['ResultMetaData'] = ResultMetaData
 globals()['StockAmount'] = StockAmount
-from openapi_client.model.list_result_wrapper_stock_amount import ListResultWrapperStockAmount
+from amparex.model.list_result_wrapper_stock_amount import ListResultWrapperStockAmount
 
 
 class TestListResultWrapperStockAmount(unittest.TestCase):

@@ -11,10 +11,10 @@
 import sys
 import unittest
 
-import openapi_client
-from openapi_client.model.timestamp import Timestamp
+import amparex
+from amparex.model.timestamp import Timestamp
 globals()['Timestamp'] = Timestamp
-from openapi_client.model.audiogram import Audiogram
+from amparex.model.audiogram import Audiogram
 
 
 class TestAudiogram(unittest.TestCase):

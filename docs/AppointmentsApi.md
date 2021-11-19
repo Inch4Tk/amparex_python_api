@@ -1,4 +1,4 @@
-# openapi_client.AppointmentsApi
+# amparex.AppointmentsApi
 
 All URIs are relative to *http://trial.amparex.net:8078/amparex/webaxapi*
 
@@ -23,14 +23,14 @@ Create a new appointment
 
 ```python
 import time
-import openapi_client
-from openapi_client.api import appointments_api
-from openapi_client.model.creation_response import CreationResponse
-from openapi_client.model.appointment_to_save import AppointmentToSave
+import amparex
+from amparex.api import appointments_api
+from amparex.model.creation_response import CreationResponse
+from amparex.model.appointment_to_save import AppointmentToSave
 from pprint import pprint
 # Defining the host is optional and defaults to http://trial.amparex.net:8078/amparex/webaxapi
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = amparex.Configuration(
     host = "http://trial.amparex.net:8078/amparex/webaxapi"
 )
 
@@ -46,7 +46,7 @@ configuration.api_key['security_token'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['security_token'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with amparex.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = appointments_api.AppointmentsApi(api_client)
     alias = "alias_example" # str | alias
@@ -120,7 +120,7 @@ with openapi_client.ApiClient(configuration) as api_client:
         # Create a new appointment
         api_response = api_instance.create_appointment_using_post(alias, to_save)
         pprint(api_response)
-    except openapi_client.ApiException as e:
+    except amparex.ApiException as e:
         print("Exception when calling AppointmentsApi->create_appointment_using_post: %s\n" % e)
 ```
 
@@ -171,12 +171,12 @@ Delete an appointment with given id
 
 ```python
 import time
-import openapi_client
-from openapi_client.api import appointments_api
+import amparex
+from amparex.api import appointments_api
 from pprint import pprint
 # Defining the host is optional and defaults to http://trial.amparex.net:8078/amparex/webaxapi
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = amparex.Configuration(
     host = "http://trial.amparex.net:8078/amparex/webaxapi"
 )
 
@@ -192,7 +192,7 @@ configuration.api_key['security_token'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['security_token'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with amparex.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = appointments_api.AppointmentsApi(api_client)
     alias = "alias_example" # str | alias
@@ -202,7 +202,7 @@ with openapi_client.ApiClient(configuration) as api_client:
     try:
         # Delete an appointment with given id
         api_instance.delete_availability_using_delete(alias, id)
-    except openapi_client.ApiException as e:
+    except amparex.ApiException as e:
         print("Exception when calling AppointmentsApi->delete_availability_using_delete: %s\n" % e)
 ```
 
@@ -251,12 +251,12 @@ Get possible fields for orderby of appointment fields
 
 ```python
 import time
-import openapi_client
-from openapi_client.api import appointments_api
+import amparex
+from amparex.api import appointments_api
 from pprint import pprint
 # Defining the host is optional and defaults to http://trial.amparex.net:8078/amparex/webaxapi
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = amparex.Configuration(
     host = "http://trial.amparex.net:8078/amparex/webaxapi"
 )
 
@@ -272,7 +272,7 @@ configuration.api_key['security_token'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['security_token'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with amparex.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = appointments_api.AppointmentsApi(api_client)
     alias = "alias_example" # str | alias
@@ -282,7 +282,7 @@ with openapi_client.ApiClient(configuration) as api_client:
         # Get possible fields for orderby of appointment fields
         api_response = api_instance.get_appointment_order_by_fields_using_get(alias)
         pprint(api_response)
-    except openapi_client.ApiException as e:
+    except amparex.ApiException as e:
         print("Exception when calling AppointmentsApi->get_appointment_order_by_fields_using_get: %s\n" % e)
 ```
 
@@ -330,13 +330,13 @@ Get one specific appointment by id
 
 ```python
 import time
-import openapi_client
-from openapi_client.api import appointments_api
-from openapi_client.model.appointment import Appointment
+import amparex
+from amparex.api import appointments_api
+from amparex.model.appointment import Appointment
 from pprint import pprint
 # Defining the host is optional and defaults to http://trial.amparex.net:8078/amparex/webaxapi
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = amparex.Configuration(
     host = "http://trial.amparex.net:8078/amparex/webaxapi"
 )
 
@@ -352,7 +352,7 @@ configuration.api_key['security_token'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['security_token'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with amparex.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = appointments_api.AppointmentsApi(api_client)
     alias = "alias_example" # str | alias
@@ -363,7 +363,7 @@ with openapi_client.ApiClient(configuration) as api_client:
         # Get one specific appointment by id
         api_response = api_instance.get_appointment_using_get(alias, id)
         pprint(api_response)
-    except openapi_client.ApiException as e:
+    except amparex.ApiException as e:
         print("Exception when calling AppointmentsApi->get_appointment_using_get: %s\n" % e)
 ```
 
@@ -414,14 +414,14 @@ Get a list of appointments by a search query, paging is used, specify limit and 
 
 ```python
 import time
-import openapi_client
-from openapi_client.api import appointments_api
-from openapi_client.model.list_result_wrapper_appointment import ListResultWrapperAppointment
-from openapi_client.model.appointment_search_query import AppointmentSearchQuery
+import amparex
+from amparex.api import appointments_api
+from amparex.model.list_result_wrapper_appointment import ListResultWrapperAppointment
+from amparex.model.appointment_search_query import AppointmentSearchQuery
 from pprint import pprint
 # Defining the host is optional and defaults to http://trial.amparex.net:8078/amparex/webaxapi
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = amparex.Configuration(
     host = "http://trial.amparex.net:8078/amparex/webaxapi"
 )
 
@@ -437,7 +437,7 @@ configuration.api_key['security_token'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['security_token'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with amparex.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = appointments_api.AppointmentsApi(api_client)
     alias = "alias_example" # str | alias
@@ -473,7 +473,7 @@ with openapi_client.ApiClient(configuration) as api_client:
         # Get a list of appointments
         api_response = api_instance.search_appointments_using_post(alias, appointment_search_query)
         pprint(api_response)
-    except openapi_client.ApiException as e:
+    except amparex.ApiException as e:
         print("Exception when calling AppointmentsApi->search_appointments_using_post: %s\n" % e)
 ```
 
@@ -523,13 +523,13 @@ Update appointment with given id
 
 ```python
 import time
-import openapi_client
-from openapi_client.api import appointments_api
-from openapi_client.model.appointment_to_save import AppointmentToSave
+import amparex
+from amparex.api import appointments_api
+from amparex.model.appointment_to_save import AppointmentToSave
 from pprint import pprint
 # Defining the host is optional and defaults to http://trial.amparex.net:8078/amparex/webaxapi
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = amparex.Configuration(
     host = "http://trial.amparex.net:8078/amparex/webaxapi"
 )
 
@@ -545,7 +545,7 @@ configuration.api_key['security_token'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['security_token'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with amparex.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = appointments_api.AppointmentsApi(api_client)
     alias = "alias_example" # str | alias
@@ -619,7 +619,7 @@ with openapi_client.ApiClient(configuration) as api_client:
     try:
         # Update appointment with given id
         api_instance.update_appointment_using_patch(alias, id, to_update)
-    except openapi_client.ApiException as e:
+    except amparex.ApiException as e:
         print("Exception when calling AppointmentsApi->update_appointment_using_patch: %s\n" % e)
 ```
 

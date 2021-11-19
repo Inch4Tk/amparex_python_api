@@ -11,8 +11,8 @@
 import sys
 import unittest
 
-import openapi_client
-from openapi_client.model.procurement import Procurement
+import amparex
+from amparex.model.procurement import Procurement
 
 
 class TestProcurement(unittest.TestCase):

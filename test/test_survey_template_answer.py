@@ -11,10 +11,10 @@
 import sys
 import unittest
 
-import openapi_client
-from openapi_client.model.survey_template_category import SurveyTemplateCategory
+import amparex
+from amparex.model.survey_template_category import SurveyTemplateCategory
 globals()['SurveyTemplateCategory'] = SurveyTemplateCategory
-from openapi_client.model.survey_template_answer import SurveyTemplateAnswer
+from amparex.model.survey_template_answer import SurveyTemplateAnswer
 
 
 class TestSurveyTemplateAnswer(unittest.TestCase):

@@ -10,8 +10,8 @@
 
 import unittest
 
-import openapi_client
-from openapi_client.api.addresses_api import AddressesApi  # noqa: E501
+import amparex
+from amparex.api.addresses_api import AddressesApi  # noqa: E501
 
 
 class TestAddressesApi(unittest.TestCase):

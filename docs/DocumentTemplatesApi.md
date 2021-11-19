@@ -1,4 +1,4 @@
-# openapi_client.DocumentTemplatesApi
+# amparex.DocumentTemplatesApi
 
 All URIs are relative to *http://trial.amparex.net:8078/amparex/webaxapi*
 
@@ -20,14 +20,14 @@ Get a list of document templates by a search query, paging is used, specify limi
 
 ```python
 import time
-import openapi_client
-from openapi_client.api import document_templates_api
-from openapi_client.model.list_result_wrapper_document_template import ListResultWrapperDocumentTemplate
-from openapi_client.model.document_template_search_query import DocumentTemplateSearchQuery
+import amparex
+from amparex.api import document_templates_api
+from amparex.model.list_result_wrapper_document_template import ListResultWrapperDocumentTemplate
+from amparex.model.document_template_search_query import DocumentTemplateSearchQuery
 from pprint import pprint
 # Defining the host is optional and defaults to http://trial.amparex.net:8078/amparex/webaxapi
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = amparex.Configuration(
     host = "http://trial.amparex.net:8078/amparex/webaxapi"
 )
 
@@ -43,7 +43,7 @@ configuration.api_key['security_token'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['security_token'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with amparex.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = document_templates_api.DocumentTemplatesApi(api_client)
     alias = "alias_example" # str | alias
@@ -63,7 +63,7 @@ with openapi_client.ApiClient(configuration) as api_client:
         # Get a list of document templates
         api_response = api_instance.search_document_templates_using_post(alias, search_query)
         pprint(api_response)
-    except openapi_client.ApiException as e:
+    except amparex.ApiException as e:
         print("Exception when calling DocumentTemplatesApi->search_document_templates_using_post: %s\n" % e)
 ```
 

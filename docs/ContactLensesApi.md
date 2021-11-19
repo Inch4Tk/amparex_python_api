@@ -1,4 +1,4 @@
-# openapi_client.ContactLensesApi
+# amparex.ContactLensesApi
 
 All URIs are relative to *http://trial.amparex.net:8078/amparex/webaxapi*
 
@@ -20,14 +20,14 @@ Create a new contactlense process
 
 ```python
 import time
-import openapi_client
-from openapi_client.api import contact_lenses_api
-from openapi_client.model.contact_lense_to_save import ContactLenseToSave
-from openapi_client.model.creation_response import CreationResponse
+import amparex
+from amparex.api import contact_lenses_api
+from amparex.model.contact_lense_to_save import ContactLenseToSave
+from amparex.model.creation_response import CreationResponse
 from pprint import pprint
 # Defining the host is optional and defaults to http://trial.amparex.net:8078/amparex/webaxapi
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = amparex.Configuration(
     host = "http://trial.amparex.net:8078/amparex/webaxapi"
 )
 
@@ -43,7 +43,7 @@ configuration.api_key['security_token'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['security_token'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with amparex.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = contact_lenses_api.ContactLensesApi(api_client)
     alias = "alias_example" # str | alias
@@ -116,7 +116,7 @@ with openapi_client.ApiClient(configuration) as api_client:
         # Create a new contactlense process
         api_response = api_instance.create_contact_lense_using_post(alias, to_save)
         pprint(api_response)
-    except openapi_client.ApiException as e:
+    except amparex.ApiException as e:
         print("Exception when calling ContactLensesApi->create_contact_lense_using_post: %s\n" % e)
 ```
 
@@ -166,13 +166,13 @@ Get one specific contactlense by id
 
 ```python
 import time
-import openapi_client
-from openapi_client.api import contact_lenses_api
-from openapi_client.model.contact_lense import ContactLense
+import amparex
+from amparex.api import contact_lenses_api
+from amparex.model.contact_lense import ContactLense
 from pprint import pprint
 # Defining the host is optional and defaults to http://trial.amparex.net:8078/amparex/webaxapi
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = amparex.Configuration(
     host = "http://trial.amparex.net:8078/amparex/webaxapi"
 )
 
@@ -188,7 +188,7 @@ configuration.api_key['security_token'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['security_token'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with amparex.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = contact_lenses_api.ContactLensesApi(api_client)
     alias = "alias_example" # str | alias
@@ -199,7 +199,7 @@ with openapi_client.ApiClient(configuration) as api_client:
         # Get one specific contactlense by id
         api_response = api_instance.get_contact_lense_using_get(alias, id)
         pprint(api_response)
-    except openapi_client.ApiException as e:
+    except amparex.ApiException as e:
         print("Exception when calling ContactLensesApi->get_contact_lense_using_get: %s\n" % e)
 ```
 
@@ -250,14 +250,14 @@ Get a list of contactlenses  by a search query, paging is used, specify limit an
 
 ```python
 import time
-import openapi_client
-from openapi_client.api import contact_lenses_api
-from openapi_client.model.list_result_wrapper_contact_lense import ListResultWrapperContactLense
-from openapi_client.model.contact_lense_search_query import ContactLenseSearchQuery
+import amparex
+from amparex.api import contact_lenses_api
+from amparex.model.list_result_wrapper_contact_lense import ListResultWrapperContactLense
+from amparex.model.contact_lense_search_query import ContactLenseSearchQuery
 from pprint import pprint
 # Defining the host is optional and defaults to http://trial.amparex.net:8078/amparex/webaxapi
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = amparex.Configuration(
     host = "http://trial.amparex.net:8078/amparex/webaxapi"
 )
 
@@ -273,7 +273,7 @@ configuration.api_key['security_token'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['security_token'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with amparex.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = contact_lenses_api.ContactLensesApi(api_client)
     alias = "alias_example" # str | alias
@@ -302,7 +302,7 @@ with openapi_client.ApiClient(configuration) as api_client:
         # Get a list of contactlenses
         api_response = api_instance.search_contact_lenses_using_post(alias, contactlense_search_query)
         pprint(api_response)
-    except openapi_client.ApiException as e:
+    except amparex.ApiException as e:
         print("Exception when calling ContactLensesApi->search_contact_lenses_using_post: %s\n" % e)
 ```
 
