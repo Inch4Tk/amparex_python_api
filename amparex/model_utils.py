@@ -1677,19 +1677,19 @@ def model_to_dict(model_instance, serialize=True):
                     except KeyError:
                         used_fallback_python_attribute_names.add(attr)
                 if isinstance(value, list):
-                if not value:
-                    # empty list or None
-                    result[attr] = value
-                else:
-                    res = []
-                    for v in value:
-                        if isinstance(v, PRIMITIVE_TYPES) or v is None:
-                            res.append(v)
-                        elif isinstance(v, ModelSimple):
-                            res.append(v.value)
-                        else:
-                            res.append(model_to_dict(v, serialize=serialize))
-                    result[attr] = res
+                    if not value:
+                        # empty list or None
+                        result[attr] = value
+                    else:
+                        res = []
+                        for v in value:
+                            if isinstance(v, PRIMITIVE_TYPES) or v is None:
+                                res.append(v)
+                            elif isinstance(v, ModelSimple):
+                                res.append(v.value)
+                            else:
+                                res.append(model_to_dict(v, serialize=serialize))
+                        result[attr] = res
                 elif isinstance(value, dict):
                     result[attr] = dict(map(
                         lambda item: (item[0],
